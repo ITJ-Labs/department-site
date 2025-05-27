@@ -1,0 +1,19 @@
+/* assets/css/button-brand.css */
+
+/* Base button style */
+a.button {
+  background-color: #0366d6;   /* GitHub blue */
+  color: #ffffff !important;    /* white text */
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em 1em;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Hover state */
+a.button:hover {
+  background-color: #0256b3;   /* slightly darker */
+  text-decoration: none;
+}
