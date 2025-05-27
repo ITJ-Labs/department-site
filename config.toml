@@ -17,3 +17,11 @@ theme = "PaperMod"
 
   # Enable dark mode toggle
   disableDarkMode = false
+
+  # Include your new CSS for button branding
+  customCSS = ["css/itj-brand.css", "css/button-brand.css"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

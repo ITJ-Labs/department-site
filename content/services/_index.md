@@ -41,4 +41,10 @@ Our mission is to accelerate your business with cutting-edge AI solutions—deli
 ---
 
 Ready to get started?  
-[Submit a request →](https://github.com/ITJ-Labs-Dept/support-requests/issues/new/choose){.button}
+<p>
+  <a href="https://github.com/ITJ-Labs-Dept/support-requests/issues/new/choose"
+     class="button"
+     style="background-color:#0366d6;color:#ffffff;border:none;border-radius:6px;padding:0.5em 1em;font-weight:600;">
+    Submit a request →
+  </a>
+</p>
