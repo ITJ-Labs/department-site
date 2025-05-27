@@ -1,0 +1,19 @@
+baseURL = "https://ITJ-Labs.github.io/"
+languageCode = "en-us"
+title = "ITJ Labs Department"
+theme = "PaperMod"
+
+
+[params]
+  # ITJ Royal Blue in HSL
+  primaryHue = 220
+  primarySaturation = 80
+  primaryLightness = 50
+
+  # Lighter accent blue
+  accentHue = 220
+  accentSaturation = 80
+  accentLightness = 60
+
+  # Enable dark mode toggle
+  disableDarkMode = false
