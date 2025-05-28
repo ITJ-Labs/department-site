@@ -1,20 +1,34 @@
 #!/usr/bin/env bash
 # scripts/apply-custom-css.sh
-# This script patches your site to include custom CSS overrides for PaperMod.
+# This script patches your site to include all CSS files from assets/css into static/css,
+# and regenerates extend_head.html with the correct <link> tags.
 
 set -euo pipefail
 
-echo "🔧 Copying custom CSS to static/css…"
-mkdir -p static/css
-cp assets/css/button-brand.css static/css/
-cp assets/css/services.css   static/css/
+SRC_DIR="assets/css"
+DST_DIR="static/css"
+PARTIAL="layouts/partials/extend_head.html"
 
-echo "🔧 Writing extend_head.html partial…"
-mkdir -p layouts/partials
-cat > layouts/partials/extend_head.html << 'EOF'
+echo "🔧 Copying custom CSS files from $SRC_DIR to $DST_DIR…"
+mkdir -p "$DST_DIR"
+for cssfile in "$SRC_DIR"/*.css; do
+  filename=$(basename "$cssfile")
+  cp "$cssfile" "$DST_DIR/$filename"
+  echo "  - $filename"
+done
+
+echo "🔧 Generating $PARTIAL…"
+mkdir -p "$(dirname "$PARTIAL")"
+
+# Start partial
+cat > "$PARTIAL" << 'EOF'
 {{/* layouts/partials/extend_head.html */}}
-<link rel="stylesheet" href="{{ "/css/button-brand.css" | relURL }}">
-<link rel="stylesheet" href="{{ "/css/services.css"     | relURL }}">
 EOF
 
-echo "✅ Custom CSS patch applied!"
+# Append each <link> for the copied .css files
+for cssfile in "$SRC_DIR"/*.css; do
+  filename=$(basename "$cssfile")
+  echo "<link rel=\"stylesheet\" href=\"{{ \"/css/$filename\" | relURL }}\">" >> "$PARTIAL"
+done
+
+echo "✅ $PARTIAL generated with links to all custom CSS files."
