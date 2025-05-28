@@ -8,8 +8,16 @@
   margin-top: 2rem;
 }
 
-/* Card style for each column */
-.contact-info,
+/* Contact Info “card” */
+.contact-info {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* Form “card” */
 .contact-form {
   background: var(--entry);
   border: 1px solid var(--border);
