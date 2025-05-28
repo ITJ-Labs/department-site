@@ -1,0 +1,202 @@
+/* assets/css/contact.css */
+
+/* Two-column layout for Contact page */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Stack to one column on small screens */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Shared card base for both info and form */
+.contact-info,
+.contact-form {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  position: relative;
+}
+
+/* Add a colored stripe on the left of the contact-info card */
+.contact-info {
+  border-left: 4px solid var(--accent);
+  padding-left: 1.5rem;
+}
+
+/* Decorative stripe instead of negative-margin header (form) */
+.contact-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: hsl(145, 63%, 42%);
+  border-radius: 8px 8px 0 0;
+}
+
+/* Adjusted form header to sit below the stripe */
+.contact-form h2 {
+  margin-top: 1.5rem;
+  padding-top: 0;
+}
+
+/* Form layout inside contact-form */
+.contact-form form {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Group spacing */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--secondary);
+}
+
+/* Inputs & textarea */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--theme);
+  color: var(--content);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus state with green accent */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: hsl(145, 63%, 42%);
+  box-shadow: 0 0 0 3px rgba(40,167,69,0.2);
+}
+
+/* Extra space before the button */
+.form-group p {
+  margin-top: 1.5rem;
+}
+
+/* Submit button sizing */
+.form-group button {
+  width: max-content;
+}
+
+/* Green success button */
+.button.success {
+  background-color: #28a745;
+}
+.button.success:hover {
+  background-color: #218838;
+}
+
+/* ————————————————————————————————————————————————————— */
+/* Contact list & icon styling                                */
+/* ————————————————————————————————————————————————————— */
+
+/* Reset list and add spacing via flex-gap */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* Make each row a full-width clickable link */
+.contact-list li a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  color: var(--content);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover/focus state for link rows */
+.contact-list li a:hover,
+.contact-list li a:focus {
+  background: rgba(40,167,69,0.1);
+  color: var(--accent);
+}
+
+/* Remove residual underline on the text span */
+.contact-list li a span {
+  text-decoration: none;
+}
+
+/* Unified icon sizing & color */
+.contact-list .icon,
+.icon {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  fill: currentColor;
+  stroke: none;
+  color: var(--accent);
+  vertical-align: middle;
+}
+
+/* Center items on very narrow screens */
+@media (max-width: 480px) {
+  .contact-list li {
+    justify-content: center;
+  }
+}
+
+
+/* ——— FORCE-REMOVE ANY AUTO-SEPARATORS IN CONTACT INFO ——— */
+.contact-info .contact-list li,
+.contact-info .contact-list li a {
+  border: none !important;       /* nuke any borders on the li or the link */
+  box-shadow: none !important;   /* in case it’s a shadow rule */
+}
+
+/* also catch any pseudo-elements they might be using */
+.contact-info .contact-list li::before,
+.contact-info .contact-list li::after,
+.contact-info .contact-list li a::before,
+.contact-info .contact-list li a::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* hide any <hr> that sneaked in */
+.contact-info .contact-list hr {
+  display: none !important;
+  margin: 0 !important;
+}
+
+/* re-space items now that separators are gone */
+.contact-info .contact-list {
+  gap: 2.5rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* ensure links still have their padding */
+.contact-info .contact-list li a {
+  padding: 0.75rem 0 !important;
+}
