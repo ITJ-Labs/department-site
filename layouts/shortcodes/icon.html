@@ -1,0 +1,11 @@
+{{- $name := .Get "name" | lower -}}
+{{- with resources.Get (printf "icons/%s.svg" $name) -}}
+  {{- /* Load the raw SVG */ -}}
+  {{- $raw := .Content | safeHTML -}}
+  {{- /* Inject class="icon" into the <svg> tag */ -}}
+  {{- $withClass := replaceRE `(?i)<svg` `<svg class="icon"` $raw -}}
+  {{- /* Output the modified SVG */ -}}
+  {{- $withClass | safeHTML }}
+{{- else -}}
+  <!-- missing icon: {{ $name }} -->
+{{- end -}}
