@@ -1,0 +1,86 @@
+/* assets/css/contact.css */
+
+/* Two-column layout for Contact page */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Card style for each column */
+.contact-info,
+.contact-form {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* Form layout inside contact-form */
+.contact-form form {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Group spacing */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--secondary);
+}
+
+/* Inputs & textarea */
+.form-group input,
+.form-group textarea {
+  width: 100%;                    /* full width */
+  box-sizing: border-box;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--theme);
+  color: var(--content);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus state with green accent */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: hsl(145, 63%, 42%);
+  box-shadow: 0 0 0 3px rgba(40,167,69,0.2);
+}
+
+/* Extra space before the button */
+.form-group p {
+  margin-top: 1.5rem;
+}
+
+/* Submit button sizing */
+.form-group button {
+  width: max-content;
+}
+
+/* Green success button */
+.button.success {
+  background-color: #28a745;
+}
+.button.success:hover {
+  background-color: #218838;
+}
+
+/* Styled form header */
+.contact-form h2 {
+  background: var(--theme);
+  padding: 0.75rem 1rem;
+  border-radius: 6px 6px 0 0;
+  margin: -2rem -2rem 1rem;
+}
