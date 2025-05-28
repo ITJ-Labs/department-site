@@ -1,0 +1,56 @@
+/* assets/css/services.css */
+
+/* Grid container for service cards */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Individual service card */
+.service-card {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-top: 2px solid hsl(220,80%,45%);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.service-card__title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+/* Feature list inside the card */
+.service-card ul {
+  list-style-type: disc;           /* standard bullets */
+  list-style-position: outside;    /* bullet sits outside text box */
+  padding-left: 1.2rem;            /* indent the list block */
+  margin: 0.5em 0 1.5em;           /* vertical spacing */
+}
+
+/* Fine-tune each item’s left margin for perfect alignment */
+.service-card ul li {
+  margin-left: 0.2rem;
+}
+
+.service-card ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0.5em auto 1.5em;
+}
+
+.service-card__cta {
+  margin-top: auto;
+}

@@ -9,42 +9,57 @@ Our mission is to accelerate your business with cutting-edge AI solutions—deli
 
 ---
 
-### NeuroDocs  
-**AI-powered document manager**  
-- **Key features**: Retrieval-Augmented Generation, customizable LLMs  
-- **Use cases**: Pharma compliance reports, medical records tagging  
-- **Learn more**: [Details →](/services/neurodocs/)
+<div class="service-cards">
+
+  <div class="service-card">
+    <h3 class="service-card__title">NeuroDocs</h3>
+    <p><strong>AI-powered document manager</strong></p>
+    <ul>
+      <li><strong>Key features</strong>: Retrieval-Augmented Generation, customizable LLMs</li>
+      <li><strong>Use cases</strong>: Pharma compliance reports, medical records tagging</li>
+    </ul>
+    <p class="service-card__cta">
+            <a href="/services/neurodocs/" class="button primary">Details →</a>
+    </p>
+  </div>
+
+  <div class="service-card">
+    <h3 class="service-card__title">CV Extractor</h3>
+    <p><strong>High-throughput resume parsing</strong></p>
+    <ul>
+      <li><strong>Key features</strong>: Pub/Sub pipelines, JSON & CSV outputs</li>
+      <li><strong>Use cases</strong>: HR automation, bulk candidate screening</li>
+    </ul>
+    <p class="service-card__cta">
+            <a href="/services/cv-extractor/" class="button primary">Details →</a>
+    </p>
+  </div>
+
+  <div class="service-card">
+    <h3 class="service-card__title">TalentBot</h3>
+    <p><strong>Intelligent HR-tech assistant</strong></p>
+    <ul>
+      <li><strong>Key features</strong>: Automated candidate screening, interview-prep chat</li>
+      <li><strong>Use cases</strong>: Recruitment process optimization, pre-hiring assessments</li>
+    </ul>
+    <p class="service-card__cta">
+            <a href="/services/talentbot/" class="button primary">Details →</a>
+  </div>
+
+</div>
 
 ---
 
-### CV Extractor  
-**High-throughput resume parsing**  
-- **Key features**: Pub/Sub pipelines, JSON & CSV outputs  
-- **Use cases**: HR automation, bulk candidate screening  
-- **Learn more**: [Details →](/services/cv-extractor/)
-
----
-
-### TalentBot  
-**Intelligent HR-tech assistant**  
-- **Key features**: Automated candidate screening, interview-prep chat  
-- **Use cases**: Recruitment process optimization, pre-hiring assessments  
-- **Learn more**: [Details →](/services/talentbot/)
-
----
-
-## Why Choose Us?  
+## Why Choose Us?
 - **99.9% uptime** on our SaaS endpoints  
 - **100+ satisfied clients** across healthcare, finance, manufacturing  
 - **GDPR & HIPAA compliant** deployments
 
 ---
 
-Ready to get started?  
-<p>
+<p style="text-align:center; margin-top:2rem;">
   <a href="https://github.com/ITJ-Labs-Dept/support-requests/issues/new/choose"
-     class="button"
-     style="background-color:#0366d6;color:#ffffff;border:none;border-radius:6px;padding:0.5em 1em;font-weight:600;">
+     class="button success">
     Submit a request →
   </a>
 </p>
