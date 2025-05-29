@@ -94,6 +94,35 @@ ITJ Labs is driven by a set of holistic goals designed to advance our mission an
 
 </div>
 
+<div class="section-partners">
+
+## Our Partners
+
+We collaborate with top institutions, research centers, and clients to drive AI innovation:
+
+<div class="partners-grid">
+  <div class="partner-logo" data-aos="fade-up">
+    <a href="https://www.citedi.mx/portal/" target="_blank" rel="noopener">
+      <img src="/images/partners/citedi.png" alt="CITEDI-IPN">
+    </a>
+  </div>
+  <div class="partner-logo" data-aos="fade-up" data-aos-delay="100">
+    <a href="https://www.cetys.mx/" target="_blank" rel="noopener">
+      <img src="/images/partners/cetys.png" alt="CETYS">
+    </a>
+  </div>
+  <div class="partner-logo" data-aos="fade-up" data-aos-delay="200">
+    <a href="https://www.uabc.mx/" target="_blank" rel="noopener">
+      <img src="/images/partners/uabc.png" alt="UABC">
+    </a>
+  </div>
+  <div class="partner-logo" data-aos="fade-up" data-aos-delay="300">
+    <a href="https://www.tijuana.tecnm.mx/" target="_blank" rel="noopener">
+      <img src="/images/partners/itt.png" alt="ITT-TecNM">
+    </a>
+  </div>
+</div>
+
 ## Meet the Team
 
 <div class="team-grid cards">
