@@ -372,3 +372,143 @@
   animation-play-state: paused;
   transform: scale(1.1);
 }
+
+/* ————————————————————————————————————————————————————— */
+/* Team Leaders / Profile Cards Adjustments                  */
+/* ————————————————————————————————————————————————————— */
+
+.team-leaders {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.leader-card {
+  max-width: 220px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Apply the white ring only to the direct child headshot */
+.leader-card > img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin: 0 auto 0.75rem;
+}
+
+.leader-card h3 {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+}
+
+.leader-card .role {
+  font-size: 0.875rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.leader-card blockquote {
+  font-size: 0.85rem;
+  margin: 0.75rem 0;
+  padding-left: 0.75rem;
+  border-left: 3px solid #007acc;
+}
+
+.expertise {
+  font-size: 0.8rem;
+  color: #ddd;
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.expertise li + li {
+  margin-top: 0.25rem;
+}
+
+/* ————————————————————————————————————————————————————— */
+/* Social-links (no bullets, no circles, fixed size)        */
+/* ————————————————————————————————————————————————————— */
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+}
+
+.social-links a {
+  display: block;
+  width: 40px;    /* fixed icon size */
+  height: 40px;
+  text-decoration: none;
+  border: none;
+  padding: 0;
+}
+
+.social-links a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: none !important;      /* ensure no ring */
+  border-radius: 0 !important;  /* ensure square corners */
+}
+
+/* Make exactly two cards per row, then wrap */
+.team-leaders {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 2rem;
+}
+
+/* Optional: on very small screens, switch to one column */
+@media (max-width: 600px) {
+  .team-leaders {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Override the auto-fit rule with two columns exactly */
+section.team-leaders {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 2rem !important;
+}
+
+/* Force exactly two cards per row for our special “two-per-row” section */
+.section-partners section.team-leaders.two-per-row {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 2rem !important;
+}
+
+/* Collapse to one column on narrow screens */
+@media (max-width: 600px) {
+  .section-partners section.team-leaders.two-per-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* ————————————————————————————————————————————————————— */
+/* Team Leaders: exactly two cards per row, then wrap     */
+/* ————————————————————————————————————————————————————— */
+section.team-leaders {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 2rem !important;
+  margin-top: 2rem; /* keep your existing spacing */
+}
+
+/* Collapse to one column on narrow screens */
+@media (max-width: 600px) {
+  section.team-leaders {
+    grid-template-columns: 1fr !important;
+  }
+}

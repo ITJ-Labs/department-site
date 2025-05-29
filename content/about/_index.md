@@ -125,18 +125,86 @@ We collaborate with top institutions, research centers, and clients to drive AI 
 
 ## Meet the Team
 
-<div class="team-grid cards">
-  <div class="team-member" data-aos="fade-up">
-    <img src="/images/team/miguel.jpg" alt="Dr. Miguel López">
-    <h3>Dr. Miguel López</h3>
-    <p>Co-Director & Quantum ML Lead</p>
-    <blockquote>“I believe in the transformative power of AI when paired with strategic vision.”</blockquote>
-  </div>
-  
-  <div class="team-member" data-aos="fade-up" data-aos-delay="100">
-    <img src="/images/team/ana.jpg" alt="Ana García">
-    <h3>Ana García</h3>
-    <p>Lead Data Scientist</p>
-    <blockquote>“Data tells a story—my job is to translate it into business outcomes.”</blockquote>
+<section class="team-leaders two-per-row">
+    <div class="leader-card">
+  <img src="/images/team/phil.png" alt="Phil Sweeney" />
+  <h3>Phil Sweeney</h3>
+  <p class="role">Principal Business Leader</p>
+  <blockquote>
+    “I’m passionate about translating cutting-edge AI capabilities into clear business value and sustainable growth.”
+  </blockquote>
+  <ul class="expertise">
+    <li>15+ years driving tech-enabled business transformation</li>
+    <li>Expert in strategic planning & revenue growth</li>
+    <li>Skilled at aligning multi-stakeholder priorities</li>
+  </ul>
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/phillipsweeney/" aria-label="LinkedIn">
+      <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
+    </a>
   </div>
 </div>
+    <div class="leader-card">
+      <img src="/images/team/rafa.png" alt="Rafael GPL" />
+      <h3>Rafael GPL</h3>
+      <p class="role">Data Science Director</p>
+      <blockquote>
+        “I believe marrying advanced analytics with clear business strategy is the cornerstone of impactful AI solutions.”
+      </blockquote>
+      <ul class="expertise">
+        <li>10+ years in AI, cybersecurity & software development</li>
+        <li>Holds a Master’s in Data Science</li>
+        <li>Former Director of Engineering & Software Development</li>
+      </ul>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/rafaelgpl/" aria-label="LinkedIn">
+          <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+<div class="leader-card">
+  <img src="/images/team/drmike.png" alt="Dr. Miguel López" />
+  <h3>Dr. Miguel López</h3>
+  <p class="role">Data Science Manager</p>
+  <blockquote>
+    “AI can revolutionize businesses—when paired with a clear, strategic vision.”
+  </blockquote>
+  <ul class="expertise">
+    <li>5+ years leading AI &amp; ML initiatives</li>
+    <li>Published researcher &amp; scientific peer reviewer</li>
+    <li>MBA candidate in Senior Management</li>
+  </ul>
+  <div class="social-links">
+    <a href="https://orcid.org/0000-0000-0000-0000" aria-label="ORCID">
+      <img src="/images/icons/orcid.svg" alt="ORCID" />
+    </a>
+    <a href="https://www.linkedin.com/in/miguel-lopez" aria-label="LinkedIn">
+      <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
+    </a>
+    <a href="https://scholar.google.com/citations?user=XXXX" aria-label="Google Scholar">
+      <img src="/images/icons/google-scholar.svg" alt="Google Scholar" />
+    </a>
+    <a href="https://www.scopus.com/authid/detail.uri?authorId=XXXX" aria-label="Scopus">
+      <img src="/images/icons/scopus.svg" alt="Scopus" />
+    </a>
+  </div>
+</div>
+<div class="leader-card">
+  <img src="/images/team/ivan.png" alt="Ivan Romero" />
+  <h3>Ivan Romero</h3>
+  <p class="role">Project Manager</p>
+  <blockquote>
+    “Great projects are built on clear goals, empowered teams, and relentless follow-through.”
+  </blockquote>
+  <ul class="expertise">
+    <li>8+ years managing cross-functional AI & software projects</li>
+    <li>Certified Scrum Master & PMP</li>
+    <li>Skilled in stakeholder alignment & risk management</li>
+  </ul>
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/ivanrromero/" aria-label="LinkedIn">
+      <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
+    </a>
+  </div>
+</div>
+</section>

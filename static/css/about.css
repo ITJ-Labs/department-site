@@ -372,3 +372,194 @@
   animation-play-state: paused;
   transform: scale(1.1);
 }
+
+/* ————————————————————————————————————————————————————— */
+/* Team Leaders / Profile Cards Adjustments                  */
+/* ————————————————————————————————————————————————————— */
+
+.team-leaders {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.leader-card {
+  max-width: 220px;       /* constrain card width */
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+}
+
+.leader-card img {
+  width: 120px;            /* fixed smaller size */
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;      /* make it a circle */
+  margin: 0 auto 0.75rem;
+  border: 3px solid #fff;  /* optional white border */
+}
+
+.leader-card h3 {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+}
+
+.leader-card .role {
+  font-size: 0.875rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.leader-card blockquote {
+  font-size: 0.85rem;
+  margin: 0.75rem 0;
+  padding-left: 0.75rem;
+  border-left: 3px solid #007acc;
+}
+
+.expertise {
+  font-size: 0.8rem;
+  color: #ddd;
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.expertise li + li {
+  margin-top: 0.25rem;
+}
+
+
+
+/* ———————————————————————————————————————————————— */
+/* Social-links / Meet the Team — final overrides        */
+/* Drop this at the bottom of about.css                  */
+/* ———————————————————————————————————————————————— */
+
+ul.social-links {
+  list-style: none;             /* no bullets */
+  margin: 0.75rem 0 0 0;        /* top/right/bottom/left */
+  padding: 0;                   /* remove default padding */
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+ul.social-links li {
+  width: 24px;                  /* fixed square container */
+  height: 24px;
+}
+
+ul.social-links li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none !important;  /* no underlines */
+  border: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+ul.social-links li a::before,
+ul.social-links li a::after {
+  content: none !important;    /* nuke pseudo-elements */
+}
+
+ul.social-links li img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;         /* center & preserve aspect */
+  border: none;                /* no circle */
+  border-radius: 0;
+  display: block;
+}
+
+/* keep the white ring only on your profile photo */
+.leader-card > img {
+  border: 3px solid #fff;
+}
+
+/* Remove any bullets/indent on the list */
+.team-leaders > .leader-card ul.social-links {
+  list-style: none;
+  margin: 0.75rem 0 0 0;
+  padding: 0;
+}
+
+/* Kill underlines and any bottom-border on those links */
+.team-leaders > .leader-card ul.social-links li a {
+  display: block;
+  text-decoration: none !important;
+  border: none !important;
+}
+
+
+/* ———————————————————————————————————————————————— */
+/* Kill bullets & underlines for the Meet the Team social list */
+/* ———————————————————————————————————————————————— */
+
+/* 1. Target the ul.social-links that comes right after the Meet the Team h2 */
+h2 + section.team-leaders ul.social-links {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 2. Then kill link underlines/borders in that same block */
+h2 + section.team-leaders ul.social-links li a {
+  text-decoration: none !important;
+  border: none !important;
+  background: none !important;
+  outline: none !important;
+}
+
+/* 3. And finally ensure the icons themselves have no stray borders */
+h2 + section.team-leaders ul.social-links li img {
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+
+/* Simple flex container—no list, no bullets */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0;
+}
+
+/* Make each link a fixed square and kill underlines */
+.social-links a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  text-decoration: none;  /* no underlines */
+}
+
+/* Fill that square with the icon */
+.social-links a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: none;
+  border-radius: 0;
+}
+
+/* ———————————————————————————————————————————————— */
+/* Social-links — remove circles & size down         */
+/* ———————————————————————————————————————————————— */
+.social-links a img {
+  width: clamp(40px, 15vw, 60px); /* adjust as you like */
+  height: auto;                   /* keep aspect ratio */
+  border: none !important;        /* remove any border */
+  border-radius: 0 !important;    /* no rounding */
+}
+
+/* If your anchor tags themselves have padding or border: */
+.social-links a {
+  padding: 0 !important;
+  border: none !important;
+}
+
