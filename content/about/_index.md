@@ -11,39 +11,22 @@ draft       = false
 
 <div class="about-section">
 
-## Our Mission
+<div class="mission-vision">
 
-At ITJ Labs Department, our mission is to empower organizations with AI-driven insights and automation that streamline workflows and drive innovation.
-
-## Our Vision
-
-We envision a world where cutting-edge AI solutions are accessible to every industry, enabling smarter decisions and unlocking new opportunities.
-
-</div>
-
-<div class="section-culture">
-
-## Our Culture
-
-We live and breathe a set of core principles that guide everything we do:
-
-<div class="culture-grid">
-  <div class="culture-card" data-aos="fade-up">
-    <h3>Collaboration</h3>
-    <p>We thrive on cross-functional teamwork to deliver the best AI solutions.</p>
+  <div class="mv-card">
+    <img src="/images/icons/mission.svg" alt="" class="mv-icon" />
+    <h2>Our Mission</h2>
+    <p>At ITJ Labs Department, our mission is to empower organizations with AI-driven insights and automation that streamline workflows and drive innovation.</p>
   </div>
-  <div class="culture-card" data-aos="fade-up" data-aos-delay="100">
-    <h3>Innovation</h3>
-    <p>We push boundaries and experiment with cutting-edge AI technologies.</p>
-  </div>
-  <div class="culture-card" data-aos="fade-up" data-aos-delay="200">
-    <h3>Academic Excellence</h3>
-    <p>We partner with top universities to stay at the forefront of AI research.</p>
+
+  <div class="mv-card">
+    <img src="/images/icons/vision.svg" alt="" class="mv-icon" />
+    <h2>Our Vision</h2>
+    <p>We envision a world where cutting-edge AI solutions are accessible to every industry, enabling smarter decisions and unlocking new opportunities.</p>
   </div>
 </div>
 
 </div>
-
 
 <div class="section-goals">
 
