@@ -1,0 +1,50 @@
+{{ define "main" }}
+<article class="paper-single" data-aos="fade-up">
+
+  <header class="paper-header">
+    <h1>{{ .Title }}</h1>
+    <p class="meta">
+      {{ .Date.Format "Jan 2, 2006" }} • {{ delimit .Params.authors ", " }}
+    </p>
+  </header>
+
+  <section class="paper-content">
+    {{ with .Params.summary }}
+      <p class="summary">{{ . }}</p>
+    {{ end }}
+
+    {{ with .Params.journal }}
+      <p class="journal">
+        <strong>Journal:</strong> {{ . }}
+      </p>
+    {{ end }}
+  </section>
+
+  <div class="paper-actions">
+    {{ with .Params.pdf }}
+      <a
+        href="{{ . }}"
+        class="btn btn-primary"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Download PDF of {{ $.Title }}"
+      >
+        Download PDF
+      </a>
+    {{ end }}
+
+    {{ with .Params.externalURL }}
+      <a
+        href="{{ . }}"
+        class="btn btn-secondary"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View {{ $.Title }} online"
+      >
+        View Online
+      </a>
+    {{ end }}
+  </div>
+
+</article>
+{{ end }}

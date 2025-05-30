@@ -1,0 +1,38 @@
+.pub-card {
+  display: block;                   /* make the link a block */
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: inherit;                   /* keep your text color */
+  text-decoration: none;            /* no underline */
+  transition: transform 0.2s;
+}
+
+.pub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* Wrap your inner content in a child container */
+.pub-card-content {
+  pointer-events: none;             /* let clicks pass through */
+}
+
+.pub-card-content h2,
+.pub-card-content p {
+  pointer-events: none;             /* same for all inner elements */
+}
+
+/* Leave your existing styling for text sizes */
+.pub-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.pub-card .meta {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
