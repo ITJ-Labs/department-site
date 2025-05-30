@@ -1,0 +1,16 @@
+<div class="pub-grid">
+  {{ range .Pages.ByDate.Reverse }}
+    <a 
+      href="{{ .Params.url }}" 
+      class="pub-card" 
+      target="_blank" 
+      rel="noopener"
+    >
+      <h2>{{ .Title }}</h2>
+      <p class="meta">
+        {{ .Date.Format "Jan 2, 2006" }} • {{ delimit .Params.authors ", " }}
+      </p>
+      <p>{{ .Params.summary }}</p>
+    </a>
+  {{ end }}
+</div>
