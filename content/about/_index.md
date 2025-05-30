@@ -7,33 +7,38 @@ date        = "2025-05-28T09:00:00-07:00"
 draft       = false
 +++
 
-{{< hero >}}
 
-<div class="about-section">
-
+<!-- Mission & Vision -->
 <div class="mission-vision">
-
-  <div class="mv-card">
-    <img src="/images/icons/mission.svg" alt="" class="mv-icon" />
-    <h2>Our Mission</h2>
-    <p>At ITJ Labs Department, our mission is to empower organizations with AI-driven insights and automation that streamline workflows and drive innovation.</p>
-  </div>
-
-  <div class="mv-card">
-    <img src="/images/icons/vision.svg" alt="" class="mv-icon" />
-    <h2>Our Vision</h2>
-    <p>We envision a world where cutting-edge AI solutions are accessible to every industry, enabling smarter decisions and unlocking new opportunities.</p>
+  <div class="mv-cards">
+    <div class="mv-card">
+      <img src="/images/icons/mission.svg" alt="" class="mv-icon" />
+      <h2>Our Mission</h2>
+      <p>
+        At ITJ Labs Department, our mission is to empower organizations with
+        AI-driven insights and automation that streamline workflows and drive
+        innovation.
+      </p>
+    </div>
+    <div class="mv-card">
+      <img src="/images/icons/vision.svg" alt="" class="mv-icon" />
+      <h2>Our Vision</h2>
+      <p>
+        We envision a world where cutting-edge AI solutions are accessible to
+        every industry, enabling smarter decisions and unlocking new
+        opportunities.
+      </p>
+    </div>
   </div>
 </div>
 
-</div>
 
-<div class="section-goals">
-
-## Our Holistic Goals
-
-ITJ Labs is driven by a set of holistic goals designed to advance our mission and vision:
-
+<!-- Holistic Goals -->
+<section class="section-goals">
+  <div class="section-header">
+    <h2>Our Holistic Goals</h2>
+    <p>ITJ Labs is driven by a set of holistic goals designed to advance our mission and vision:</p>
+  </div>
 <div class="goals-grid">
   <!-- Goal 1 -->
   <div class="flip-card" data-aos="fade-up">
@@ -74,8 +79,8 @@ ITJ Labs is driven by a set of holistic goals designed to advance our mission an
     </div>
   </div>
 </div>
+</section>
 
-</div>
 
 <div class="section-partners">
 
@@ -105,6 +110,7 @@ We collaborate with top institutions, research centers, and clients to drive AI 
     </a>
   </div>
 </div>
+</div>
 
 ## Meet the Team
 
@@ -122,7 +128,7 @@ We collaborate with top institutions, research centers, and clients to drive AI 
     <li>Skilled at aligning multi-stakeholder priorities</li>
   </ul>
   <div class="social-links">
-    <a href="https://www.linkedin.com/in/phillipsweeney/" aria-label="LinkedIn">
+    <a href="https://www.linkedin.com/in/phillipsweeney/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
       <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
     </a>
   </div>
@@ -140,7 +146,7 @@ We collaborate with top institutions, research centers, and clients to drive AI 
         <li>Former Director of Engineering & Software Development</li>
       </ul>
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/rafaelgpl/" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/rafaelgpl/" aria-label="LinkedIn" target="_blank" re="noopener noreferrer">
           <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
         </a>
       </div>
@@ -158,16 +164,16 @@ We collaborate with top institutions, research centers, and clients to drive AI 
     <li>MBA candidate in Senior Management</li>
   </ul>
   <div class="social-links">
-    <a href="https://orcid.org/0000-0000-0000-0000" aria-label="ORCID">
+    <a href="https://orcid.org/0000-0001-5367-9801" aria-label="ORCID" target="_blank" rel="noopener noreferrer">
       <img src="/images/icons/orcid.svg" alt="ORCID" />
     </a>
-    <a href="https://www.linkedin.com/in/miguel-lopez" aria-label="LinkedIn">
+    <a href="https://www.linkedin.com/in/miguel-angel-lopez-montiel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
       <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
     </a>
-    <a href="https://scholar.google.com/citations?user=XXXX" aria-label="Google Scholar">
+    <a href="https://scholar.google.com/citations?user=ejQAKasAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer">
       <img src="/images/icons/google-scholar.svg" alt="Google Scholar" />
     </a>
-    <a href="https://www.scopus.com/authid/detail.uri?authorId=XXXX" aria-label="Scopus">
+    <a href="https://www.scopus.com/authid/detail.uri?authorId=57212031562" aria-label="Scopus" target="_blank" rel="noopener noreferrer">
       <img src="/images/icons/scopus.svg" alt="Scopus" />
     </a>
   </div>
@@ -185,7 +191,7 @@ We collaborate with top institutions, research centers, and clients to drive AI 
     <li>Skilled in stakeholder alignment & risk management</li>
   </ul>
   <div class="social-links">
-    <a href="https://www.linkedin.com/in/ivanrromero/" aria-label="LinkedIn">
+    <a href="https://www.linkedin.com/in/ivanrromero/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
       <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
     </a>
   </div>

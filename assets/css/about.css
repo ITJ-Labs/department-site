@@ -56,6 +56,7 @@
 }
 .section-goals > h2,
 .section-goals > p {
+  text-align: center;
   margin: 0 auto 1rem;
   max-width: 800px;
 }
@@ -67,8 +68,10 @@
   justify-items: center;
 }
 .flip-card {
-  perspective: 1000px;
   margin: 0 auto;
+  width: 100%;
+  max-width: 360px;
+  min-height: 200px;
 }
 .flip-card-inner {
   position: relative;
@@ -231,3 +234,55 @@
   50%     { transform: translateY(-6px) }
 }
 
+
+/* ———————————————————————————————————————————————— */
+/* Center the H1 and subtitle on the About page          */
+/* ———————————————————————————————————————————————— */
+@media (min-width: 0) {
+  /* Target only the About page via its section */
+  body.section-about .post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  /* If your theme prints the description (the front-matter “description”) immediately after the H1: */
+  body.section-about .post-header + p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0.5rem auto 2rem;
+    color: var(--content);
+  }
+}
+
+/* ———————————————————————————————————————————————— */
+/* Center the default page title on About only           */
+/* ———————————————————————————————————————————————— */
+.post-single.about-page .post-header {
+  text-align: center;
+  margin-bottom: 2rem; /* give some breathing room */
+}
+
+/* ————————————————————————————————————————————————————— */
+/* Force any About-page H1 to sit dead-center              */
+/* ————————————————————————————————————————————————————— */
+.post-single h1.post-title {
+  text-align: center !important;
+}
+
+/* If you're still seeing a second H1 inside the content: */
+.post-content > h1 {
+  text-align: center !important;
+}
+
+/* center section headers */
+.section-header {
+  text-align: center;
+  margin: 0 auto 2rem;
+  max-width: 800px;
+}
+
+/* specifically for Goals grid */
+.section-goals .goals-grid {
+  justify-content: center;
+  justify-items: center;
+}
