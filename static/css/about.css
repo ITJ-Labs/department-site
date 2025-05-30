@@ -385,19 +385,20 @@
 }
 
 .leader-card {
-  max-width: 220px;       /* constrain card width */
+  max-width: 220px;
   margin: 0 auto;
   text-align: center;
   padding: 1rem;
 }
 
-.leader-card img {
-  width: 120px;            /* fixed smaller size */
+/* Apply the white ring only to the direct child headshot */
+.leader-card > img {
+  width: 120px;
   height: 120px;
   object-fit: cover;
-  border-radius: 50%;      /* make it a circle */
+  border-radius: 50%;
+  border: 3px solid #fff;
   margin: 0 auto 0.75rem;
-  border: 3px solid #fff;  /* optional white border */
 }
 
 .leader-card h3 {
@@ -430,136 +431,84 @@
   margin-top: 0.25rem;
 }
 
+/* ————————————————————————————————————————————————————— */
+/* Social-links (no bullets, no circles, fixed size)        */
+/* ————————————————————————————————————————————————————— */
 
-
-/* ———————————————————————————————————————————————— */
-/* Social-links / Meet the Team — final overrides        */
-/* Drop this at the bottom of about.css                  */
-/* ———————————————————————————————————————————————— */
-
-ul.social-links {
-  list-style: none;             /* no bullets */
-  margin: 0.75rem 0 0 0;        /* top/right/bottom/left */
-  padding: 0;                   /* remove default padding */
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-ul.social-links li {
-  width: 24px;                  /* fixed square container */
-  height: 24px;
-}
-
-ul.social-links li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none !important;  /* no underlines */
-  border: none !important;
-  padding: 0;
-  margin: 0;
-}
-
-ul.social-links li a::before,
-ul.social-links li a::after {
-  content: none !important;    /* nuke pseudo-elements */
-}
-
-ul.social-links li img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;         /* center & preserve aspect */
-  border: none;                /* no circle */
-  border-radius: 0;
-  display: block;
-}
-
-/* keep the white ring only on your profile photo */
-.leader-card > img {
-  border: 3px solid #fff;
-}
-
-/* Remove any bullets/indent on the list */
-.team-leaders > .leader-card ul.social-links {
-  list-style: none;
-  margin: 0.75rem 0 0 0;
-  padding: 0;
-}
-
-/* Kill underlines and any bottom-border on those links */
-.team-leaders > .leader-card ul.social-links li a {
-  display: block;
-  text-decoration: none !important;
-  border: none !important;
-}
-
-
-/* ———————————————————————————————————————————————— */
-/* Kill bullets & underlines for the Meet the Team social list */
-/* ———————————————————————————————————————————————— */
-
-/* 1. Target the ul.social-links that comes right after the Meet the Team h2 */
-h2 + section.team-leaders ul.social-links {
-  list-style: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* 2. Then kill link underlines/borders in that same block */
-h2 + section.team-leaders ul.social-links li a {
-  text-decoration: none !important;
-  border: none !important;
-  background: none !important;
-  outline: none !important;
-}
-
-/* 3. And finally ensure the icons themselves have no stray borders */
-h2 + section.team-leaders ul.social-links li img {
-  border: none !important;
-  border-radius: 0 !important;
-}
-
-
-/* Simple flex container—no list, no bullets */
 .social-links {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  margin-top: 0.75rem;
+  margin: 0.75rem 0 0;
   padding: 0;
 }
 
-/* Make each link a fixed square and kill underlines */
 .social-links a {
   display: block;
-  width: 24px;
-  height: 24px;
-  text-decoration: none;  /* no underlines */
+  width: 40px;    /* fixed icon size */
+  height: 40px;
+  text-decoration: none;
+  border: none;
+  padding: 0;
 }
 
-/* Fill that square with the icon */
 .social-links a img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border: none;
-  border-radius: 0;
+  border: none !important;      /* ensure no ring */
+  border-radius: 0 !important;  /* ensure square corners */
 }
 
-/* ———————————————————————————————————————————————— */
-/* Social-links — remove circles & size down         */
-/* ———————————————————————————————————————————————— */
-.social-links a img {
-  width: clamp(40px, 15vw, 60px); /* adjust as you like */
-  height: auto;                   /* keep aspect ratio */
-  border: none !important;        /* remove any border */
-  border-radius: 0 !important;    /* no rounding */
+/* Make exactly two cards per row, then wrap */
+.team-leaders {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 2rem;
 }
 
-/* If your anchor tags themselves have padding or border: */
-.social-links a {
-  padding: 0 !important;
-  border: none !important;
+/* Optional: on very small screens, switch to one column */
+@media (max-width: 600px) {
+  .team-leaders {
+    grid-template-columns: 1fr !important;
+  }
 }
 
+/* Override the auto-fit rule with two columns exactly */
+section.team-leaders {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 2rem !important;
+}
+
+/* Force exactly two cards per row for our special “two-per-row” section */
+.section-partners section.team-leaders.two-per-row {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 2rem !important;
+}
+
+/* Collapse to one column on narrow screens */
+@media (max-width: 600px) {
+  .section-partners section.team-leaders.two-per-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* ————————————————————————————————————————————————————— */
+/* Team Leaders: exactly two cards per row, then wrap     */
+/* ————————————————————————————————————————————————————— */
+section.team-leaders {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 2rem !important;
+  margin-top: 2rem; /* keep your existing spacing */
+}
+
+/* Collapse to one column on narrow screens */
+@media (max-width: 600px) {
+  section.team-leaders {
+    grid-template-columns: 1fr !important;
+  }
+}
