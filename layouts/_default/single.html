@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+  {{/* — HERO: only on the About section — */}}
+  {{ if and .IsPage (eq .Section "about") }}
+    {{ partial "hero.html" . }}
+  {{ end }}
+
+  {{/* — CONTENT WRAPPER — */}}
+<article class="post-single {{ if and .IsPage (eq .Section "about") }}about-page{{ end }}">
+
+    {{/* — SKIP THE DEFAULT HEADER FOR About pages — */}}
+    {{ if not (and .IsPage (eq .Section "about")) }}
+      <header class="post-header">
+        <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
+        {{ with .Date }}
+          <div class="post-meta">
+            <span>{{ .Format "Jan 2, 2006" }}</span>
+          </div>
+        {{ end }}
+      </header>
+    {{ end }}
+
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+
+    {{ if .Params.tags }}
+      <footer class="post-footer">
+        <ul class="post-tags">
+          {{ range .Params.tags }}
+            <li>
+              <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </footer>
+    {{ end }}
+
+  </article>
+
+{{ end }}
