@@ -1,6 +1,6 @@
 +++
 title = "Tech Talk – Deep Understanding of Deep Learning"
-date = 2024-04-18T17:00:00-07:00
+date = 2024-09-05T17:00:00-07:00
 location = "Online / miCoach"
 type = "Tech Talk"
 tags = ["deep learning", "training", "community"]
