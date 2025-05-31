@@ -6,11 +6,19 @@
   <div class="event-grid">
     {{ range .Pages }}
       <div class="event-card">
-        {{ with .Params.images }}
-          <div class="event-image-slideshow" data-images='{{ jsonify . }}'>
+        {{ $imgs := .Params.images }}
+        {{ if not $imgs }}
+          {{ with .Params.image }}
+            {{ $imgs = (slice .) }}
+          {{ end }}
+        {{ end }}
+
+        {{ if $imgs }}
+          <div class="event-image-slideshow" data-images='{{ jsonify $imgs }}'>
             <img class="event-image-slide" alt="{{ $.Title }}">
           </div>
         {{ end }}
+
         <div class="event-info">
           <h2>{{ .Title }}</h2>
           {{ with .Params.date }}
