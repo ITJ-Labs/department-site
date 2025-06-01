@@ -152,3 +152,69 @@ img[src*="ai-sandbox-banner"]:hover {
   margin-top: 1rem;
 }
 
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: var(--secondary);
+  text-align: center;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.industry-quote {
+  margin-top: 2rem;
+  padding: 1.2rem 1.5rem;
+  background: rgba(255,255,255,0.02);
+  border-left: 4px solid hsl(220, 80%, 60%);
+  font-style: italic;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  opacity: 0.95;
+}
+
+.industry-quote footer {
+  text-align: right;
+  font-style: normal;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.failure-reasons {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 1.2rem;
+  margin: 1.2rem auto 0.5em;
+  max-width: 800px;
+  color: #e0e0e0;
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.failure-reasons li {
+  margin: 0.4rem 0;
+}
+
+/* 1. Bigger, bolder, and with a faint glow */
+.intro-block h3 {
+  font-size: 1.6rem;           /* up from 1.4rem */
+  font-weight: 700;            /* make it bold */
+  color: #ffffff;              /* keep it white */
+  text-transform: uppercase;
+  letter-spacing: 0.8px;       /* a touch more spacing */
+  margin-bottom: 1rem;
+
+  /* subtle glow to lift it off the background */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6), 
+               0 0 6px rgba(255,255,255,0.05);
+}
+
+/* 2. Color the warning icon (⚠️) gold to draw attention */
+.intro-block h3::before {
+  content: '⚠️';
+  margin-right: 0.5rem;
+  color: gold;                /* or #FFC107, whichever fits your palette */
+  font-size: 1.6rem;          /* match the heading size */
+  vertical-align: middle;
+}

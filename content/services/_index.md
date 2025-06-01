@@ -11,8 +11,13 @@ draft = false
 <hr class="section-divider" />
 
 <div class="intro-block">
-  <h3>Why AI PoCs Often Fail</h3>
-  <ul>
+    <h3>⚠️ Why AI PoCs Often Fail</h3>
+    <p class="section-subtitle">Common causes we’ve seen across industries</p>
+    <blockquote class="industry-quote">
+      <p>“A staggering 85% of AI models fail to reach production due to misalignment with real business needs, poor data pipelines, or lack of stakeholder buy-in.”</p>
+      <footer>— <a href="https://www.forbes.com/councils/forbestechcouncil/2024/11/15/why-85-of-your-ai-models-may-fail/" target="_blank">Forbes Technology Council, 2024</a></footer>
+    </blockquote>
+  <ul class="failure-reasons">
     <li>Lack of real business alignment</li>
     <li>Overengineered tech without measurable value</li>
     <li>No bridge between PoC and productization</li>
