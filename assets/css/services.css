@@ -218,3 +218,15 @@ img[src*="ai-sandbox-banner"]:hover {
   font-size: 1.6rem;          /* match the heading size */
   vertical-align: middle;
 }
+
+/* 1. Container needs perspective */
+.interactive-card {
+  perspective: 800px; /* adjust for more or less “depth” */
+}
+
+/* 2. Make the inner block preserve its 3D transforms and animate smoothly */
+.interactive-card .intro-block {
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease-out;
+  will-change: transform;
+}

@@ -1,4 +1,8 @@
 <script>
+  console.log('🪝 footer.html loaded');
+</script>
+
+<script>
   // Flip card logic (keep this)
   document.querySelectorAll('.flip-card').forEach(card => {
     card.addEventListener('click', () => {
@@ -8,22 +12,24 @@
 
   // Slideshow logic for event image rotation
   document.querySelectorAll('.event-image-slideshow').forEach(slideshow => {
-  const images = JSON.parse(slideshow.dataset.images || "[]");
-  if (!images.length) return;
+    const images = JSON.parse(slideshow.dataset.images || "[]");
+    if (!images.length) return;
 
-  const img = slideshow.querySelector('.event-image-slide');
-  let i = 0;
-  img.src = `/${images[i]}`;
+    const img = slideshow.querySelector('.event-image-slide');
+    let i = 0;
+    img.src = `/${images[i]}`;
 
-  if (images.length > 1) {
-    setInterval(() => {
-      i = (i + 1) % images.length;
-      img.style.opacity = 0;
-      setTimeout(() => {
-        img.src = `/${images[i]}`;
-        img.style.opacity = 1;
-      }, 200);
-    }, 3000);
-  }
-});
+    if (images.length > 1) {
+      setInterval(() => {
+        i = (i + 1) % images.length;
+        img.style.opacity = 0;
+        setTimeout(() => {
+          img.src = `/${images[i]}`;
+          img.style.opacity = 1;
+        }, 200);
+      }, 3000);
+    }
+  });
 </script>
+
+<script src="/js/services-tilt.js"></script>
