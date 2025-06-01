@@ -1,20 +1,30 @@
 /* assets/css/services.css */
 
+/*─────────────────────────────────────────────────────────────────────────
+  Core Layout & Typography
+─────────────────────────────────────────────────────────────────────────*/
+
+/* Center top-level headings */
 .content h1 {
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
+/* Center any <h1> immediately following .services-intro or matching h1.title */
 .services-intro ~ h1,
 h1.title {
   text-align: center;
 }
 
+/* Add spacing above second-level headings inside .services-intro */
 .services-intro h3 {
   margin-top: 2.5rem;
 }
 
-/* Grid container for service cards */
+/*─────────────────────────────────────────────────────────────────────────
+  Service Cards Grid
+─────────────────────────────────────────────────────────────────────────*/
+
 .service-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -22,14 +32,13 @@ h1.title {
   margin-top: 2rem;
 }
 
-/* Individual service card */
 .service-card {
   background: var(--entry);
   border: 1px solid var(--border);
-  border-top: 2px solid hsl(220,80%,45%);
+  border-top: 2px solid hsl(220, 80%, 45%);
   border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -38,8 +47,12 @@ h1.title {
   animation: fadeInUp 0.6s ease forwards;
 }
 
-.service-card:nth-child(2) { animation-delay: 0.1s; }
-.service-card:nth-child(3) { animation-delay: 0.2s; }
+.service-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.service-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
 
 @keyframes fadeInUp {
   to {
@@ -50,7 +63,7 @@ h1.title {
 
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .service-card__title {
@@ -59,7 +72,7 @@ h1.title {
   color: var(--primary);
 }
 
-/* Feature list inside the card */
+/* Feature list inside each service card */
 .service-card ul {
   list-style-type: disc;
   list-style-position: outside;
@@ -70,7 +83,6 @@ h1.title {
   line-height: 1.6;
 }
 
-/* Fine-tune each item’s left margin for perfect alignment */
 .service-card ul li {
   margin-left: 0.2rem;
 }
@@ -79,12 +91,16 @@ h1.title {
   margin-top: auto;
 }
 
+/*─────────────────────────────────────────────────────────────────────────
+  .services-intro Container
+─────────────────────────────────────────────────────────────────────────*/
+
 .services-intro {
   background: rgba(255, 255, 255, 0.02);
   padding: 2rem;
   border-radius: 12px;
   margin-bottom: 3rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   text-align: justify;
   max-width: 900px;
   margin-left: auto;
@@ -96,19 +112,23 @@ h1.title {
   text-align: center;
 }
 
+/*─────────────────────────────────────────────────────────────────────────
+  Intro Block Styling
+─────────────────────────────────────────────────────────────────────────*/
+
 .intro-block {
   margin-top: 2rem;
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.015);
   border-left: 3px solid hsl(220, 80%, 50%);
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   animation: fadeInUp 0.6s ease both;
   opacity: 0;
   transform: translateY(12px);
 }
 
-/* Alternating block background (visual rhythm) */
+/* Alternating background tint for visual rhythm */
 .intro-block:nth-child(even) {
   background: rgba(255, 255, 255, 0.025);
 }
@@ -117,13 +137,23 @@ h1.title {
   margin-top: 2.5rem;
 }
 
+/* Heading inside .intro-block (bold, uppercase, glow) */
 .intro-block h3 {
   text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
+  margin-bottom: 1rem;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.6),
+    0 0 6px rgba(255, 255, 255, 0.05);
 }
+
+/*─────────────────────────────────────────────────────────────────────────
+  Image Banner & Section Divider
+─────────────────────────────────────────────────────────────────────────*/
 
 .section-divider {
   margin: 3rem auto;
@@ -138,12 +168,10 @@ img[src*="ai-sandbox-banner"] {
   max-width: 100%;
   margin: 0 auto 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-img[src*="ai-sandbox-banner"] {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
+
 img[src*="ai-sandbox-banner"]:hover {
   transform: scale(1.01);
 }
@@ -152,6 +180,9 @@ img[src*="ai-sandbox-banner"]:hover {
   margin-top: 1rem;
 }
 
+/*─────────────────────────────────────────────────────────────────────────
+  Subtitles & Quotes
+─────────────────────────────────────────────────────────────────────────*/
 
 .section-subtitle {
   font-size: 0.95rem;
@@ -165,7 +196,7 @@ img[src*="ai-sandbox-banner"]:hover {
 .industry-quote {
   margin-top: 2rem;
   padding: 1.2rem 1.5rem;
-  background: rgba(255,255,255,0.02);
+  background: rgba(255, 255, 255, 0.02);
   border-left: 4px solid hsl(220, 80%, 60%);
   font-style: italic;
   font-size: 0.95rem;
@@ -180,71 +211,122 @@ img[src*="ai-sandbox-banner"]:hover {
   margin-top: 0.5rem;
 }
 
-/* 1. Bigger, bolder, and with a faint glow */
-.intro-block h3 {
-  font-size: 1.6rem;           /* up from 1.4rem */
-  font-weight: 700;            /* make it bold */
-  color: #ffffff;              /* keep it white */
-  text-transform: uppercase;
-  letter-spacing: 0.8px;       /* a touch more spacing */
-  margin-bottom: 1rem;
+/*─────────────────────────────────────────────────────────────────────────
+  Interactive Card (3D Tilt Placeholder)
+─────────────────────────────────────────────────────────────────────────*/
 
-  /* subtle glow to lift it off the background */
-  text-shadow: 0 1px 2px rgba(0,0,0,0.6), 
-               0 0 6px rgba(255,255,255,0.05);
-}
-
-/* 2. Color the warning icon (⚠️) gold to draw attention */
-.intro-block h3::before {
-  content: '⚠️';
-  margin-right: 0.5rem;
-  color: gold;                /* or #FFC107, whichever fits your palette */
-  font-size: 1.6rem;          /* match the heading size */
-  vertical-align: middle;
-}
-
-/* 1. Container needs perspective */
 .interactive-card {
-  perspective: 800px; /* adjust for more or less “depth” */
+  perspective: 800px;
 }
 
-/* 2. Make the inner block preserve its 3D transforms and animate smoothly */
 .interactive-card .intro-block {
   transform-style: preserve-3d;
   transition: transform 0.2s ease-out;
   will-change: transform;
 }
 
-/* ─────────────────────────────────────────────────────────────────────────
-   Failure‐reasons: title on one line, detail on the next (indented)
-   ───────────────────────────────────────────────────────────────────────── */
+/*─────────────────────────────────────────────────────────────────────────
+  “Why AI PoCs Often Fail” Bullets (Two-Line, Indented Detail)
+─────────────────────────────────────────────────────────────────────────*/
+
 .failure-reasons {
-  list-style: none;            /* remove default bullets */
-  padding-left: 0;             /* no built-in indent */
-  margin: 1.2rem auto 1.5rem;  /* vertical spacing above & below */
-  max-width: 800px;            /* constrain line length for readability */
-  color: #e0e0e0;              /* light gray text */
-  font-size: 1rem;             /* comfortable font size */
-  line-height: 1.6;            /* good line spacing */
-  text-align: left;            /* left-align everything */
+  list-style: none;
+  padding-left: 0;
+  margin: 1.2rem auto 1.5rem;
+  max-width: 800px;
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
 }
 
 .failure-reasons li {
-  margin: 1rem 0;              /* space between each bullet */
+  margin: 1rem 0;
 }
 
-/* Title (emoji + bold phrase) on its own line */
 .failure-reasons .reason-title {
-  display: block;              /* force a line break after title */
-  font-size: 1.1rem;           /* slightly larger so it stands out */
-  margin-bottom: 0.3rem;       /* gap between title and detail */
-  white-space: nowrap;         /* keep emoji and bold text together */
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  white-space: nowrap;
 }
 
-/* Detail always on a second line, indented */
 .failure-reasons .reason-detail {
-  display: block;              /* start on its own line */
-  margin-left: 1.6rem;         /* indent the detail under the title */
-  /* You can tweak the left margin for more/less indent */
-  color: #cfcfcf;              /* slightly lighter than the title */
+  display: block;
+  margin-left: 1.6rem;
+  color: #cfcfcf;
+}
+
+/*─────────────────────────────────────────────────────────────────────────
+  “How We Help” Bullets (Two-Line, Indented Detail)
+─────────────────────────────────────────────────────────────────────────*/
+
+.help-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem auto 1.5rem;
+  max-width: 800px;
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.help-list li {
+  margin: 1rem 0;
+}
+
+.help-list .help-title {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  white-space: nowrap;
+}
+
+.help-list .help-detail {
+  display: block;
+  margin-left: 1.6rem;
+  color: #cfcfcf;
+}
+
+/*─────────────────────────────────────────────────────────────────────────
+  Industry Note (Matches Forbes/McKinsey Style)
+─────────────────────────────────────────────────────────────────────────*/
+
+.industry-note {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-left: 4px solid hsl(220, 80%, 60%);
+  font-style: italic;
+  font-size: 0.92rem;
+  border-radius: 6px;
+  color: #d0d0d0;
+}
+
+.industry-note a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/*─────────────────────────────────────────────────────────────────────────
+  Section-Specific Icons for <h3> Headings
+─────────────────────────────────────────────────────────────────────────*/
+
+/* 1) Warning icon for “Why AI PoCs Often Fail” (inside .interactive-card .intro-block) */
+.interactive-card .intro-block h3::before {
+  content: '⚠️';
+  margin-right: 0.5rem;
+  color: gold;
+  font-size: 1.6rem;
+  vertical-align: middle;
+}
+
+/* 2) Rocket icon for “How We Help” (inside .intro-block.how-we-help) */
+.intro-block.how-we-help h3::before {
+  content: '🚀';
+  margin-right: 0.5rem;
+  color: #4ADE80;
+  font-size: 1.6rem;
+  vertical-align: middle;
 }

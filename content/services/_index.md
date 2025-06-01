@@ -39,15 +39,34 @@ draft = false
 
 <hr class="section-divider" />
 
-<div class="intro-block">
+<div class="intro-block how-we-help">
   <h3>How We Help</h3>
   <p>We help businesses validate and scale AI initiatives by providing:</p>
-  <ul>
-    <li>🧪 <strong>PoC Co-Development</strong> – Collaborate with us to build a working prototype that solves a real business problem.</li>
-    <li>🛠️ <strong>AI Enablement</strong> – Train internal teams while we build; we hand off clean, documented code and practices.</li>
-    <li>🎯 <strong>Use Case Discovery</strong> – We help you narrow down what’s feasible, valuable, and measurable.</li>
-    <li>🔍 <strong>AI Audits & Technical Validation</strong> – Already built something? We assess and improve it.</li>
+
+  <ul class="help-list">
+    <li>
+      <span class="help-title">🧪 <strong>PoC Co-Development</strong></span>
+      <span class="help-detail">— Collaborate with us to build a working prototype that solves a real business problem.</span>
+    </li>
+    <li>
+      <span class="help-title">🛠️ <strong>AI Enablement</strong></span>
+      <span class="help-detail">— Train internal teams while we build; we hand off clean, documented code and best practices.</span>
+    </li>
+    <li>
+      <span class="help-title">🎯 <strong>Use Case Discovery</strong></span>
+      <span class="help-detail">— We help you narrow down what’s feasible, valuable, and measurable.</span>
+    </li>
+    <li>
+      <span class="help-title">🔍 <strong>AI Audits &amp; Technical Validation</strong></span>
+      <span class="help-detail">— Already built something? We assess and improve it to ensure production readiness.</span>
+    </li>
   </ul>
+
+  <!-- Industry note from Ideas2IT -->
+  <p class="industry-note">
+    “Organizations that establish an AI Center of Excellence see a faster, more consistent ROI—because centralized best practices and governance help avoid costly blind spots.”  
+    ― <a href="https://www.ideas2it.com/blogs/establish-ai-center-excellence" target="_blank">Ideas2IT, Establishing an AI Center of Excellence</a>
+  </p>
 </div>
 
 </div>
