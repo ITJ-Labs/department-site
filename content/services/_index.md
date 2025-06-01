@@ -37,12 +37,13 @@ draft = false
     </div>
 </div>
 
-<hr class="section-divider" />
-
 <div class="intro-block how-we-help">
   <h3>How We Help</h3>
   <p>We help businesses validate and scale AI initiatives by providing:</p>
-
+        <p class="industry-note">
+    “Organizations that establish an AI Center of Excellence see a faster, more consistent ROI—because centralized best practices and governance help avoid costly blind spots.”  
+    ― <a href="https://www.ideas2it.com/blogs/establish-ai-center-excellence" target="_blank">Ideas2IT, Establishing an AI Center of Excellence</a>
+  </p>
   <ul class="help-list">
     <li>
       <span class="help-title">🧪 <strong>PoC Co-Development</strong></span>
@@ -61,31 +62,46 @@ draft = false
       <span class="help-detail">— Already built something? We assess and improve it to ensure production readiness.</span>
     </li>
   </ul>
+</div>
 
-  <!-- Industry note from Ideas2IT -->
-  <p class="industry-note">
-    “Organizations that establish an AI Center of Excellence see a faster, more consistent ROI—because centralized best practices and governance help avoid costly blind spots.”  
-    ― <a href="https://www.ideas2it.com/blogs/establish-ai-center-excellence" target="_blank">Ideas2IT, Establishing an AI Center of Excellence</a>
+  <div class="intro-block reliable-pocs">
+  <h3>How We Build Reliable AI PoCs</h3>
+  <p>
+    We follow the <strong>CRISP-ML(Q)</strong> methodology combined with the scientific method — ensuring every AI Proof of Concept is grounded in data, evaluated rigorously, and ready for scale.
   </p>
+
+  <!-- Industry note: CRISP-ML(Q) quote (cleaned, without raw citation markup) -->
+  <p class="industry-note">
+    “CRISP-ML(Q) is a systematic process model for machine learning software development that creates an awareness of possible risks and emphasizes quality assurance to diminish these risks and ensure ML project success.”  
+    ― <a href="https://ml-ops.org/content/crisp-ml" target="_blank">CRISP-ML(Q) (ml-ops.org)</a>
+  </p>
+
+  <!-- Two‐line, indented bullet list -->
+  <ul class="poc-list">
+    <li>
+      <span class="poc-title">🔍 <strong>Problem Framing</strong></span>
+      <span class="poc-detail">— Understand business impact and define measurable goals.</span>
+    </li>
+    <li>
+      <span class="poc-title">📊 <strong>Data Exploration</strong></span>
+      <span class="poc-detail">— Use hypothesis-driven analysis, not just “throw data at models.”</span>
+    </li>
+    <li>
+      <span class="poc-title">🧪 <strong>Model Development</strong></span>
+      <span class="poc-detail">— Rapid iteration with explainable metrics, not black-box guessing.</span>
+    </li>
+    <li>
+      <span class="poc-title">📝 <strong>Validation &amp; Feedback</strong></span>
+      <span class="poc-detail">— Test under realistic constraints with business criteria.</span>
+    </li>
+    <li>
+      <span class="poc-title">📦 <strong>AI Lifecycle Planning</strong></span>
+      <span class="poc-detail">— Transition PoC to MVP using modular, documented components.</span>
+    </li>
+  </ul>
 </div>
 
 </div>
-
----
-
-### How We Build Reliable AI PoCs
-
-We follow the **CRISP-ML(Q)** methodology combined with the scientific method — ensuring every AI Proof of Concept is grounded in data, evaluated rigorously, and ready for scale.
-
-Our process emphasizes:
-
-- **🔍 Problem Framing** – Understand business impact and define measurable goals  
-- **📊 Data Exploration** – Use hypothesis-driven analysis, not just “throw data at models”  
-- **🧪 Model Development** – Rapid iteration with explainable metrics, not black-box guessing  
-- **📈 Validation & Feedback** – Test under realistic constraints with business criteria  
-- **📦 AI Lifecycle Planning** – Transition PoC to MVP using modular, documented components
-
----
 
 ### Our Tech Stack
 

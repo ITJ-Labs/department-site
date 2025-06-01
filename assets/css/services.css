@@ -330,3 +330,78 @@ img[src*="ai-sandbox-banner"]:hover {
   font-size: 1.6rem;
   vertical-align: middle;
 }
+
+/*─────────────────────────────────────────────────────────────────────────
+  Industry Note (matches other sections)
+─────────────────────────────────────────────────────────────────────────*/
+.industry-note {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-left: 4px solid hsl(220, 80%, 60%);
+  font-style: italic;
+  font-size: 0.92rem;
+  border-radius: 6px;
+  color: #d0d0d0;
+}
+.industry-note a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/*─────────────────────────────────────────────────────────────────────────
+  “How We Build Reliable AI PoCs”: Microscope icon + cleaned industry note
+─────────────────────────────────────────────────────────────────────────*/
+
+/* 1) Inject 🔬 before the section title */
+.intro-block.reliable-pocs h3::before {
+  content: '🔬';
+  margin-right: 0.5rem;
+  color: #4ADE80;     /* You can adjust this to any accent color you prefer */
+  font-size: 1.6rem;  /* Same size as other icons */
+  vertical-align: middle;
+}
+
+/* 2) Industry note (same style as other sections) */
+.industry-note {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-left: 4px solid hsl(220, 80%, 60%);
+  font-style: italic;
+  font-size: 0.92rem;
+  border-radius: 6px;
+  color: #d0d0d0;
+}
+.industry-note a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/*─────────────────────────────────────────────────────────────────────────
+  Two‐line, indented bullets for “How We Build Reliable AI PoCs”
+─────────────────────────────────────────────────────────────────────────*/
+.poc-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem auto 1.5rem;
+  max-width: 800px;
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+.poc-list li {
+  margin: 1rem 0;
+}
+.poc-list .poc-title {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  white-space: nowrap;
+}
+.poc-list .poc-detail {
+  display: block;
+  margin-left: 1.6rem;
+  color: #cfcfcf;
+}
