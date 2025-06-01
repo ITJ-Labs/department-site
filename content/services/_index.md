@@ -16,12 +16,24 @@ draft = false
           <p>“A staggering 85% of AI models fail to reach production due to misalignment with real business needs, poor data pipelines, or lack of stakeholder buy-in.”</p>
           <footer>— <a href="https://www.forbes.com/councils/forbestechcouncil/2024/11/15/why-85-of-your-ai-models-may-fail/" target="_blank">Forbes Technology Council, 2024</a></footer>
         </blockquote>
-      <ul class="failure-reasons">
-        <li>Lack of real business alignment</li>
-        <li>Overengineered tech without measurable value</li>
-        <li>No bridge between PoC and productization</li>
-        <li>Missing in-house AI talent or process maturity</li>
-      </ul>
+        <ul class="failure-reasons">
+          <li>
+            <span class="reason-title">📉 <strong>Lack of real business alignment</strong></span>
+            <span class="reason-detail">— teams build models without a clear ROI or KPI.</span>
+          </li>
+          <li>
+            <span class="reason-title">⚙️ <strong>Over-engineered tech</strong></span>
+            <span class="reason-detail">— fancy algorithms, but no measurable value or end-user buy-in.</span>
+          </li>
+          <li>
+            <span class="reason-title">🌉 <strong>No bridge between PoC and productization</strong></span>
+            <span class="reason-detail">— the prototype never makes it into a production pipeline.</span>
+          </li>
+          <li>
+            <span class="reason-title">💼 <strong>Missing in-house AI talent or process maturity</strong></span>
+            <span class="reason-detail">— no one to maintain, monitor, or scale the model.</span>
+          </li>
+        </ul>
     </div>
 </div>
 

@@ -180,22 +180,6 @@ img[src*="ai-sandbox-banner"]:hover {
   margin-top: 0.5rem;
 }
 
-.failure-reasons {
-  list-style-type: disc;
-  list-style-position: inside;
-  padding-left: 1.2rem;
-  margin: 1.2rem auto 0.5em;
-  max-width: 800px;
-  color: #e0e0e0;
-  line-height: 1.6;
-  font-size: 1rem;
-  text-align: left;
-}
-
-.failure-reasons li {
-  margin: 0.4rem 0;
-}
-
 /* 1. Bigger, bolder, and with a faint glow */
 .intro-block h3 {
   font-size: 1.6rem;           /* up from 1.4rem */
@@ -229,4 +213,38 @@ img[src*="ai-sandbox-banner"]:hover {
   transform-style: preserve-3d;
   transition: transform 0.2s ease-out;
   will-change: transform;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Failure‐reasons: title on one line, detail on the next (indented)
+   ───────────────────────────────────────────────────────────────────────── */
+.failure-reasons {
+  list-style: none;            /* remove default bullets */
+  padding-left: 0;             /* no built-in indent */
+  margin: 1.2rem auto 1.5rem;  /* vertical spacing above & below */
+  max-width: 800px;            /* constrain line length for readability */
+  color: #e0e0e0;              /* light gray text */
+  font-size: 1rem;             /* comfortable font size */
+  line-height: 1.6;            /* good line spacing */
+  text-align: left;            /* left-align everything */
+}
+
+.failure-reasons li {
+  margin: 1rem 0;              /* space between each bullet */
+}
+
+/* Title (emoji + bold phrase) on its own line */
+.failure-reasons .reason-title {
+  display: block;              /* force a line break after title */
+  font-size: 1.1rem;           /* slightly larger so it stands out */
+  margin-bottom: 0.3rem;       /* gap between title and detail */
+  white-space: nowrap;         /* keep emoji and bold text together */
+}
+
+/* Detail always on a second line, indented */
+.failure-reasons .reason-detail {
+  display: block;              /* start on its own line */
+  margin-left: 1.6rem;         /* indent the detail under the title */
+  /* You can tweak the left margin for more/less indent */
+  color: #cfcfcf;              /* slightly lighter than the title */
 }
