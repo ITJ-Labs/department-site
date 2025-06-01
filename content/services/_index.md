@@ -4,8 +4,62 @@ date  = "2025-05-27T09:00:00-07:00"
 draft = false
 +++
 
-Welcome to ITJ Labs’ Services!  
-Our mission is to accelerate your business with cutting-edge AI solutions—delivered as easy-to-consume SaaS, SDKs, and custom integrations.
+![AI Sandbox Banner](/images/services/ai-sandbox-banner.png)
+
+<div class="services-intro">
+
+<hr class="section-divider" />
+
+<div class="intro-block">
+  <h3>Why AI PoCs Often Fail</h3>
+  <ul>
+    <li>Lack of real business alignment</li>
+    <li>Overengineered tech without measurable value</li>
+    <li>No bridge between PoC and productization</li>
+    <li>Missing in-house AI talent or process maturity</li>
+  </ul>
+</div>
+
+<hr class="section-divider" />
+
+<div class="intro-block">
+  <h3>How We Help</h3>
+  <p>We help businesses validate and scale AI initiatives by providing:</p>
+  <ul>
+    <li>🧪 <strong>PoC Co-Development</strong> – Collaborate with us to build a working prototype that solves a real business problem.</li>
+    <li>🛠️ <strong>AI Enablement</strong> – Train internal teams while we build; we hand off clean, documented code and practices.</li>
+    <li>🎯 <strong>Use Case Discovery</strong> – We help you narrow down what’s feasible, valuable, and measurable.</li>
+    <li>🔍 <strong>AI Audits & Technical Validation</strong> – Already built something? We assess and improve it.</li>
+  </ul>
+</div>
+
+</div>
+
+---
+
+### How We Build Reliable AI PoCs
+
+We follow the **CRISP-ML(Q)** methodology combined with the scientific method — ensuring every AI Proof of Concept is grounded in data, evaluated rigorously, and ready for scale.
+
+Our process emphasizes:
+
+- **🔍 Problem Framing** – Understand business impact and define measurable goals  
+- **📊 Data Exploration** – Use hypothesis-driven analysis, not just “throw data at models”  
+- **🧪 Model Development** – Rapid iteration with explainable metrics, not black-box guessing  
+- **📈 Validation & Feedback** – Test under realistic constraints with business criteria  
+- **📦 AI Lifecycle Planning** – Transition PoC to MVP using modular, documented components
+
+---
+
+### Our Tech Stack
+
+We use an open, modern, and modular stack for rapid and scalable AI experimentation:
+
+- **🧠 LLMs & NLP**: Hugging Face Transformers, LangChain, Ollama, GPT APIs  
+- **📊 ML Frameworks**: PyTorch, FastAI, XGBoost, scikit-learn  
+- **🖼️ Computer Vision**: YOLOv8, ViTs, OpenCV, TensorRT  
+- **🚀 Deployment**: Docker, Streamlit, GCP, NVIDIA Jetson, Pub/Sub  
+- **📁 Document AI**: RAG pipelines, vector search (FAISS, Chroma), embedding models
 
 ---
 
