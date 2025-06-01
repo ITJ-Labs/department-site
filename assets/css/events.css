@@ -1,0 +1,95 @@
+/* events.css - Improved version */
+
+.events-list {
+  padding: 3rem 1.5rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: var(--primary-text, #eee);
+}
+
+.section-description {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: var(--secondary-text, #aaa);
+}
+
+.event-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: start;
+}
+
+.event-card {
+  background: var(--entry, #1e1e1e);
+  border: 1px solid var(--border, #333);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.event-image-slideshow {
+  width: 100%;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  overflow: hidden;
+}
+
+.event-image-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.4s ease;
+}
+
+@media (min-width: 768px) {
+  .event-image-slideshow {
+    height: 300px;
+  }
+}
+
+.event-info {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.event-info h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--primary, #fff);
+}
+
+.event-date,
+.event-location {
+  font-size: 0.9rem;
+  color: var(--tertiary-text, #bbb);
+}
+
+.event-summary {
+  font-size: 1rem;
+  color: #ddd;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
