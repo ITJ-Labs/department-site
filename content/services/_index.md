@@ -101,17 +101,82 @@ draft = false
   </ul>
 </div>
 
+
+<div class="intro-block tech-stack">
+<!-- Section Heading with Injected Icon via CSS -->
+<h3>Our Tech Stack</h3>
+
+<!-- Use Cases Subtitle -->
+<p class="section-subtitle">
+Use cases we develop: Computer Vision • AI Agents & Orchestration • 
+Classic ML & Deep Learning • Generative AI
+</p>
+
+<!-- License & Open-Source Note -->
+<p class="tech-intro-text">
+All of the tools below are open-source under permissive licenses (MIT, Apache 2.0, etc.).
+</p>
+
+<!-- Responsive Grid of Tech Items -->
+<div class="tech-grid">
+<!-- LLMs & NLP -->
+<div class="tech-item">
+  <a href="https://huggingface.co/transformers/" target="_blank" class="tech-logo-link">
+    <img src="/images/logos/huggingface.png" alt="Hugging Face" class="tech-logo" />
+  </a>
+  <div class="tech-text">
+    <strong>LLMs &amp; NLP</strong><br/>
+    <a href="https://huggingface.co/transformers/" target="_blank">Hugging Face Transformers</a> • 
+    <a href="https://www.langchain.com/" target="_blank">LangChain</a> • 
+    <a href="https://ollama.com/" target="_blank">Ollama</a> • 
+  </div>
 </div>
 
-### Our Tech Stack
+<!-- ML Frameworks -->
+<div class="tech-item">
+  <a href="https://pytorch.org/" target="_blank" class="tech-logo-link">
+    <img src="/images/logos/pytorch.png" alt="PyTorch" class="tech-logo" />
+  </a>
+  <div class="tech-text">
+    <strong>ML Frameworks</strong><br/>
+    <a href="https://pytorch.org/" target="_blank">PyTorch</a> • 
+    <a href="https://www.fast.ai/" target="_blank">FastAI</a> • 
+    <a href="https://xgboost.ai/" target="_blank">XGBoost</a> • 
+    <a href="https://scikit-learn.org/" target="_blank">scikit-learn</a>
+  </div>
+</div>
 
-We use an open, modern, and modular stack for rapid and scalable AI experimentation:
+<!-- Computer Vision -->
+<div class="tech-item">
+  <a href="https://ultralytics.com/yolov8" target="_blank" class="tech-logo-link">
+    <img src="/images/logos/opencv.png" alt="YOLOv8" class="tech-logo" />
+  </a>
+  <div class="tech-text">
+    <strong>Computer Vision</strong><br/>
+    <a href="https://ultralytics.com/yolov8" target="_blank">YOLOv8</a> • 
+    <a href="https://github.com/google-research/vision_transformer" target="_blank">ViTs</a> • 
+    <a href="https://opencv.org/" target="_blank">OpenCV</a> • 
+  </div>
+</div>
 
-- **🧠 LLMs & NLP**: Hugging Face Transformers, LangChain, Ollama, GPT APIs  
-- **📊 ML Frameworks**: PyTorch, FastAI, XGBoost, scikit-learn  
-- **🖼️ Computer Vision**: YOLOv8, ViTs, OpenCV, TensorRT  
-- **🚀 Deployment**: Docker, Streamlit, GCP, NVIDIA Jetson, Pub/Sub  
-- **📁 Document AI**: RAG pipelines, vector search (FAISS, Chroma), embedding models
+<!-- Deployment -->
+<div class="tech-item">
+  <a href="https://www.docker.com/" target="_blank" class="tech-logo-link">
+    <img src="/images/logos/docker.png" alt="Docker" class="tech-logo" />
+  </a>
+  <div class="tech-text">
+    <strong>Deployment</strong><br/>
+    <a href="https://www.docker.com/" target="_blank">Docker</a> • 
+    <a href="https://streamlit.io/" target="_blank">Streamlit</a> • 
+    <a href="https://cloud.google.com/" target="_blank">GCP</a> • 
+    <a href="https://developer.nvidia.com/embedded-systems/jetson" target="_blank">NVIDIA Jetson</a> • 
+    <a href="https://cloud.google.com/pubsub" target="_blank">Pub/Sub</a>
+  </div>
+</div>
+
+</div>
+
+</div>
 
 ---
 
@@ -156,10 +221,28 @@ We use an open, modern, and modular stack for rapid and scalable AI experimentat
 
 ---
 
-## Why Choose Us?
-- **99.9% uptime** on our SaaS endpoints  
-- **100+ satisfied clients** across healthcare, finance, manufacturing  
-- **GDPR & HIPAA compliant** deployments
+<div class="intro-block choose-us">
+  <h3>Why Choose Us?</h3>
+
+  <ul class="failure-reasons">
+    <li>
+      <span class="reason-title">🕒 <strong>99.9% Uptime &amp; 24/7 Monitoring</strong></span>
+      <span class="reason-detail">— Our infrastructure remains live under heavy usage so your team never waits for results.</span>
+    </li>
+    <li>
+      <span class="reason-title">🤝 <strong>100+ Satisfied Clients &amp; Counting</strong></span>
+      <span class="reason-detail">— We’ve delivered measurable ROI in healthcare, finance, and manufacturing.</span>
+    </li>
+    <li>
+      <span class="reason-title">🚀 <strong>Rapid PoC Turnaround (4–6 Weeks)</strong></span>
+      <span class="reason-detail">— See a working prototype in under two months—no drawn-out roadmaps or scope creep.</span>
+    </li>
+    <li>
+      <span class="reason-title">🔒 <strong>Fully GDPR &amp; HIPAA-Compliant</strong></span>
+      <span class="reason-detail">— We build with security and privacy at the forefront, so you stay audit-ready.</span>
+    </li>
+  </ul>
+</div>
 
 ---
 

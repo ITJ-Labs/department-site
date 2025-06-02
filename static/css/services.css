@@ -405,3 +405,145 @@ img[src*="ai-sandbox-banner"]:hover {
   margin-left: 1.6rem;
   color: #cfcfcf;
 }
+
+/*─────────────────────────────────────────────────────────────────────────
+  “Our Tech Stack” Section: Icon + Responsive Tech Grid
+─────────────────────────────────────────────────────────────────────────*/
+
+/* 1) Inject 💻 before the “Our Tech Stack” heading */
+.intro-block.tech-stack h3::before {
+  content: '💻';
+  margin-right: 0.5rem;
+  color: #4ADE80;     /* accent green—adjust as desired */
+  font-size: 1.6rem;  /* keep consistent with other section icons */
+  vertical-align: middle;
+}
+
+/* 2) Subtitle styling (use-case list) underneath the heading */
+.intro-block.tech-stack .section-subtitle {
+  font-size: 0.95rem;
+  color: var(--secondary);
+  text-align: center;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+/* 3) Tech‐grid container: use CSS Grid for responsiveness */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* 4) Individual tech‐item block (arrange logo + text) */
+.tech-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+/* 5) Logo link & image */
+.tech-logo-link {
+  flex-shrink: 0;
+  margin-right: 1rem;
+  display: block;
+}
+
+.tech-logo {
+  width: 2.4rem;    /* ~38px; adjust if you need larger/smaller logos */
+  height: auto;
+  display: block;
+}
+
+/* 6) Text next to the logo (wrapped, with bold category + links) */
+.tech-text {
+  flex: 1;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.tech-text strong {
+  font-size: 1.1rem;    /* bold category header */
+  display: inline-block;
+}
+
+.tech-text a {
+  color: #ffffff;        /* link color (white for contrast) */
+  text-decoration: underline;
+  transition: color 0.15s ease;
+}
+
+.tech-text a:hover,
+.tech-text a:focus {
+  color: #4ADE80;        /* accent green on hover */
+}
+
+/* 7) If a link list wraps to a new line, adjust indent so it lines up */
+.tech-text br + a {
+  text-indent: -0.5rem;
+}
+
+/*─────────────────────────────────────────────────────────────────────────
+  “Why We Stand Out” / “Why Choose Us?” Section
+─────────────────────────────────────────────────────────────────────────*/
+
+.why-choose-us {
+  max-width: 800px;
+  margin: 3rem auto;          /* center and add vertical spacing */
+  text-align: left;           /* align bullets to the left */
+  color: #e0e0e0;             /* light gray text for contrast */
+}
+
+.why-choose-us h3 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.why-choose-us .why-subtitle {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.why-choose-us .why-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.why-choose-us .why-list li {
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.why-choose-us .why-title {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.why-choose-us .why-detail {
+  margin-left: 1.6rem;
+  font-size: 0.95rem;
+  color: #cfcfcf;
+}
+
+/*─────────────────────────────────────────────────────────────────────────
+  Inject 🏆 before “Why Choose Us?”
+─────────────────────────────────────────────────────────────────────────*/
+.intro-block.choose-us h3::before {
+  content: '🏆';
+  margin-right: 0.5rem;
+  color: #4ADE80;     /* same accent green as your other section icons */
+  font-size: 1.6rem;  /* match the size of your other emojis */
+  vertical-align: middle;
+}
