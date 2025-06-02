@@ -1,14 +1,14 @@
 /* ────────────────────────────────────────────────────────────────────
-   1) Always show the hamburger icon
-   2) Hide the menu by default
-   3) Show it only when header has .nav-open
-─────────────────────────────────────────────────────────────────────────*/
+   Header & Navbar Styling with Always-Visible Hamburger Toggle
+────────────────────────────────────────────────────────────────────── */
 
 .site-header {
-  position: relative; /* needed so absolute-positioned nav sits relative to header */
+  position: relative;
+  background-color: var(--background);
+  z-index: 1000;
 }
 
-/* 1) Hamburger always visible */
+/* Always show hamburger icon */
 .mobile-menu-toggle {
   display: block;
   background: none;
@@ -19,20 +19,33 @@
   padding: 0.5rem;
 }
 
-/* 2) Hide nav by default */
+/* Hidden nav by default (invisible + not interactable) */
 .main-nav {
-  display: none;
-  flex-direction: column; /* vertical list */
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  top: 100%;    /* just below the header */
+  top: 100%;
   left: 0;
   width: 100%;
   background-color: var(--background);
   border-top: 1px solid var(--muted);
-  z-index: 100; /* ensure it sits above page content */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  pointer-events: none;
+  z-index: 999;
 }
 
-/* Style the list inside the hidden nav */
+/* When menu is toggled open */
+.nav-open .main-nav {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* List & Link styles */
 .nav-list {
   display: flex;
   flex-direction: column;
@@ -59,7 +72,84 @@
   background-color: var(--muted);
 }
 
-/* 3) When header has .nav-open, show the menu */
-.nav-open .main-nav {
-  display: flex !important;
+
+/* ───────────────────────────────────────────────────────────────
+   Quick Link Cards on Home Page
+──────────────────────────────────────────────────────────────── */
+
+.quick-links {
+  background: var(--background);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  max-width: 1080px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.quick-card {
+  display: block;
+  padding: 2rem 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  text-decoration: none;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: var(--text);
+  text-align: left;
+}
+
+.quick-card:hover,
+.quick-card:focus {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  border-color: var(--primary);
+  background-color: #fdfdfd;
+}
+
+.quick-card h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: var(--primary);
+}
+
+.quick-card p {
+  margin: 0.75rem 0 0 0;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.hero {
+  background-color: var(--background);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.hero .container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hero-banner {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 0 auto;
 }
