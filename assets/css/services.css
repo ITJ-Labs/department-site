@@ -571,3 +571,32 @@ img[src*="ai-sandbox-banner"]:hover {
   color: #ffffff;
   box-shadow: 0 4px 12px rgba(35, 201, 98, 0.4);
 }
+
+/*─────────────────────────────────────────────────────────────────────────
+  Ghost → Fill pattern for “Details →” (blue version)
+─────────────────────────────────────────────────────────────────────────*/
+
+.service-card__cta .button.primary {
+  /* Start as a ghost/outline button using the primary blue */
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+  transition: 
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.1s ease;
+}
+
+.service-card__cta .button.primary:hover,
+.service-card__cta .button.primary:focus {
+  /* On hover/focus → fill with blue, switch text to white, add a subtle shadow */
+  background-color: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(34, 119, 254, 0.4); /* semi-transparent “primary blue” shadow */
+  transform: translateY(-2px);
+}
