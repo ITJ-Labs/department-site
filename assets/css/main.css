@@ -270,3 +270,63 @@
   font-weight: 500;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
+
+/* ─────────────────────────────────────────────
+   CTA: Let's Talk Section (Card Style)
+────────────────────────────────────────────── */
+
+.home-cta {
+  background-color: var(--background, #f9f9f9);
+  padding: 5rem 1.5rem;
+}
+
+.home-cta .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  border: 1px solid var(--muted, #ccc);
+}
+
+.cta-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary, #0057ff);
+}
+
+.cta-card p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--text, #222);
+}
+
+/* Generic button style (still useful for other CTAs) */
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+/* Specific green style — make it more specific to override earlier rules */
+.cta-card .cta-button.cta-green {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.cta-card .cta-button.cta-green:hover {
+  background-color: #218838;
+}
+
+.cta-button.cta-green {
+  background-color: green !important;
+  color: white !important;
+}
