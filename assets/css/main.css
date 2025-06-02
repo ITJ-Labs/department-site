@@ -224,3 +224,49 @@
 .cta-button:hover {
   background-color: #0059c0;
 }
+
+/* ───────────────────────────────────────────────────────────
+   Why ITJ Labs Section
+───────────────────────────────────────────────────────────────*/
+
+.why-itj {
+  padding: 4rem 1rem;
+  background-color: var(--background-alt, #f5f5f5);
+  color: var(--text);
+}
+
+.why-itj .container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why-itj .section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--primary); 
+}
+
+.why-itj .section-subtitle {
+  font-size: 1.2rem;
+  color: var(--muted-text, #666);
+  margin-bottom: 2rem;
+}
+
+.why-itj .why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.why-itj .why-list li {
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--primary, #0057ff);
+  background-color: #fff;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
