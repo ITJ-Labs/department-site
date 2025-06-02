@@ -190,7 +190,7 @@ All of the tools below are open-source under permissive licenses (MIT, Apache 2.
       <li><strong>Use cases</strong>: Pharma compliance reports, medical records tagging</li>
     </ul>
     <p class="service-card__cta">
-            <a href="/services/neurodocs/" class="button primary">Details →</a>
+      <a href="/services/neurodocs/" class="button primary">Details →</a>
     </p>
   </div>
 
@@ -202,7 +202,7 @@ All of the tools below are open-source under permissive licenses (MIT, Apache 2.
       <li><strong>Use cases</strong>: HR automation, bulk candidate screening</li>
     </ul>
     <p class="service-card__cta">
-            <a href="/services/cv-extractor/" class="button primary">Details →</a>
+      <a href="/services/cv-extractor/" class="button primary">Details →</a>
     </p>
   </div>
 
@@ -214,7 +214,8 @@ All of the tools below are open-source under permissive licenses (MIT, Apache 2.
       <li><strong>Use cases</strong>: Recruitment process optimization, pre-hiring assessments</li>
     </ul>
     <p class="service-card__cta">
-            <a href="/services/talentbot/" class="button primary">Details →</a>
+      <a href="/services/talentbot/" class="button primary">Details →</a>
+    </p>
   </div>
 
 </div>
