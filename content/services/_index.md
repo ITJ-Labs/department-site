@@ -243,12 +243,11 @@ All of the tools below are open-source under permissive licenses (MIT, Apache 2.
     </li>
   </ul>
 </div>
-
----
+</div>
 
 <p style="text-align:center; margin-top:2rem;">
-  <a href="https://github.com/ITJ-Labs-Dept/support-requests/issues/new/choose"
-     class="button success">
-    Submit a request →
+  <a href="https://itj.com/"
+     class="learn-more-button button learn-more" target="_blank">
+    Learn More About →
   </a>
 </p>

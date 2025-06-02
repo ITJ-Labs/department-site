@@ -547,3 +547,27 @@ img[src*="ai-sandbox-banner"]:hover {
   font-size: 1.6rem;  /* match the size of your other emojis */
   vertical-align: middle;
 }
+
+
+/* Step 1: Ghost/outline style */
+.button.learn-more {
+  background-color: transparent;
+  color: #23C962;            /* green text */
+  border: 2px solid #23C962; /* green border */
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+  transition: 
+    background-color 0.2s ease, 
+    color 0.2s ease, 
+    box-shadow 0.2s ease;
+}
+
+/* Step 2: On hover/focus → fill with green, white text */
+.button.learn-more:hover,
+.button.learn-more:focus {
+  background-color: #23C962; /* fill green */
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(35, 201, 98, 0.4);
+}
