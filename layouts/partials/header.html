@@ -1,0 +1,24 @@
+<header class="site-header">
+  <div class="container">
+    <!-- Logo / Site Title -->
+    <div class="logo">
+      <a href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a>
+    </div>
+
+    <!-- Hamburger toggle button -->
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <!-- Main navigation -->
+    <nav class="main-nav">
+      <ul class="nav-list">
+        {{ range .Site.Menus.main }}
+          {{ if not .Parent }}
+            <li class="nav-item">
+              <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>
