@@ -153,3 +153,16 @@
   font-size: 1.2rem;
   margin: 0 auto;
 }
+
+.hero-quote {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--text);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  opacity: 0.9;
+}
