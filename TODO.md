@@ -62,3 +62,4 @@
 - [ ] Add “Request an AI PoC Audit” CTA link
 - [ ] Add client logo carousel (internal or anonymized)
 - [ ] Create grid of “mini case studies”
+- [ ] **Automate fetching CV Extractor documentation from Confluence via REST API and convert it to Markdown during the Hugo build**
