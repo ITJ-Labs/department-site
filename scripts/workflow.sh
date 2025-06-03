@@ -1,20 +1,19 @@
 #!/usr/bin/env bash
 # scripts/workflow.sh
-# A small orchestrator for debugging, applying CSS overrides, and serving your site.
+# Orchestrator for Hugo: clean build, generate CSS head partial, and serve.
 
 set -euo pipefail
 
-# Helpers
 debug() {
   echo "🧹 Cleaning Hugo caches..."
   rm -rf resources public
   echo "✅ Caches cleared."
 }
 
-apply_css() {
-  echo "🎨 Applying custom CSS overrides..."
+generate_head() {
+  echo "🎨 Regenerating head partial using Hugo Pipes..."
   ./scripts/apply-custom-css.sh
-  echo "✅ Custom CSS applied."
+  echo "✅ Head partial updated with dynamic CSS links."
 }
 
 serve() {
@@ -27,11 +26,11 @@ usage() {
 Usage: $0 <command>
 
 Commands:
-  debug       Clear Hugo caches (resources/, public/)
-  apply-css   Copy custom CSS & regenerate head partial
-  serve       Start the Hugo dev server (via serve.sh)
-  all         Run debug → apply-css → serve in sequence
-  help        Show this message
+  debug          Clear Hugo caches (resources/, public/)
+  generate-head  Regenerate CSS <link> tags using Hugo Pipes
+  serve          Start the Hugo dev server (via serve.sh)
+  all            Run debug → generate-head → serve
+  help           Show this message
 EOF
   exit 1
 }
@@ -42,9 +41,9 @@ if [[ $# -ne 1 ]]; then
 fi
 
 case "$1" in
-  debug)     debug ;;
-  apply-css) apply_css ;;
-  serve)     serve ;;
-  all)       debug; apply_css; serve ;;
-  help|*)    usage ;;
+  debug)         debug ;;
+  generate-head) generate_head ;;
+  serve)         serve ;;
+  all)           debug; generate_head; serve ;;
+  help|*)        usage ;;
 esac
