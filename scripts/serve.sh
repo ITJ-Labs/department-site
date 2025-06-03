@@ -1,19 +1,16 @@
 #!/usr/bin/env bash
 # scripts/serve.sh
 
-# Exit on first error
-set -e
+set -euo pipefail
 
-# Move to the script’s parent directory (your site root)
 cd "$(dirname "$0")/.."
 
-echo "🔄 Cleaning generated resources..."
-rm -rf resources public
+echo "🔄 Cleaning Hugo build resources..."
+rm -rf resources/ public/
 
-echo "🚀 Starting Hugo dev server..."
+echo "🚀 Starting Hugo development server with Hugo Pipes support..."
 hugo server \
   --disableFastRender \
-  --theme=PaperMod \
-  --baseURL http://localhost:1313/ \
+  --noHTTPCache \
   --buildDrafts \
   --watch
