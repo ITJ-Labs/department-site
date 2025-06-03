@@ -234,6 +234,21 @@
   50%     { transform: translateY(-6px) }
 }
 
+.partner-logo a {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.partner-logo a:hover,
+.partner-logo a:focus,
+.partner-logo a:active {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
 
 /* ———————————————————————————————————————————————— */
 /* Center the H1 and subtitle on the About page          */
