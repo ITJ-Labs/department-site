@@ -1,34 +1,33 @@
 #!/usr/bin/env bash
-# scripts/apply-custom-css.sh
-# This script patches your site to include all CSS files from assets/css into static/css,
-# and regenerates extend_head.html with the correct <link> tags.
+# Updated: uses Hugo Pipes, generates valid Go template syntax
 
 set -euo pipefail
 
-SRC_DIR="assets/css"
-DST_DIR="static/css"
+echo "🎨 Skipping CSS copy — Hugo Pipes is now handling style injection."
+
 PARTIAL="layouts/partials/extend_head.html"
+SRC_DIR="assets/css"
 
-echo "🔧 Copying custom CSS files from $SRC_DIR to $DST_DIR…"
-mkdir -p "$DST_DIR"
-for cssfile in "$SRC_DIR"/*.css; do
-  filename=$(basename "$cssfile")
-  cp "$cssfile" "$DST_DIR/$filename"
-  echo "  - $filename"
-done
+if [ -d "static/css" ] && [ "$(ls -A static/css 2>/dev/null)" ]; then
+  echo "⚠️  static/css is not empty. Please delete any old files to avoid conflicts:"
+  ls -1 static/css
+  exit 1
+fi
 
-echo "🔧 Generating $PARTIAL…"
+echo "🔧 Generating $PARTIAL using Hugo Pipes references..."
 mkdir -p "$(dirname "$PARTIAL")"
 
-# Start partial
-cat > "$PARTIAL" << 'EOF'
+# Write the partial header
+cat > "$PARTIAL" <<'EOF'
 {{/* layouts/partials/extend_head.html */}}
 EOF
 
-# Append each <link> for the copied .css files
+# Append each CSS file using Hugo Pipes syntax
 for cssfile in "$SRC_DIR"/*.css; do
   filename=$(basename "$cssfile")
-  echo "<link rel=\"stylesheet\" href=\"{{ \"/css/$filename\" | relURL }}\">" >> "$PARTIAL"
+  varname=$(echo "$filename" | cut -d'.' -f1 | tr '-' '_')
+  echo "{{ \$${varname} := resources.Get \"css/${filename}\" | minify | fingerprint }}" >> "$PARTIAL"
+  echo "<link rel=\"stylesheet\" href=\"{{ \$${varname}.RelPermalink }}\">" >> "$PARTIAL"
 done
 
-echo "✅ $PARTIAL generated with links to all custom CSS files."
+echo "✅ $PARTIAL generated with Hugo Pipes <link> tags."

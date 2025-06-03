@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (toggleButton && header) {
     toggleButton.addEventListener("click", () => {
-      header.classList.toggle("nav-open");
+      const isOpen = header.classList.toggle("nav-open");
+      toggleButton.setAttribute("aria-expanded", isOpen);
     });
   }
 });
