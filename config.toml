@@ -19,10 +19,6 @@ theme = "PaperMod"
     [markup.goldmark.renderer]
       unsafe = true
 
-# ────────────────────────────────────────────────────────────────────
-# Hugo menu definitions for the main navbar
-# ────────────────────────────────────────────────────────────────────
-
 [menu]
 
   [[menu.main]]
