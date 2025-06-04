@@ -5,17 +5,20 @@
 }
 
 .section-title {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  font-weight: 700;
   text-align: center;
-  color: var(--primary-text, #eee);
+  color: #111;             /* solid black for strong contrast */
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
 }
 
 .section-description {
-  text-align: center;
-  margin-bottom: 2rem;
   font-size: 1.1rem;
-  color: var(--secondary-text, #aaa);
+  text-align: center;
+  color: #444;               /* readable but not pure black */
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .event-grid {
@@ -26,12 +29,13 @@
 }
 
 .event-card {
-  background: var(--entry, #1e1e1e);
-  border: 1px solid var(--border, #333);
+  background: #ffffff; /* white card */
+  color: #1a1a1a; /* default text color */
+  border: 1px solid #ccc;
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -71,25 +75,24 @@
   padding: 1.2rem;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.5rem;
 }
 
 .event-info h2 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 0;
-  color: var(--primary, #fff);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111111;
 }
 
 .event-date,
 .event-location {
-  font-size: 0.9rem;
-  color: var(--tertiary-text, #bbb);
+  font-size: 0.95rem;
+  color: #444444;
 }
 
 .event-summary {
   font-size: 1rem;
-  color: #ddd;
+  color: #222222;
   margin-top: 0.5rem;
-  line-height: 1.4;
+  line-height: 1.6;
 }
