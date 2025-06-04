@@ -2,7 +2,10 @@
 title = "TalentBot (WIP)"
 date = "2025-01-05T09:00:00-07:00"
 draft = false
-headless = true
+headless = false
+
+[build]
+  list = false
 +++
 
 <div class="intro-block">
@@ -14,7 +17,7 @@ headless = true
     This page is under construction. We’ll be adding TalentBot’s architecture, 
     API reference, and deployment guide soon. Stay tuned!
   </p>
-  <p class="industry-note">
+  <p class="support-note">
     If you have urgent questions about TalentBot, please email 
     <a href="mailto:miguel.lopez@itj.com">miguel.lopez@itj.com</a>.
   </p>

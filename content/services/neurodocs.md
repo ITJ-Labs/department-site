@@ -2,7 +2,10 @@
 title = "NeuroDocs (WIP)"
 date = "2025-01-05T09:00:00-07:00"
 draft = false
-headless = true
+headless = false
+
+[build]
+list = false
 +++
 
 <div class="intro-block">
@@ -14,7 +17,7 @@ headless = true
     We’re still polishing this page—check back soon for full NeuroDocs documentation, 
     including setup instructions, API examples, and configuration details.
   </p>
-  <p class="industry-note">
+  <p class="support-note">
     In the meantime, if you have urgent questions about NeuroDocs, please email 
         <a href="mailto:miguel.lopez@itj.com">miguel.lopez@itj.com</a>.
   </p>

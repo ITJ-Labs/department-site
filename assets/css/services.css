@@ -143,7 +143,7 @@ h1.title {
   text-align: center;
   font-size: 1.6rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #111111; /* Very dark gray for better contrast */
   text-transform: uppercase;
   letter-spacing: 0.8px;
   margin-bottom: 1rem;
@@ -187,18 +187,19 @@ img[src*="ai-sandbox-banner"]:hover {
 
 .section-subtitle {
   font-size: 0.95rem;
-  color: var(--secondary);
+  color: #444444; /* darker for better readability */
   text-align: center;
   margin-top: -0.5rem;
   margin-bottom: 1.5rem;
-  opacity: 0.8;
+  opacity: 1.0;
 }
 
 .industry-quote {
   margin-top: 2rem;
   padding: 1.2rem 1.5rem;
-  background: rgba(255, 255, 255, 0.02);
-  border-left: 4px solid hsl(220, 80%, 60%);
+  color: #1f1f1f; /* darker quote text */
+  background: rgba(240, 240, 240, 0.4);
+  border-left: 4px solid #007acc;
   font-style: italic;
   font-size: 0.95rem;
   border-radius: 8px;
@@ -255,7 +256,7 @@ img[src*="ai-sandbox-banner"]:hover {
 .failure-reasons .reason-detail {
   display: block;
   margin-left: 1.6rem;
-  color: #cfcfcf;
+  color: #e6e6e6;
 }
 
 /*─────────────────────────────────────────────────────────────────────────
@@ -287,7 +288,7 @@ img[src*="ai-sandbox-banner"]:hover {
 .help-list .help-detail {
   display: block;
   margin-left: 1.6rem;
-  color: #cfcfcf;
+  color: #e6e6e6;
 }
 
 /*─────────────────────────────────────────────────────────────────────────
@@ -297,8 +298,9 @@ img[src*="ai-sandbox-banner"]:hover {
 .industry-note {
   margin-top: 1.5rem;
   padding: 1rem 1.2rem;
-  background-color: rgba(255, 255, 255, 0.02);
-  border-left: 4px solid hsl(220, 80%, 60%);
+  color: #2c2c2c;
+  background-color: rgba(235, 245, 255, 0.4);
+  border-left: 4px solid #007acc;
   font-style: italic;
   font-size: 0.92rem;
   border-radius: 6px;
@@ -306,7 +308,7 @@ img[src*="ai-sandbox-banner"]:hover {
 }
 
 .industry-note a {
-  color: #ffffff;
+  color: #007acc;
   text-decoration: underline;
 }
 
@@ -373,7 +375,7 @@ img[src*="ai-sandbox-banner"]:hover {
 .poc-list .poc-detail {
   display: block;
   margin-left: 1.6rem;
-  color: #cfcfcf;
+  color: #e6e6e6;
 }
 
 /*─────────────────────────────────────────────────────────────────────────
@@ -392,7 +394,7 @@ img[src*="ai-sandbox-banner"]:hover {
 /* Subtitle styling (use-case list) under the heading */
 .intro-block.tech-stack .section-subtitle {
   font-size: 0.95rem;
-  color: var(--secondary);
+  color: #333333; /* much darker and readable */
   text-align: center;
   margin-top: -0.5rem;
   margin-bottom: 1rem;
@@ -402,16 +404,20 @@ img[src*="ai-sandbox-banner"]:hover {
 /* Tech‐grid container: use CSS Grid for responsiveness */
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
 }
 
 /* Individual tech‐item block (logo + text) */
 .tech-item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
 }
 
 /* Logo link & image */
@@ -423,7 +429,7 @@ img[src*="ai-sandbox-banner"]:hover {
 }
 
 .tech-logo {
-  width: 2.4rem;
+  width: 2.6rem;
   height: auto;
   display: block;
   border: none; /* no border around linked image */
@@ -432,14 +438,23 @@ img[src*="ai-sandbox-banner"]:hover {
 /* Text next to the logo */
 .tech-text {
   flex: 1;
-  line-height: 1.5;
-  font-size: 1rem;
-  color: #e0e0e0;
+  color: #222222;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.tech-text strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+  color: #111111;
+  font-weight: 700;
 }
 
 /* Remove underlines by default; underline on hover only */
 .tech-text a {
-  color: #ffffff;
+  color: #222222;
+  font-weight: 500;
   text-decoration: none;
   transition: color 0.15s ease;
 }
@@ -489,9 +504,9 @@ img[src*="ai-sandbox-banner"]:hover {
 ─────────────────────────────────────────────────────────────────────────*/
 
 .button.learn-more {
-  background-color: transparent;
-  color: #23C962;
-  border: 2px solid #23C962;
+  background-color: #1E9D59; /* filled green */
+  color: #ffffff;
+  border: 2px solid #1E9D59;
   padding: 0.7rem 1.4rem;
   border-radius: 6px;
   font-weight: 600;
@@ -504,9 +519,9 @@ img[src*="ai-sandbox-banner"]:hover {
 
 .button.learn-more:hover,
 .button.learn-more:focus {
-  background-color: #23C962;
+  background-color: #167D47; /* darker green */
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(35, 201, 98, 0.4);
+  box-shadow: 0 4px 12px rgba(22, 125, 71, 0.4);
 }
 
 /*─────────────────────────────────────────────────────────────────────────
@@ -557,4 +572,68 @@ img[src*="ai-sandbox-banner"]:hover {
 .intro-block.tech-stack a:focus {
   text-decoration: underline !important;
   color: #4ADE80 !important;  /* accent green on hover */
+}
+
+
+.failure-reasons .reason-detail,
+.help-list .help-detail,
+.poc-list .poc-detail {
+  color: #eeeeee;
+}
+
+.failure-reasons .reason-title,
+.help-list .help-title,
+.poc-list .poc-title {
+  color: #111111;         /* stronger than #e0e0e0 */
+  font-weight: 600;
+}
+
+.failure-reasons .reason-detail,
+.help-list .help-detail,
+.poc-list .poc-detail {
+  color: #555555;         /* soft but visible */
+}
+
+.failure-reasons li,
+.help-list li,
+.poc-list li {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.failure-reasons li:nth-child(1),
+.help-list li:nth-child(1),
+.poc-list li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.failure-reasons li:nth-child(2),
+.help-list li:nth-child(2),
+.poc-list li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+/*─────────────────────────────────────────────────────────────────────────
+  Support Note (For Contact or Help Info)
+─────────────────────────────────────────────────────────────────────────*/
+
+.support-note {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #222222;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border-left: 4px solid #4ADE80;
+  border-radius: 8px;
+}
+
+.support-note a {
+  color: #007acc;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.support-note a:hover {
+  color: #4ADE80;
 }

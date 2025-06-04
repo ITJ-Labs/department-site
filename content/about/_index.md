@@ -186,7 +186,7 @@ We collaborate with top institutions, research centers, and clients to drive AI 
     “Great projects are built on clear goals, empowered teams, and relentless follow-through.”
   </blockquote>
   <ul class="expertise">
-    <li>8+ years managing cross-functional AI & software projects</li>
+    <li>8+ years managing cross-functional & software projects</li>
     <li>Certified Scrum Master & PMP</li>
     <li>Skilled in stakeholder alignment & risk management</li>
   </ul>
