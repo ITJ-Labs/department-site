@@ -612,3 +612,28 @@ img[src*="ai-sandbox-banner"]:hover {
 .poc-list li:nth-child(2) {
   animation-delay: 0.2s;
 }
+
+/*─────────────────────────────────────────────────────────────────────────
+  Support Note (For Contact or Help Info)
+─────────────────────────────────────────────────────────────────────────*/
+
+.support-note {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #222222;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border-left: 4px solid #4ADE80;
+  border-radius: 8px;
+}
+
+.support-note a {
+  color: #007acc;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.support-note a:hover {
+  color: #4ADE80;
+}

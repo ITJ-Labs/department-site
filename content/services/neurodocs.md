@@ -17,7 +17,7 @@ list = false
     We’re still polishing this page—check back soon for full NeuroDocs documentation, 
     including setup instructions, API examples, and configuration details.
   </p>
-  <p class="industry-note">
+  <p class="support-note">
     In the meantime, if you have urgent questions about NeuroDocs, please email 
         <a href="mailto:miguel.lopez@itj.com">miguel.lopez@itj.com</a>.
   </p>

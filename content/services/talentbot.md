@@ -17,7 +17,7 @@ headless = false
     This page is under construction. We’ll be adding TalentBot’s architecture, 
     API reference, and deployment guide soon. Stay tuned!
   </p>
-  <p class="industry-note">
+  <p class="support-note">
     If you have urgent questions about TalentBot, please email 
     <a href="mailto:miguel.lopez@itj.com">miguel.lopez@itj.com</a>.
   </p>
