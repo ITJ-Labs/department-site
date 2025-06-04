@@ -2,7 +2,10 @@
 title = "TalentBot (WIP)"
 date = "2025-01-05T09:00:00-07:00"
 draft = false
-headless = true
+headless = false
+
+[build]
+  list = false
 +++
 
 <div class="intro-block">
