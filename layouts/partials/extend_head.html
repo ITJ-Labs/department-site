@@ -1,4 +1,9 @@
 {{/* layouts/partials/extend_head.html */}}
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.png" type="image/png">
+
+<!-- CSS Bundles -->
 {{ $about := resources.Get "css/about.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $about.RelPermalink }}">
 {{ $button_brand := resources.Get "css/button-brand.css" | minify | fingerprint }}
