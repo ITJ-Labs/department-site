@@ -18,7 +18,11 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.147.6'
+
+      - name: Install PaperMod theme
+        run: |
+          git clone --depth 1 https://github.com/adityatelange/hugo-PaperMod themes/PaperMod
 
       - name: Build site
         run: hugo --minify --baseURL=https://itj-labs.github.io/department-site/
