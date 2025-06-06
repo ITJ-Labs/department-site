@@ -146,7 +146,7 @@ We collaborate with top institutions, research centers, and clients to drive AI 
         <li>Former Director of Engineering & Software Development</li>
       </ul>
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/rafaelgpl/" aria-label="LinkedIn" target="_blank" re="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/rafaelgpl/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
           <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
         </a>
       </div>
