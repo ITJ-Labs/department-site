@@ -32,3 +32,5 @@ EOF
 
 # Ignore any styles override we’re not using
 layouts/partials/styles.html
+
+/department-site

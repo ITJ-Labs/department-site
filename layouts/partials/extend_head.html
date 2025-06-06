@@ -1,7 +1,7 @@
 {{/* layouts/partials/extend_head.html */}}
 
 <!-- Favicon -->
-<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="icon" href="{{ "favicon.png" | relURL }}" type="image/png">
 
 <!-- CSS Bundles -->
 {{ $about := resources.Get "css/about.css" | minify | fingerprint }}

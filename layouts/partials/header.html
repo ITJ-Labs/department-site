@@ -14,7 +14,7 @@
         {{ range .Site.Menus.main }}
           {{ if not .Parent }}
             <li class="nav-item">
-              <a href="{{ .URL }}">{{ .Name }}</a>
+              <a href="{{ .URL | relURL }}">{{ .Name }}</a>
             </li>
           {{ end }}
         {{ end }}

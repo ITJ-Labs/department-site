@@ -2,6 +2,7 @@ baseURL = "https://itj-labs.github.io/department-site/"
 languageCode = "en-us"
 title = "ITJ Labs Department"
 theme = "PaperMod"
+realtiveURLs = true
 
 [params]
   primaryHue       = 220

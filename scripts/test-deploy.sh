@@ -1,21 +1,25 @@
 #!/usr/bin/env bash
 set -e
 
-# 1) Build with Hugo (production baseURL is already in config.toml).
-echo "Building site…"
-hugo --minify
-
-# 2) If a previous department-site/ exists, remove it.
+# 0) Clean up any existing public/ or department-site/ folders
 if [ -d "department-site" ]; then
   echo "Removing old department-site/…"
   rm -rf department-site
 fi
+if [ -d "public" ]; then
+  echo "Removing old public/…"
+  rm -rf public
+fi
 
-# 3) Rename public/ → department-site/
+# 1) Build with Hugo (production baseURL is already in config.toml).
+echo "Building site…"
+hugo --minify
+
+# 2) Rename public/ → department-site/
 echo "Moving public/ → department-site/…"
 mv public department-site
 
-# 4) Define a cleanup function to restore public/ on exit.
+# 3) Define a cleanup function to restore public/ on exit.
 cleanup() {
   echo
   echo "Stopping server and restoring public/…"
@@ -27,9 +31,6 @@ cleanup() {
 # When the script receives SIGINT (Ctrl+C) or exits, run cleanup()
 trap cleanup EXIT
 
-# 5) Serve the department-site/ folder at port 8000
+# 4) Serve the department-site/ folder at port 8000
 echo "Serving department-site/ at http://localhost:8000/department-site/  (Ctrl+C to stop)…"
-cd .
 python3 -m http.server 8000
-
-# Note: script will pause here until you hit Ctrl+C, then cleanup() runs.
