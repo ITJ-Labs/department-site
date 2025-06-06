@@ -39,4 +39,10 @@ draft = false
   {{< contact-form >}}
 </section>
 
+<section class="support-ticket">
+  <h2>Open a Support Ticket</h2>
+  <p>If you need urgent help with an existing project, please submit an issue in our GitHub support repository:</p>
+  <p><a href="https://github.com/ITJ-Labs-Dept/support-requests/issues/new/choose" class="button primary" target="_blank" rel="noopener noreferrer">Submit a ticket on GitHub</a></p>
+</section>
+
 </div>
