@@ -3,14 +3,23 @@
 
 set -euo pipefail
 
-cd "$(dirname "$0")/.."
+# Ensure we're in the repo root
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR/.."
 
-echo "🔄 Cleaning Hugo build resources..."
-rm -rf resources/ public/
+# Check Hugo is installed
+if ! command -v hugo >/dev/null 2>&1; then
+  echo "❌ Hugo is not installed. Please install Hugo: https://gohugo.io/getting-started/installing/"
+  exit 1
+fi
 
-echo "🚀 Starting Hugo development server with Hugo Pipes support..."
+echo "🔄 Cleaning generated resources..."
+rm -rf resources public
+
+echo "🚀 Starting Hugo dev server..."
 hugo server \
   --disableFastRender \
-  --noHTTPCache \
   --buildDrafts \
+  --noHTTPCache \
+  --baseURL http://localhost:1313/ \
   --watch
