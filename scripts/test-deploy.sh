@@ -1,36 +1,33 @@
 #!/usr/bin/env bash
 set -e
 
-# 0) Clean up any existing public/ or department-site/ folders
-if [ -d "department-site" ]; then
-  echo "Removing old department-site/…"
-  rm -rf department-site
-fi
-if [ -d "public" ]; then
-  echo "Removing old public/…"
-  rm -rf public
-fi
+# usage:
+#   ./test-deploy.sh         # build only (prod URLs)
+#   ./test-deploy.sh serve   # build + serve locally (root URLs)
 
-# 1) Build with Hugo (production baseURL is already in config.toml).
-echo "Building site…"
-hugo --minify
+# 0) Clean up any existing output
+rm -rf public department-site
+
+# 1) Build
+if [[ "$1" == "serve" ]]; then
+  echo "🛠  Building for LOCAL preview (root URLs)…"
+  hugo --minify --baseURL=http://localhost:8000/
+else
+  echo "🛠  Building for PRODUCTION (GitHub Pages URLs)…"
+  hugo --minify
+fi
 
 # 2) Rename public/ → department-site/
-echo "Moving public/ → department-site/…"
+echo "📂  Moving public → department-site…"
 mv public department-site
 
-# 3) Define a cleanup function to restore public/ on exit.
-cleanup() {
+# 3) If “serve”, kill any old server & launch a new one
+if [[ "$1" == "serve" ]]; then
   echo
-  echo "Stopping server and restoring public/…"
+  echo "🔄  Stopping any previous local server on port 8000…"
   pkill -f "python3 -m http.server 8000" 2>/dev/null || true
-  rm -rf public
-  mv department-site public
-  echo "Done."
-}
-# When the script receives SIGINT (Ctrl+C) or exits, run cleanup()
-trap cleanup EXIT
 
-# 4) Serve the department-site/ folder at port 8000
-echo "Serving department-site/ at http://localhost:8000/department-site/  (Ctrl+C to stop)…"
-python3 -m http.server 8000
+  echo "🌐  Serving at http://localhost:8000/department-site/  (Ctrl+C to stop)"
+  # Stay in the repo root; now /department-site/* maps to ./department-site/*
+  python3 -m http.server 8000
+fi
