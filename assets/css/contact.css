@@ -1,5 +1,75 @@
 /* ───────────────────────────────────────────────
-   Contact Form Layout & Styling
+   Contact Page Grid Layout (Row Layout)
+─────────────────────────────────────────────── */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ───────────────────────────────────────────────
+   Contact Info Card Styling (Left Column)
+─────────────────────────────────────────────── */
+
+.contact-info {
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.contact-list li a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.contact-list li a:hover {
+  color: #2e7d32;
+}
+
+.contact-list .icon,
+.icon {
+  width: 24px;
+  height: 24px;
+  color: #2e7d32;
+  flex-shrink: 0;
+}
+
+/* ───────────────────────────────────────────────
+   Contact Form Card Styling (Right Column)
 ─────────────────────────────────────────────── */
 
 .contact-form {
@@ -8,22 +78,7 @@
   border-radius: 10px;
   padding: 2rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-  position: relative;
 }
-
-/* Optional accent stripe (comment out to remove) */
-/*
-.contact-form::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 4px;
-  width: 100%;
-  background-color: var(--accent, #2e7d32); 
-  border-radius: 10px 10px 0 0;
-}
-*/
 
 .contact-form h2 {
   text-align: center;
@@ -33,12 +88,10 @@
   font-weight: 700;
 }
 
-/* Form layout */
 .contact-form form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 100%;
 }
 
 .contact-form .form-group {
@@ -53,7 +106,6 @@
   color: #333;
 }
 
-/* Inputs and Textarea */
 .contact-form input,
 .contact-form textarea {
   padding: 0.85rem 1rem;
@@ -68,15 +120,14 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: var(--accent, #2e7d32);
+  border-color: #2e7d32;
   box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
   outline: none;
 }
 
-/* Submit Button */
 .contact-form button {
   align-self: flex-start;
-  background-color: var(--accent, #2e7d32);
+  background-color: #2e7d32;
   color: #fff;
   padding: 0.75rem 1.5rem;
   font-weight: 600;
