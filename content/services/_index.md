@@ -112,7 +112,7 @@ draft = false
     <div class="tech-grid">
       <div class="tech-item">
         <a href="https://huggingface.co/transformers/" target="_blank" class="tech-logo-link">
-          <img src="images/logos/huggingface.png" alt="Hugging Face" class="tech-logo" />
+          <img src="/images/logos/huggingface.png" alt="Hugging Face" class="tech-logo" />
         </a>
         <div class="tech-text">
           <strong>LLMs &amp; NLP</strong><br/>
@@ -124,7 +124,7 @@ draft = false
 
   <div class="tech-item">
     <a href="https://pytorch.org/" target="_blank" class="tech-logo-link">
-      <img src="images/logos/pytorch.png" alt="PyTorch" class="tech-logo" />
+      <img src="/images/logos/pytorch.png" alt="PyTorch" class="tech-logo" />
     </a>
     <div class="tech-text">
       <strong>ML Frameworks</strong><br/>
@@ -137,7 +137,7 @@ draft = false
 
   <div class="tech-item">
     <a href="https://ultralytics.com/yolov8" target="_blank" class="tech-logo-link">
-      <img src="images/logos/opencv.png" alt="YOLOv8" class="tech-logo" />
+      <img src="/images/logos/opencv.png" alt="YOLOv8" class="tech-logo" />
     </a>
     <div class="tech-text">
       <strong>Computer Vision</strong><br/>
@@ -149,7 +149,7 @@ draft = false
 
   <div class="tech-item">
     <a href="https://www.docker.com/" target="_blank" class="tech-logo-link">
-      <img src="images/logos/docker.png" alt="Docker" class="tech-logo" />
+      <img src="/images/logos/docker.png" alt="Docker" class="tech-logo" />
     </a>
     <div class="tech-text">
       <strong>Deployment</strong><br/>
@@ -177,7 +177,7 @@ draft = false
       <li><strong>Use cases</strong>: Pharma compliance reports, medical records tagging</li>
     </ul>
     <p class="service-card__cta">
-      <a href="services/neurodocs/" class="button primary">Details →</a>
+      <a href="/services/neurodocs/" class="button primary">Details →</a>
     </p>
   </div>
 
@@ -189,7 +189,7 @@ draft = false
       <li><strong>Use cases</strong>: HR automation, bulk candidate screening</li>
     </ul>
     <p class="service-card__cta">
-      <a href="services/cv-extractor/" class="button primary">Details →</a>
+      <a href="/services/cv-extractor/" class="button primary">Details →</a>
     </p>
   </div>
 
@@ -201,7 +201,7 @@ draft = false
       <li><strong>Use cases</strong>: Recruitment process optimization, pre-hiring assessments</li>
     </ul>
     <p class="service-card__cta">
-      <a href="services/talentbot/" class="button primary">Details →</a>
+      <a href="/services/talentbot/" class="button primary">Details →</a>
     </p>
   </div>
 
