@@ -6,109 +6,120 @@ ITJ Labs Department website powered by [Hugo](https://gohugo.io/) and the [Paper
 
 ## Prerequisites
 
-* [Hugo Extended](https://gohugo.io/getting-started/installing/) v0.147.6+
-* GNU `make` (for task orchestration)
-* `git` (to fetch submodules)
+* **Hugo Extended** v0.147.6+ ([https://gohugo.io/getting-started/installing/](https://gohugo.io/getting-started/installing/))
+* **GNU Make** for task orchestration
+* **Git** for version control and submodules
 
 ---
 
 ## Getting Started
 
-### Clone the repo
+1. **Clone the repository**
 
-```bash
-git clone https://github.com/ITJ-Labs/department-site.git
-cd department-site
-```
+   ```bash
+   git clone https://github.com/ITJ-Labs/department-site.git
+   cd department-site
+   ```
+2. **Fetch the PaperMod theme**
 
-### Fetch the PaperMod theme
+   ```bash
+   git submodule update --init --recursive
+   ```
+3. **Install dependencies**
 
-```bash
-git submodule update --init --recursive
-```
-
-### Install dependencies
-
-No external dependencies—Hugo and `make` are all you need.
+   ```bash
+   # No additional dependencies beyond Hugo and Make
+   hugo version
+   make --version
+   ```
 
 ---
 
 ## Local Development
 
-Use the provided Makefile for a seamless dev workflow:
+Use the provided Makefile for an efficient development workflow:
 
 ```bash
-# Clean build artifacts
+# Clean previous builds
 make debug
 
-# Run Hugo dev server (auto-reload, drafts)
+# Start Hugo dev server (auto-reload, includes drafts)
 make serve
 ```
 
-Visit [http://localhost:1313](http://localhost:1313) in your browser. Hugo watches your files and live-reloads on changes.
+* The server runs at [http://localhost:1313](http://localhost:1313)
+* LiveReload will refresh your browser on file changes
 
 ---
 
 ## CSS & Assets
 
-All CSS is managed via Hugo Pipes and bundled into a single fingerprinted file. Source styles live in `assets/css/`.
-
-Static assets (images, JS) reside in `static/` and are served at `/images/` and `/js/` respectively.
+* **Source styles**: `assets/css/` (Hugo Pipes processes these)
+* **Bundled styles**: single fingerprinted CSS in `public/css/`
+* **Static files**: `static/` serves images and JS at `/images/` and `/js/`
 
 ---
 
-## Building & Previewing Production
+## Production Build & Preview
 
-To generate a production build and preview it locally:
+To build for production and preview locally:
 
 ```bash
-# Create optimized site output and rename for GitHub Pages
+# Build and serve production output
 make preview
 ```
 
-This will:
+This executes:
 
-1. Run `hugo --minify` (uses `baseURL` in `config.toml`)
-2. Rename `public/` → `department-site/`
-3. Serve on [http://localhost:8000](http://localhost:8000)
+1. `hugo --minify` (uses `baseURL` from `config.toml`)
+2. Renames `public/` to `department-site/`
+3. Serves at [http://localhost:8000](http://localhost:8000)
 
 ---
 
-## Deploy
+## Deploy to GitHub Pages
 
-To build for GitHub Pages (without preview):
+When ready to publish:
 
 ```bash
 make deploy
 ```
 
-The `department-site/` folder produced is ready to be pushed to your `gh-pages` branch.
+This generates the `department-site/` folder, which you can push to the `gh-pages` branch or configure your CI to handle.
 
 ---
 
 ## Project Structure
 
 ```
-├── archetypes      # Hugo front-matter templates
-├── assets          # Hugo Pipes source (CSS, SCSS)
-├── content         # Markdown content organized by section
-├── data            # Data files (YAML, JSON, TOML)
-├── layouts         # Hugo layout templates & partials
-├── scripts         # Helper scripts (serve.sh, deploy.sh)
-├── static          # Static files (images, JS, favicon)
-├── themes          # Hugo theme (PaperMod)
-├── Makefile        # Task orchestration (serve, build, deploy)
-└── config.toml     # Site config (baseURL, menus, params)
+├── archetypes/        # Hugo front-matter templates
+├── assets/            # Hugo Pipes source (CSS, SCSS)
+├── content/           # Markdown content files
+├── data/              # Data files (YAML, JSON, TOML)
+├── layouts/           # Hugo templates & partials
+├── scripts/           # Helper scripts (serve.sh, deploy.sh)
+├── static/            # Static files (images, JS, favicon)
+├── themes/            # Hugo theme (PaperMod)
+├── Makefile           # Task orchestration (debug, serve, build, preview, deploy)
+└── config.toml        # Site configuration (baseURL, menus, params)
 ```
 
 ---
 
 ## Contributing
 
-1. Create a feature branch off `develop` (e.g. `feature/your-feature`).
-2. Commit and push to GitHub.
+1. Create a feature branch off `develop`: `git checkout -b feature/your-feature`
+2. Make your changes, commit, and push.
 3. Open a Pull Request targeting `develop`.
-4. Once approved, it will be merged and deployed via CI.
+4. Upon approval, changes are merged; CI will build and deploy.
+
+---
+
+## See Also
+
+* [INSTRUCTIONS.md](INSTRUCTIONS.md) for detailed step-by-step setup
+* [CHANGELOG.md](CHANGELOG.md) for version history and release notes
+* [TODO.md](TODO.md) for backlog and future tasks
 
 ---
 
