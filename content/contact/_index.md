@@ -4,45 +4,37 @@ date  = "2025-05-27T10:00:00-07:00"
 draft = false
 +++
 
+<h1 class="contact-page-title"></h1>
+
 <div class="contact-grid">
 
-<section class="contact-info">
-  <h2>Get in Touch</h2>
-  <ul class="contact-list">
+  <section class="contact-info">
+    <h2>Get in Touch</h2>
+    <ul class="contact-list">
+      <li>
+        <a href="mailto:labs@itj.com">
+          {{< icon name="email" >}}
+          <span>labs@itj.com</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://wa.me/526644164937" target="_blank">
+          {{< icon name="whatsapp" >}}
+          <span>+52 664 416 4937</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/company/itj/" target="_blank">
+          {{< icon name="linkedin" >}}
+          <span>LinkedIn</span>
+        </a>
+      </li>
+    </ul>
+  </section>
 
-<li>
-      <a href="mailto:labs@itj.com">
-                        {{< icon name="email" >}}
-                        <span>labs@itj.com</span>
-      </a>
-</li>
-
-<li>
-      <a href="https://wa.me/526644164937">
-                {{< icon name="whatsapp" >}}
-        <span>+52 55 1234 5678</span>
-       </a>
-</li>
-
-<li>
-      <a href="https://www.linkedin.com/company/itj/">
-                {{< icon name="linkedin" >}}
-                <span>LinkedIn</span>
-      </a>
-</li>
-
-  </ul>
-</section>
-
-<section class="contact-form">
-  <h2>Send us a Message</h2>
-  {{< contact-form >}}
-</section>
-
-<section class="support-ticket">
-  <h2>Open a Support Ticket</h2>
-  <p>If you need urgent help with an existing project, please submit an issue in our GitHub support repository:</p>
-  <p><a href="https://github.com/ITJ-Labs-Dept/support-requests/issues/new/choose" class="button primary" target="_blank" rel="noopener noreferrer">Submit a ticket on GitHub</a></p>
-</section>
+  <section class="contact-form">
+    <h2>Send us a Message</h2>
+    {{< contact-form >}}
+  </section>
 
 </div>

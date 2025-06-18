@@ -6,10 +6,10 @@
   {{ end }}
 
   {{/* — CONTENT WRAPPER — */}}
-<article class="post-single {{ if and .IsPage (eq .Section "about") }}about-page{{ end }}">
+  <article class="post-single {{ if or (eq .Section "about") (eq .Section "contact") }}no-default-title{{ end }}">
 
-    {{/* — SKIP THE DEFAULT HEADER FOR About pages — */}}
-    {{ if not (and .IsPage (eq .Section "about")) }}
+    {{/* — SKIP HEADER for About and Contact pages — */}}
+    {{ if not (or (eq .Section "about") (eq .Section "contact")) }}
       <header class="post-header">
         <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
         {{ with .Date }}
