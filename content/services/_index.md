@@ -112,7 +112,7 @@ draft = false
     <div class="tech-grid">
       <div class="tech-item">
         <a href="https://huggingface.co/transformers/" target="_blank" class="tech-logo-link">
-          <img src="images/logos/huggingface.png" alt="Hugging Face" class="tech-logo" />
+          <img src="/images/logos/huggingface.png" alt="Hugging Face" class="tech-logo" />
         </a>
         <div class="tech-text">
           <strong>LLMs &amp; NLP</strong><br/>
@@ -124,7 +124,7 @@ draft = false
 
   <div class="tech-item">
     <a href="https://pytorch.org/" target="_blank" class="tech-logo-link">
-      <img src="images/logos/pytorch.png" alt="PyTorch" class="tech-logo" />
+      <img src="/images/logos/pytorch.png" alt="PyTorch" class="tech-logo" />
     </a>
     <div class="tech-text">
       <strong>ML Frameworks</strong><br/>
@@ -137,7 +137,7 @@ draft = false
 
   <div class="tech-item">
     <a href="https://ultralytics.com/yolov8" target="_blank" class="tech-logo-link">
-      <img src="images/logos/opencv.png" alt="YOLOv8" class="tech-logo" />
+      <img src="/images/logos/opencv.png" alt="YOLOv8" class="tech-logo" />
     </a>
     <div class="tech-text">
       <strong>Computer Vision</strong><br/>
@@ -149,7 +149,7 @@ draft = false
 
   <div class="tech-item">
     <a href="https://www.docker.com/" target="_blank" class="tech-logo-link">
-      <img src="images/logos/docker.png" alt="Docker" class="tech-logo" />
+      <img src="/images/logos/docker.png" alt="Docker" class="tech-logo" />
     </a>
     <div class="tech-text">
       <strong>Deployment</strong><br/>
