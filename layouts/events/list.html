@@ -15,7 +15,7 @@
 
         {{ if $imgs }}
           <div class="event-image-slideshow" data-images='{{ jsonify $imgs }}'>
-            <img class="event-image-slide" alt="{{ $.Title }}">
+		<img class="event-image-slide" src="{{ index $imgs 0 }}" alt="{{ $.Title }}">
           </div>
         {{ end }}
 
