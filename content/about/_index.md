@@ -12,7 +12,7 @@ draft       = false
 <div class="mission-vision">
   <div class="mv-cards">
     <div class="mv-card">
-      <img src="/images/icons/mission.svg" alt="" class="mv-icon" />
+      <img src="images/icons/mission.svg" alt="" class="mv-icon" />
       <h2>Our Mission</h2>
       <p>
         At ITJ Labs Department, our mission is to empower organizations with
@@ -21,7 +21,7 @@ draft       = false
       </p>
     </div>
     <div class="mv-card">
-      <img src="/images/icons/vision.svg" alt="" class="mv-icon" />
+      <img src="images/icons/vision.svg" alt="" class="mv-icon" />
       <h2>Our Vision</h2>
       <p>
         We envision a world where cutting-edge AI solutions are accessible to
@@ -45,7 +45,7 @@ draft       = false
     <div class="flip-card-inner">
       <div class="flip-card-front">
         <h3>Build capabilities around AI and related technologies</h3>
-        <img class="goal-icon" src="/images/icons/ai-capabilities.svg" alt="AI Capabilities">
+        <img class="goal-icon" src="images/icons/ai-capabilities.svg" alt="AI Capabilities">
       </div>
       <div class="flip-card-back">
         <p>We act as a liaison and consulting group within ITJ to support localized AI initiatives across the organization.</p>
@@ -58,7 +58,7 @@ draft       = false
     <div class="flip-card-inner">
       <div class="flip-card-front">
         <h3>Design, build and implement AI products and services</h3>
-        <img class="goal-icon" src="/images/icons/ai-products.svg" alt="AI Products">
+        <img class="goal-icon" src="images/icons/ai-products.svg" alt="AI Products">
       </div>
       <div class="flip-card-back">
         <p>We create production-ready AI solutions—not just for ITJ’s core business, but also by leveraging public data to spark new innovations.</p>
@@ -71,7 +71,7 @@ draft       = false
     <div class="flip-card-inner">
       <div class="flip-card-front">
         <h3>Divulge AI knowledge and information</h3>
-        <img class="goal-icon" src="/images/icons/ai-knowledge.svg" alt="AI Knowledge">
+        <img class="goal-icon" src="images/icons/ai-knowledge.svg" alt="AI Knowledge">
       </div>
       <div class="flip-card-back">
         <p>In partnership with prestigious universities, we serve as a central knowledge hub for AI research and insights.</p>
@@ -91,22 +91,22 @@ We collaborate with top institutions, research centers, and clients to drive AI 
 <div class="partners-grid">
   <div class="partner-logo" data-aos="fade-up">
     <a href="https://www.citedi.mx/portal/" target="_blank" rel="noopener">
-      <img src="/images/partners/citedi.png" alt="CITEDI-IPN">
+      <img src="images/partners/citedi.png" alt="CITEDI-IPN">
     </a>
   </div>
   <div class="partner-logo" data-aos="fade-up" data-aos-delay="100">
     <a href="https://www.cetys.mx/" target="_blank" rel="noopener">
-      <img src="/images/partners/cetys.png" alt="CETYS">
+      <img src="images/partners/cetys.png" alt="CETYS">
     </a>
   </div>
   <div class="partner-logo" data-aos="fade-up" data-aos-delay="200">
     <a href="https://www.uabc.mx/" target="_blank" rel="noopener">
-      <img src="/images/partners/uabc.png" alt="UABC">
+      <img src="images/partners/uabc.png" alt="UABC">
     </a>
   </div>
   <div class="partner-logo" data-aos="fade-up" data-aos-delay="300">
     <a href="https://www.tijuana.tecnm.mx/" target="_blank" rel="noopener">
-      <img src="/images/partners/itt.png" alt="ITT-TecNM">
+      <img src="images/partners/itt.png" alt="ITT-TecNM">
     </a>
   </div>
 </div>
@@ -116,7 +116,7 @@ We collaborate with top institutions, research centers, and clients to drive AI 
 
 <section class="team-leaders two-per-row">
     <div class="leader-card">
-  <img src="/images/team/phil.png" alt="Phil Sweeney" />
+  <img src="images/team/phil.png" alt="Phil Sweeney" />
   <h3>Phil Sweeney</h3>
   <p class="role">Principal Business Leader</p>
   <blockquote>
@@ -129,12 +129,12 @@ We collaborate with top institutions, research centers, and clients to drive AI 
   </ul>
   <div class="social-links">
     <a href="https://www.linkedin.com/in/phillipsweeney/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-      <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
+      <img src="images/icons/linkedin.svg" alt="LinkedIn" />
     </a>
   </div>
 </div>
     <div class="leader-card">
-      <img src="/images/team/rafa.png" alt="Rafael GPL" />
+      <img src="images/team/rafa.png" alt="Rafael GPL" />
       <h3>Rafael GPL</h3>
       <p class="role">Data Science Director</p>
       <blockquote>
@@ -146,13 +146,13 @@ We collaborate with top institutions, research centers, and clients to drive AI 
         <li>Former Director of Engineering & Software Development</li>
       </ul>
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/rafaelgpl/" aria-label="LinkedIn" target="_blank" re="noopener noreferrer">
-          <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
+        <a href="https://www.linkedin.com/in/rafaelgpl/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <img src="images/icons/linkedin.svg" alt="LinkedIn" />
         </a>
       </div>
     </div>
 <div class="leader-card">
-  <img src="/images/team/drmike.png" alt="Dr. Miguel López" />
+  <img src="images/team/drmike.png" alt="Dr. Miguel López" />
   <h3>Dr. Miguel López</h3>
   <p class="role">Data Science Manager</p>
   <blockquote>
@@ -165,21 +165,21 @@ We collaborate with top institutions, research centers, and clients to drive AI 
   </ul>
   <div class="social-links">
     <a href="https://orcid.org/0000-0001-5367-9801" aria-label="ORCID" target="_blank" rel="noopener noreferrer">
-      <img src="/images/icons/orcid.svg" alt="ORCID" />
+      <img src="images/icons/orcid.svg" alt="ORCID" />
     </a>
     <a href="https://www.linkedin.com/in/miguel-angel-lopez-montiel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-      <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
+      <img src="images/icons/linkedin.svg" alt="LinkedIn" />
     </a>
     <a href="https://scholar.google.com/citations?user=ejQAKasAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer">
-      <img src="/images/icons/google-scholar.svg" alt="Google Scholar" />
+      <img src="images/icons/google-scholar.svg" alt="Google Scholar" />
     </a>
     <a href="https://www.scopus.com/authid/detail.uri?authorId=57212031562" aria-label="Scopus" target="_blank" rel="noopener noreferrer">
-      <img src="/images/icons/scopus.svg" alt="Scopus" />
+      <img src="images/icons/scopus.svg" alt="Scopus" />
     </a>
   </div>
 </div>
 <div class="leader-card">
-  <img src="/images/team/ivan.png" alt="Ivan Romero" />
+  <img src="images/team/ivan.png" alt="Ivan Romero" />
   <h3>Ivan Romero</h3>
   <p class="role">Project Manager</p>
   <blockquote>
@@ -192,7 +192,7 @@ We collaborate with top institutions, research centers, and clients to drive AI 
   </ul>
   <div class="social-links">
     <a href="https://www.linkedin.com/in/ivanrromero/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-      <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
+      <img src="images/icons/linkedin.svg" alt="LinkedIn" />
     </a>
   </div>
 </div>

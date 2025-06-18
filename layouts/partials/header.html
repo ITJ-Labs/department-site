@@ -1,3 +1,5 @@
+{{/* layouts/partials/header.html */}}
+
 <header class="site-header">
   <div class="container">
     <!-- Logo / Site Title -->
@@ -14,7 +16,7 @@
         {{ range .Site.Menus.main }}
           {{ if not .Parent }}
             <li class="nav-item">
-              <a href="{{ .URL }}">{{ .Name }}</a>
+              <a href="{{ .URL | relURL }}">{{ .Name }}</a>
             </li>
           {{ end }}
         {{ end }}
@@ -22,3 +24,6 @@
     </nav>
   </div>
 </header>
+
+<!-- Begin site-container wrapper -->
+<div class="site-container">

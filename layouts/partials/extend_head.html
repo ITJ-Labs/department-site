@@ -1,20 +1,24 @@
 {{/* layouts/partials/extend_head.html */}}
 
 <!-- Favicon -->
-<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="icon" href="{{ "favicon.png" | relURL }}" type="image/png">
 
-<!-- CSS Bundles -->
-{{ $about := resources.Get "css/about.css" | minify | fingerprint }}
+<!-- Nav styles first -->
+{{ $nav := resources.Get "css/nav.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $nav.RelPermalink }}">
+
+<!-- Section styles -->
+{{ $about := resources.Get "css/about.css"      | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $about.RelPermalink }}">
-{{ $button_brand := resources.Get "css/button-brand.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $button_brand.RelPermalink }}">
-{{ $contact := resources.Get "css/contact.css" | minify | fingerprint }}
+{{ $button := resources.Get "css/button-brand.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $button.RelPermalink }}">
+{{ $contact := resources.Get "css/contact.css"  | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $contact.RelPermalink }}">
-{{ $events := resources.Get "css/events.css" | minify | fingerprint }}
+{{ $events  := resources.Get "css/events.css"   | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $events.RelPermalink }}">
-{{ $main := resources.Get "css/main.css" | minify | fingerprint }}
+{{ $main    := resources.Get "css/main.css"     | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $main.RelPermalink }}">
-{{ $publications := resources.Get "css/publications.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $publications.RelPermalink }}">
-{{ $services := resources.Get "css/services.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $services.RelPermalink }}">
+{{ $pubs    := resources.Get "css/publications.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $pubs.RelPermalink }}">
+{{ $svc     := resources.Get "css/services.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $svc.RelPermalink }}">
