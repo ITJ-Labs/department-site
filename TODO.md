@@ -13,20 +13,26 @@
 - [ ] Validate Hugo Pipes CSS bundle is loaded once per page and includes all styles.
 - [ ] Run production build (`make preview`) and inspect for any console or layout errors.
 
+---
+
 ## Page-Level UX Fixes (Contact Page)
+- [x] 📝 **Remove duplicate "Contact Us" heading**  
+  Prevented double title rendering by cleaning `_index.md`.
 
-- [ ] 📝 **Remove duplicate "Contact Us" heading**  
-  Prevent double title rendering by adjusting layout logic or suppressing markdown title.
+- [x] 🎨 **Style "Send Message" button**  
+  Matched green theme with proper padding, hover effect, border radius.
 
-- [ ] 🎨 **Style "Send Message" button**  
-  Apply `success` button style to match green theme (padding, hover, radius, shadow).
+- [x] ✅ **Improve form card design**  
+  Unified card styling (padding, shadows, spacing) for consistent UX.
 
-- [ ] ✅ **Add visual feedback on form submission**  
-  Temporary success message or loading animation when user clicks submit.
+- [x] 🖱 **Add hover effect on contact links**  
+  Added scale+highlight interaction to reinforce interactivity.
 
-- [ ] 📱 **Ensure mobile responsiveness for contact grid**  
-  Icons and text should stay aligned and readable below 768px.
+- [x] 🎨 **Clean icon spacing & remove black underlines**  
+  Updated layout to remove legacy styles and visual noise.
+
+- [x] 📱 **Ensure mobile responsiveness for contact grid**  
+  Validated that icons, text, and layout stack properly below 768px.
 
 - [ ] 🔄 **(Optional) Centralize contact links in `data/contact.toml`**  
   For cleaner reuse and easier updates by non-devs in future.
-
