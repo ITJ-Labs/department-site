@@ -4,8 +4,6 @@ date  = "2025-05-27T10:00:00-07:00"
 draft = false
 +++
 
-<h1 class="contact-page-title">Contact Us</h1>
-
 <div class="contact-grid">
 
   <!-- Contact Info Card -->
