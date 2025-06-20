@@ -8,17 +8,26 @@
 <link rel="stylesheet" href="{{ $nav.RelPermalink }}">
 
 <!-- Section styles -->
-{{ $about := resources.Get "css/about.css"      | minify | fingerprint }}
+{{ $about := resources.Get "css/about.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $about.RelPermalink }}">
+
 {{ $button := resources.Get "css/button-brand.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $button.RelPermalink }}">
-{{ $contact := resources.Get "css/contact.css"  | minify | fingerprint }}
+
+{{ $contact := resources.Get "css/contact.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $contact.RelPermalink }}">
-{{ $events  := resources.Get "css/events.css"   | minify | fingerprint }}
+
+{{ $events := resources.Get "css/events.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $events.RelPermalink }}">
-{{ $main    := resources.Get "css/main.css"     | minify | fingerprint }}
+
+{{ $main := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $main.RelPermalink }}">
-{{ $pubs    := resources.Get "css/publications.css" | minify | fingerprint }}
+
+{{ $featured := resources.Get "css/featured-service.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $featured.RelPermalink }}">
+
+{{ $pubs := resources.Get "css/publications.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $pubs.RelPermalink }}">
-{{ $svc     := resources.Get "css/services.css" | minify | fingerprint }}
+
+{{ $svc := resources.Get "css/services.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $svc.RelPermalink }}">
