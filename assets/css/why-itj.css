@@ -1,0 +1,63 @@
+/* ───────────────────────────────────────────────────────────
+   Why ITJ Labs Section (Updated Design)
+───────────────────────────────────────────────────────────────*/
+
+.why-itj {
+  padding: 4rem 1rem;
+  background-color: var(--background-alt, #f5f5f5);
+  color: var(--text);
+}
+
+.why-itj .container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why-itj .section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: #111;
+}
+
+.why-itj .section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+}
+
+.why-itj .why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.why-itj .why-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: #fff;
+  border-left: 4px solid var(--primary, #0057ff);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.why-itj .why-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-left-color: var(--accent, #1a73e8);
+}
+
+.why-itj .why-list li .emoji {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}

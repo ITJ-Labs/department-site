@@ -29,6 +29,9 @@
 {{ $cta := resources.Get "css/home-cta.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $cta.RelPermalink }}">
 
+{{ $why := resources.Get "css/why-itj.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $why.RelPermalink }}">
+
 {{ $pubs := resources.Get "css/publications.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $pubs.RelPermalink }}">
 
