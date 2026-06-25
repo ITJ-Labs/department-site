@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - develop
+  workflow_dispatch:
 
 permissions:
   contents: write  # needed to push to gh-pages
@@ -19,6 +20,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.147.6'
+          extended: true
 
       - name: Fetch submodules
         run: git submodule update --init --recursive
@@ -33,4 +35,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages     # <— push here
-          force_orphan: true           # <— keep an orphan branch
+          force_orphan: false
