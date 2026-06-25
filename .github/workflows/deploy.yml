@@ -26,8 +26,7 @@ jobs:
         run: git submodule update --init --recursive
 
       - name: Build site
-        run: hugo --minify \
-          --baseURL=https://itj-labs.github.io/department-site/
+        run: hugo --minify --baseURL=https://itj-labs.github.io/department-site/
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
