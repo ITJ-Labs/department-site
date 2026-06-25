@@ -10,7 +10,7 @@ build:
 	hugo --minify
 
 preview: build
-	./scripts/test-deploy.sh serve
+	./scripts/deploy.sh serve
 
 deploy: build
-	./scripts/test-deploy.sh
+	./scripts/deploy.sh

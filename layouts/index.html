@@ -8,16 +8,11 @@
 </head>
 <body>
   {{ partial "header.html" . }}
-
-  {{/* Main content wrapped in site-container for sidebar offset */}}
-  <div class="site-container">
-    {{ partial "hero.html" . }}
-    {{ partial "home_quicklinks.html" . }}
-    {{ partial "home_featured_service.html" . }}
-    {{ partial "home_why.html" . }}
-    {{ partial "home_cta.html" . }}
-  </div>
-
+  {{ partial "hero.html" . }}
+  {{ partial "home_quicklinks.html" . }}
+  {{ partial "home_featured_service.html" . }}
+  {{ partial "home_why.html" . }}
+  {{ partial "home_cta.html" . }}
   {{ partial "footer.html" . }}
 </body>
 </html>

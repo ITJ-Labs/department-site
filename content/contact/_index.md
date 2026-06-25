@@ -34,18 +34,21 @@ draft = false
   <!-- Contact Form Card -->
   <section class="contact-form">
     <h2>Send us a message</h2>
-    <form>
+    <form action="https://formsubmit.co/labs@itj.com" method="POST">
+      <input type="hidden" name="_subject" value="New message from AI Solutions website" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://itj-labs.github.io/department-site/" />
       <div class="form-group">
         <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" placeholder="Jane Doe" />
+        <input type="text" id="name" name="name" placeholder="Jane Doe" required />
       </div>
       <div class="form-group">
         <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" />
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
       </div>
       <div class="form-group">
         <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="How can we help you today?" rows="6"></textarea>
+        <textarea id="message" name="message" placeholder="How can we help you today?" rows="6" required></textarea>
       </div>
       <button type="submit">Send Message</button>
     </form>

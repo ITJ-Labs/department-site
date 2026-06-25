@@ -1,78 +1,3 @@
-/* ────────────────────────────────────────────────────────────────────
-   Header & Navbar Styling with Always-Visible Hamburger Toggle
-────────────────────────────────────────────────────────────────────── */
-
-.site-header {
-  position: relative;
-  background-color: var(--background);
-  z-index: 1000;
-}
-
-/* Always show hamburger icon */
-.mobile-menu-toggle {
-  display: block;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: var(--text);
-  padding: 0.5rem;
-}
-
-/* Hidden nav by default (invisible + not interactable) */
-.main-nav {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: var(--background);
-  border-top: 1px solid var(--muted);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
-  pointer-events: none;
-  z-index: 999;
-}
-
-/* When menu is toggled open */
-.nav-open .main-nav {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-/* List & Link styles */
-.nav-list {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.nav-item {
-  border-bottom: 1px solid var(--muted);
-}
-
-.nav-item a {
-  display: block;
-  padding: 0.75rem 1rem;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
-}
-
-.nav-item a:hover,
-.nav-item a:focus {
-  color: var(--primary);
-  background-color: var(--muted);
-}
-
-
 /* ───────────────────────────────────────────────────────────────
    Quick Link Cards on Home Page
 ──────────────────────────────────────────────────────────────── */
@@ -168,10 +93,9 @@
 }
 
 /* ────────────────────────────────────────────────────────────────────
-   Global content container
+   Global content container — base padding only.
+   Desktop sidebar offset (margin-left: 220px) is in nav.css @media.
 ────────────────────────────────────────────────────────────────────── */
 .site-container {
-  max-width: 960px;
-  margin: 0 auto;
   padding: 2rem 1rem;
 }
