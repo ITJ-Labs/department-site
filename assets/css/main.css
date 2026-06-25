@@ -45,8 +45,8 @@
 }
 
 .quick-card p {
-  margin: 0.75rem 0 0 0;
-  font-size: 1rem;
+  margin: var(--space-3) 0 0 0;
+  font-size: var(--font-size-base);
   color: var(--text);
 }
 
@@ -64,32 +64,32 @@
 .hero-banner {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-card);
+  margin-bottom: var(--space-8);
+  box-shadow: var(--shadow-md);
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-2);
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.2rem;           /* intentional — between md and lg; migration candidate */
   margin: 0 auto;
 }
 
 .hero-quote {
-  font-size: 1.25rem;
+  font-size: var(--font-size-lg);
   font-style: italic;
   color: var(--text);
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  max-width: 600px;
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+  max-width: var(--container-xs);
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.6;
-  opacity: 0.9;
+  line-height: var(--line-height-base);
+  opacity: var(--opacity-muted);
 }
 
 /* ────────────────────────────────────────────────────────────────────
@@ -97,5 +97,5 @@
    Desktop sidebar offset (margin-left: 220px) is in nav.css @media.
 ────────────────────────────────────────────────────────────────────── */
 .site-container {
-  padding: 2rem 1rem;
+  padding: var(--space-8) var(--space-4);
 }

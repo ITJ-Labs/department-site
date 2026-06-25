@@ -1,0 +1,55 @@
+/* ================================================================
+   brand.css — ITJ Solutions AI Solutions Brand Identity Layer
+   SF-SLICE-087D.2
+   ================================================================
+   Loaded after tokens.css, before all other custom CSS.
+   Extends tokens.css with brand-context custom properties and
+   establishes ITJ Solutions logo and identity rules.
+
+   Scope: brand identity only. Do not add page-layout rules here.
+   ================================================================ */
+
+:root {
+  /* Brand gradient — mirrors itj.com primary-to-light direction */
+  --brand-gradient:        linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  --brand-gradient-hover:  linear-gradient(135deg, var(--color-primary-hover), var(--color-primary));
+
+  /* Brand surface — slightly warm white used in elevated panels */
+  --brand-surface-warm:    #fdfdfd;
+}
+
+/* ── Logo mark ──────────────────────────────────────────────────── */
+/* Applies brand blue to the site logo link. Additive — nav.css
+   handles layout; this file handles brand color identity only.    */
+.logo a {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: var(--color-primary-hover);
+  text-decoration: none;
+}
+
+/* ── Brand accent stripe utility ────────────────────────────────── */
+/* Canonical top or left stripe that signals brand identity.
+   Used by service cards, intro blocks, blockquotes.              */
+.brand-stripe-top {
+  border-top: 3px solid var(--color-primary);
+}
+
+.brand-stripe-left {
+  border-left: 4px solid var(--color-primary);
+}
+
+/* ── Brand section marker ────────────────────────────────────────  */
+/* Horizontal gradient bar for section-level visual separators.   */
+.brand-divider {
+  height: 3px;
+  background: var(--brand-gradient);
+  border: none;
+  border-radius: var(--radius-pill);
+  margin: var(--space-8) auto;
+  width: 60px;
+}

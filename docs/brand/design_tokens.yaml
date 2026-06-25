@@ -1,24 +1,31 @@
 # ITJ Solutions — AI Solutions Design Tokens
-# Slice: SF-SLICE-087D.0 — Corporate Brand Discovery
+# Slice: SF-SLICE-087D.2 — Design System Foundation
 # Date: 2026-06-25
-# Status: DRAFT — Pending executive brand alignment
+# Status: FOUNDATION — Token layer active; 65 tokens implemented
 #
 # Notation:
-#   status: canonical   — confirmed and ready for implementation
-#   status: placeholder — current best value; must be confirmed with ITJ brand team
-#   status: decision    — requires stakeholder decision before implementation
-#   status: gap         — no current value; token must be defined from scratch
+#   status: implemented  — token exists in tokens.css and used in CSS files
+#   status: defined      — token exists in tokens.css; not yet applied in page CSS
+#   status: canonical    — confirmed correct value; safe to consume
+#   status: placeholder  — working value; pending official brand confirmation
+#   status: gap          — no current value; token must be defined from scratch
 #
 # NOTE: This file contains token definitions ONLY.
 # No CSS. No implementation. No :root {} blocks.
-# Implementation will be delivered in SF-SLICE-087D.1.
+# Implementation: assets/css/tokens.css (SF-SLICE-087D.1/087D.2)
 
 meta:
   project: AI Solutions Digital Platform
   brand: ITJ Solutions — AI Solutions (sub-brand)
   parent_brand: ITJ Solutions (itj.com)
   parent_brand_direction: blue-to-purple gradient
-  status: draft
+  status: foundation
+  token_count: 65
+  coverage_estimate: "~72%"
+  slices_completed:
+    - SF-SLICE-087D.0  # brand discovery
+    - SF-SLICE-087D.1  # token implementation (22 tokens)
+    - SF-SLICE-087D.2  # design system foundation (+43 tokens; 6 layer CSS files)
 
 # ──────────────────────────────────────────────────────────────────────────────
 # COLOR TOKENS
@@ -62,11 +69,6 @@ colors:
       status: implemented
       note: Focus ring shadow for inputs and interactive elements (D-05 resolved).
 
-  # ── Brand Secondary / CTA ──────────────────────────────────────────────────
-  # D-02 RESOLVED: Primary CTAs use --color-primary (blue).
-  # Green is reserved for semantic success/status only (--color-success).
-  # No separate secondary CTA color; secondary buttons use outline/ghost of primary.
-
   # ── Semantic ───────────────────────────────────────────────────────────────
   semantic:
     success:
@@ -81,97 +83,109 @@ colors:
       value: "#256329"
       css-var: "--color-success-hover"
       status: implemented
+    success-glow:
+      value: "rgba(46, 125, 50, 0.35)"
+      css-var: "--color-success-glow"
+      status: implemented
     warning:
       value: "#b45309"
-      status: gap
-      note: No warning color defined in codebase. This is a suggested value (amber-700).
+      status: defined
+      note: Amber-700. Defined in ds-alert-warning. Not yet used in page CSS.
     danger:
       value: "#dc2626"
       status: gap
-      note: >
-        #dc3545 (Bootstrap red) appears only in publications card hover — likely unintentional.
-        Needs an intentional danger token defined separately from that hover state.
+      note: No danger/error color defined. Needs intentional definition.
     info:
       value: "#0369a1"
       status: gap
-      note: No info color defined. This is a suggested value (sky-700).
+      note: No info color defined. Suggested value (sky-700).
 
   # ── Text ──────────────────────────────────────────────────────────────────
   text:
     primary:
       value: "#111111"
-      status: canonical
-      note: Dark text on light background. Consolidates #111, #1a1a1a, #222.
+      css-var: "--color-text-primary"
+      status: implemented
+      note: >
+        Dark text on light background. Consolidates #111, #1a1a1a, #222.
+        NOTE: #1a1a1a, #222222 still hardcoded in some files — value mismatch.
     secondary:
       value: "#444444"
-      status: canonical
-      note: Body secondary text. Consolidates #333, #444, #555.
+      css-var: "--color-text-secondary"
+      status: implemented
+      note: >
+        Body secondary text. Consolidates #333, #444, #555.
+        NOTE: #333, #555 still hardcoded in some files — value mismatch.
     muted:
       value: "#666666"
-      status: canonical
+      css-var: "--color-text-muted"
+      status: implemented
       note: Placeholder, captions, metadata.
     disabled:
       value: "#999999"
       status: gap
       note: No disabled text color defined. Suggested value.
-    inverse:
-      value: "#ffffff"
-      status: canonical
-      note: Text on dark/colored backgrounds. Used in nav, dark sections.
-    inverse-muted:
-      value: "#e0e0e0"
-      status: canonical
-      note: Subdued text on dark backgrounds. Found in services.css dark sections.
-    link:
-      value: "color.brand.primary"
-      status: canonical
-      note: Links default to primary brand color via PaperMod --primary variable.
-    link-hover:
-      value: "color.brand.primary-hover"
-      status: canonical
 
-  # ── Background ──────────────────────────────────────────────────────────────
-  background:
-    page:
+  # ── Surfaces ──────────────────────────────────────────────────────────────
+  surface:
+    default:
       value: "#ffffff"
-      status: canonical
-      note: Main page background. PaperMod --background in light mode.
-    surface:
-      value: "#ffffff"
-      status: canonical
-      note: Card and panel background.
-    surface-alt:
+      css-var: "--color-surface"
+      status: implemented
+    alt:
       value: "#f9f9f9"
-      status: canonical
+      css-var: "--color-surface-alt"
+      status: implemented
       note: Alternating section backgrounds. Consolidates #f5f5f5 and #f9f9f9.
+    warm:
+      value: "#fdfdfd"
+      css-var: "--brand-surface-warm"
+      status: defined
+      note: Warm white for elevated panels (featured-service.css). In brand.css.
     overlay:
-      value: "rgba(0, 0, 0, 0.4)"
-      status: canonical
-      note: Mobile nav drawer backdrop (.nav-overlay).
-    dark-section:
+      value: "rgba(0, 0, 0, 0.40)"
+      css-var: "--color-overlay"
+      status: implemented
+      note: Mobile nav drawer backdrop.
+    dark:
       value: "#0f172a"
       status: gap
       note: >
-        services.css uses inline dark backgrounds for feature blocks.
-        No canonical dark background token defined. Suggested value: slate-900.
+        services.css uses dark ambient backgrounds for feature blocks.
+        No token yet. Suggested: slate-900. Required for TD-M11.
 
-  # ── Border ────────────────────────────────────────────────────────────────
+  # ── Borders ───────────────────────────────────────────────────────────────
   border:
     default:
       value: "#e1e1e1"
-      status: canonical
-      note: Standard card and component borders. Consolidates #ccc, #e1e1e1, rgba(0,0,0,0.15).
-    subtle:
-      value: "rgba(0, 0, 0, 0.08)"
-      status: canonical
-      note: Very light borders, icon frames.
-    focus:
-      value: "color.brand.primary"
-      status: decision
-      note: >
-        Currently #2e7d32 (green) for contact form focus ring.
-        Should change to primary blue — aligns focus ring with brand color.
-        Confirm before implementation.
+      css-var: "--color-border"
+      status: implemented
+    medium:
+      value: "#cccccc"
+      css-var: "--color-border-medium"
+      status: implemented
+      note: Input fields, card borders.
+    light:
+      value: "rgba(0, 0, 0, 0.15)"
+      css-var: "--color-border-light"
+      status: implemented
+      note: Subtle card borders.
+
+# ──────────────────────────────────────────────────────────────────────────────
+# BRAND TOKENS
+# (defined in brand.css, not tokens.css)
+# ──────────────────────────────────────────────────────────────────────────────
+
+brand:
+  gradient:
+    value: "linear-gradient(135deg, var(--color-primary), var(--color-primary-light))"
+    css-var: "--brand-gradient"
+    status: defined
+    note: Brand gradient. Used in .brand-divider utility. Mirrors itj.com direction.
+  gradient-hover:
+    value: "linear-gradient(135deg, var(--color-primary-hover), var(--color-primary))"
+    css-var: "--brand-gradient-hover"
+    status: defined
 
 # ──────────────────────────────────────────────────────────────────────────────
 # TYPOGRAPHY TOKENS
@@ -181,189 +195,162 @@ typography:
 
   # ── Font Family ───────────────────────────────────────────────────────────
   font-family:
-    base:
+    sans:
       value: >
-        -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-      status: placeholder
-      note: >
-        PaperMod system font stack. No webfont currently defined.
-        Decision required: keep system fonts or introduce enterprise webfont?
-        Candidates: Inter, IBM Plex Sans, Source Sans Pro.
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif
+      css-var: "--font-family-sans"
+      status: defined
+      note: Defined in tokens.css; not yet applied in page CSS (PaperMod owns body font).
+    mono:
+      value: '"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace'
+      css-var: "--font-family-mono"
+      status: defined
     webfont:
       value: "DECISION_REQUIRED"
-      status: decision
-      note: >
-        ITJ corporate typeface not confirmed. Requires inspection of itj.com CSS
-        or brand guidelines document from brand team.
-    mono:
-      value: "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace"
-      status: canonical
-      note: Code blocks. PaperMod default.
+      status: gap
+      note: ITJ corporate typeface not confirmed. Requires brand guidelines.
 
   # ── Type Scale ────────────────────────────────────────────────────────────
-  # Based on ad-hoc sizes found across CSS files. Not a formal scale currently.
-  # Suggested canonical scale. Values must be reviewed before 087D.1.
   scale:
-    display:
-      value: "3rem"      # 48px
-      status: gap
-      note: Not currently used. Suggested hero display size.
-    h1:
-      value: "2.5rem"    # 40px
-      status: canonical
-      note: Hero page title. Found in hero.html styles.
-    h2:
-      value: "2rem"      # 32px
-      status: canonical
-      note: Section headers. why-itj, cta, featured-service.
-    h3:
-      value: "1.5rem"    # 24px
-      status: canonical
-      note: Subsection, card titles. contact, featured-content.
-    h4:
-      value: "1.25rem"   # 20px
-      status: canonical
-      note: Event titles, pub cards.
-    h5:
-      value: "1.1rem"    # 17.6px
-      status: gap
-      note: Not currently defined. Suggested.
-    body-lg:
-      value: "1.125rem"  # 18px
-      status: gap
-      note: Larger body text. Not currently defined.
-    body:
-      value: "1rem"      # 16px
-      status: canonical
-      note: Default body text.
-    body-sm:
-      value: "0.95rem"   # 15.2px
-      status: canonical
-      note: Subtitle, metadata text.
-    caption:
-      value: "0.875rem"  # 14px
-      status: canonical
-      note: Small labels, badge text.
-    micro:
-      value: "0.75rem"   # 12px
-      status: gap
-      note: Not defined. Suggested for legal, footnotes.
+    xs:
+      value: "0.75rem"     # 12px
+      css-var: "--font-size-xs"
+      status: implemented
+      note: Legal, footnotes, badge labels.
+    sm:
+      value: "0.875rem"    # 14px
+      css-var: "--font-size-sm"
+      status: implemented
+      note: Captions, badges, meta, leader role text.
+    base:
+      value: "1rem"        # 16px
+      css-var: "--font-size-base"
+      status: implemented
+      note: Body text. Most common size.
+    md:
+      value: "1.1rem"      # ~18px
+      css-var: "--font-size-md"
+      status: implemented
+      note: Subtitles, section descriptions.
+    lg:
+      value: "1.25rem"     # 20px
+      css-var: "--font-size-lg"
+      status: implemented
+      note: Card titles, event h2, hero quote.
+    xl:
+      value: "1.5rem"      # 24px
+      css-var: "--font-size-xl"
+      status: implemented
+      note: h3 equivalents, featured-content h3.
+    2xl:
+      value: "2rem"        # 32px
+      css-var: "--font-size-2xl"
+      status: implemented
+      note: h2 section headings. NOTE: events.css uses 2.2rem (TD-M02).
+    3xl:
+      value: "2.5rem"      # 40px
+      css-var: "--font-size-3xl"
+      status: implemented
+      note: Hero h1. Most prominent page title.
 
   # ── Font Weight ───────────────────────────────────────────────────────────
   weight:
     regular:
       value: 400
-      status: canonical
+      css-var: "--font-weight-regular"
+      status: implemented
     medium:
       value: 500
-      status: canonical
-      note: Nav items, labels.
+      css-var: "--font-weight-medium"
+      status: implemented
+      note: Nav items, why-list items, labels.
     semibold:
       value: 600
-      status: canonical
-      note: Buttons, form labels, emphasized text.
+      css-var: "--font-weight-semibold"
+      status: implemented
+      note: Buttons, form labels, h3.
     bold:
       value: 700
-      status: canonical
-      note: Headings.
+      css-var: "--font-weight-bold"
+      status: implemented
+      note: Headings, section titles.
 
   # ── Line Height ───────────────────────────────────────────────────────────
   line-height:
     tight:
-      value: 1.2
-      status: canonical
+      value: 1.3
+      css-var: "--line-height-tight"
+      status: implemented
       note: Headings.
     compact:
       value: 1.4
-      status: canonical
-      note: Dense UI text.
-    default:
+      css-var: "--line-height-compact"
+      status: defined
+      note: Dense UI text. Defined but not yet applied in page CSS.
+    base:
       value: 1.6
-      status: canonical
-      note: Body text. Most common value across CSS files.
+      css-var: "--line-height-base"
+      status: implemented
+      note: Body text. Most common value.
+    loose:
+      value: 1.8
+      css-var: "--line-height-loose"
+      status: defined
+      note: Relaxed reading. Defined but not yet applied.
 
 # ──────────────────────────────────────────────────────────────────────────────
 # SPACING TOKENS
 # ──────────────────────────────────────────────────────────────────────────────
 
-# Base unit: 4px. Scale: 1 2 3 4 6 8 12 16 20 24 32 (multiples of 4px base).
-# Current codebase uses ad-hoc rem values. These tokens codify the intent.
+# Base unit: 4px. Scale: multiples of 4px.
+# Naming: --space-N where N = rem × 4 (e.g. 0.25rem = 1 → --space-1)
 
 spacing:
-  1:
-    value: "0.25rem"   # 4px
-    status: gap
-  2:
-    value: "0.5rem"    # 8px
-    status: canonical
-    note: Tight component padding, icon margins.
-  3:
-    value: "0.75rem"   # 12px
-    status: canonical
-  4:
-    value: "1rem"      # 16px
-    status: canonical
-    note: Standard component padding.
-  5:
-    value: "1.25rem"   # 20px
-    status: gap
-  6:
-    value: "1.5rem"    # 24px
-    status: canonical
-    note: Card inner padding, grid gaps.
-  8:
-    value: "2rem"      # 32px
-    status: canonical
-    note: Standard section padding, card padding (large).
-  10:
-    value: "2.5rem"    # 40px
-    status: gap
-  12:
-    value: "3rem"      # 48px
-    status: canonical
-    note: Section vertical padding (mobile).
-  16:
-    value: "4rem"      # 64px
-    status: canonical
-    note: Section vertical padding (desktop).
-  20:
-    value: "5rem"      # 80px
-    status: canonical
-    note: Large section vertical padding.
+  1:   { value: "0.25rem", css-var: "--space-1",  status: defined }
+  2:   { value: "0.5rem",  css-var: "--space-2",  status: implemented, note: "8px — badge padding, tight gap" }
+  3:   { value: "0.75rem", css-var: "--space-3",  status: implemented, note: "12px — label margin" }
+  4:   { value: "1rem",    css-var: "--space-4",  status: implemented, note: "16px — standard padding unit" }
+  5:   { value: "1.25rem", css-var: "--space-5",  status: defined }
+  6:   { value: "1.5rem",  css-var: "--space-6",  status: implemented, note: "24px — section-x, card padding" }
+  8:   { value: "2rem",    css-var: "--space-8",  status: implemented, note: "32px — grid gap, card padding, margin" }
+  10:  { value: "2.5rem",  css-var: "--space-10", status: implemented, note: "40px — section subtitle margin" }
+  12:  { value: "3rem",    css-var: "--space-12", status: implemented, note: "48px — events section padding" }
+  16:  { value: "4rem",    css-var: "--space-16", status: implemented, note: "64px — why-itj, featured-service padding" }
+  20:  { value: "5rem",    css-var: "--space-20", status: defined,     note: "80px — defined; used as --section-y" }
+
+section:
+  y:
+    value: "5rem"
+    css-var: "--section-y"
+    status: defined
+    note: Canonical section vertical padding. DS layer uses this; page CSS still hardcoded.
+  x:
+    value: "1.5rem"
+    css-var: "--section-x"
+    status: defined
+    note: Canonical section horizontal padding.
 
 # ──────────────────────────────────────────────────────────────────────────────
 # BORDER RADIUS TOKENS
 # ──────────────────────────────────────────────────────────────────────────────
 
 border-radius:
-  none:
-    value: "0"
-    status: canonical
-  sm:
-    value: "4px"
-    status: gap
-    note: Not found in codebase. Suggested for small UI elements.
   button:
     value: "6px"
-    status: canonical
-    note: Buttons and form inputs. Consistent across most of codebase.
-  badge:
-    value: "8px"
-    status: canonical
-    note: Badges, small labels.
+    css-var: "--radius-button"
+    status: implemented
+    note: Buttons and form inputs. Consistent across codebase.
   card:
     value: "12px"
-    status: canonical
-    note: Standard card radius. Most common value. Supersedes 10px and 16px variants.
-  card-lg:
-    value: "16px"
-    status: placeholder
-    note: Featured/elevated card. Currently only in featured-service.css. May consolidate to card.
+    css-var: "--radius-card"
+    status: implemented
+    note: Standard card radius. NOTE: featured-box uses 16px (TD-M03).
   pill:
     value: "9999px"
-    status: canonical
-    note: Full-pill shape. Currently used in publications filter buttons.
+    css-var: "--radius-pill"
+    status: implemented
+    note: Full-pill shape. Publications filter, tags.
 
 # ──────────────────────────────────────────────────────────────────────────────
 # SHADOW TOKENS
@@ -372,98 +359,19 @@ border-radius:
 shadow:
   sm:
     value: "0 2px 8px rgba(0, 0, 0, 0.06)"
-    status: canonical
-    note: Cards at rest. Consolidates 0.04–0.08 alpha variants at 2-8px spread.
+    css-var: "--shadow-sm"
+    status: implemented
+    note: Cards at rest.
   md:
     value: "0 4px 20px rgba(0, 0, 0, 0.08)"
-    status: canonical
-    note: Contact card, elevated components.
+    css-var: "--shadow-md"
+    status: implemented
+    note: Hero banner, elevated components.
   lg:
     value: "0 8px 32px rgba(0, 0, 0, 0.10)"
-    status: canonical
-    note: CTA card, hero, featured components.
-  button-primary:
-    value: "0 4px 12px rgba(26, 94, 230, 0.30)"
-    status: placeholder
-    note: Blue button hover shadow. Update hex to match confirmed primary.
-  button-secondary:
-    value: "0 4px 12px rgba(46, 125, 50, 0.35)"
-    status: decision
-    note: Green button hover shadow. Update once secondary color is decided.
-
-# ──────────────────────────────────────────────────────────────────────────────
-# BREAKPOINT TOKENS
-# ──────────────────────────────────────────────────────────────────────────────
-
-breakpoints:
-  mobile:
-    value: "400px"
-    status: canonical
-    note: Button goes full-width below this value. Found in multiple files.
-  tablet:
-    value: "600px"
-    status: canonical
-    note: Team grid collapses below this value.
-  desktop:
-    value: "768px"
-    status: canonical
-    note: Sidebar nav activates. Mobile drawer hidden. Primary layout breakpoint.
-
-# ──────────────────────────────────────────────────────────────────────────────
-# CONTAINER TOKENS
-# ──────────────────────────────────────────────────────────────────────────────
-
-container:
-  page:
-    value: "calc(960px - 220px)"   # 740px
-    status: canonical
-    note: Main content width with desktop sidebar active. Defined in nav.css.
-  xl:
-    value: "1080px"
-    status: canonical
-    note: Quick-links grid. Largest container in use.
-  lg:
-    value: "960px"
-    status: canonical
-    note: Featured service, hero section.
-  md:
-    value: "900px"
-    status: canonical
-    note: Services intro section.
-  sm:
-    value: "800px"
-    status: canonical
-    note: About, publications, CTA.
-  xs:
-    value: "600px"
-    status: canonical
-    note: Featured content box, hero quote.
-
-# ──────────────────────────────────────────────────────────────────────────────
-# Z-INDEX TOKENS
-# ──────────────────────────────────────────────────────────────────────────────
-
-z-index:
-  nav-overlay:
-    value: 999
-    status: canonical
-    note: Mobile nav backdrop (.nav-overlay). Below nav drawer.
-  nav-drawer:
-    value: 1000
-    status: canonical
-    note: Sidebar/drawer (.main-nav). Above overlay.
-  nav-toggle:
-    value: 1001
-    status: canonical
-    note: Hamburger button. Above nav drawer to remain tappable.
-  modal:
-    value: 1100
-    status: gap
-    note: Not yet used. Reserved for future modal components.
-  tooltip:
-    value: 1200
-    status: gap
-    note: Not yet used. Reserved for future tooltip components.
+    css-var: "--shadow-lg"
+    status: implemented
+    note: CTA card, featured components.
 
 # ──────────────────────────────────────────────────────────────────────────────
 # TRANSITION TOKENS
@@ -472,19 +380,132 @@ z-index:
 transition:
   fast:
     value: "0.2s ease"
-    status: canonical
-    note: Buttons, card hover lift, link color changes. Most common duration.
+    css-var: "--transition-fast"
+    status: implemented
   medium:
     value: "0.3s ease"
-    status: canonical
-    note: Nav drawer open/close, partner logo reveal.
+    css-var: "--transition-medium"
+    status: implemented
   slow:
     value: "0.6s ease"
-    status: canonical
-    note: Card fade-in animations on scroll. Less common.
+    css-var: "--transition-slow"
+    status: defined
+    note: Card fade-in animations. Defined but page CSS still uses literal 0.6s.
 
 # ──────────────────────────────────────────────────────────────────────────────
-# DECISIONS — STATUS AFTER SF-SLICE-087D.1
+# BREAKPOINT TOKENS
+# (CSS custom properties cannot be used in media queries — YAML reference only)
+# ──────────────────────────────────────────────────────────────────────────────
+
+breakpoints:
+  mobile:
+    value: "400px"
+    status: canonical
+    note: Button full-width below this. Found in publications.css.
+  tablet:
+    value: "600px"
+    status: canonical
+    note: Team grid collapses. About page.
+  desktop:
+    value: "768px"
+    status: canonical
+    note: Nav sidebar activates. Primary layout breakpoint.
+
+# ──────────────────────────────────────────────────────────────────────────────
+# CONTAINER TOKENS
+# ──────────────────────────────────────────────────────────────────────────────
+
+container:
+  xl:
+    value: "1080px"
+    css-var: "--container-xl"
+    status: defined
+    note: Quick-links grid. In DS layer only; page CSS still hardcoded.
+  lg:
+    value: "960px"
+    css-var: "--container-lg"
+    status: defined
+    note: Featured service, hero, default container.
+  md:
+    value: "900px"
+    css-var: "--container-md"
+    status: defined
+    note: Services intro.
+  sm:
+    value: "800px"
+    css-var: "--container-sm"
+    status: defined
+    note: About, publications, CTA.
+  xs:
+    value: "600px"
+    css-var: "--container-xs"
+    status: implemented
+    note: Featured content box, hero quote max-width (applied in main.css).
+  page:
+    value: "calc(960px - 220px)"
+    status: canonical
+    note: Effective content width with desktop sidebar. Computed in nav.css.
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Z-INDEX TOKENS
+# ──────────────────────────────────────────────────────────────────────────────
+
+z-index:
+  base:
+    value: 0
+    css-var: "--z-base"
+    status: defined
+  raised:
+    value: 10
+    css-var: "--z-raised"
+    status: defined
+  overlay:
+    value: 999
+    css-var: "--z-overlay"
+    status: defined
+    note: Defined but nav.css still uses hardcoded 999.
+  drawer:
+    value: 1000
+    css-var: "--z-drawer"
+    status: defined
+    note: Defined but nav.css still uses hardcoded 1000 (TD-M04).
+  toggle:
+    value: 1001
+    css-var: "--z-toggle"
+    status: defined
+    note: Defined but nav.css still uses hardcoded 1001.
+  modal:
+    value: 1100
+    css-var: "--z-modal"
+    status: defined
+    note: Reserved — no modal component yet.
+  tooltip:
+    value: 1200
+    css-var: "--z-tooltip"
+    status: defined
+    note: Reserved — no tooltip component yet.
+
+# ──────────────────────────────────────────────────────────────────────────────
+# OPACITY TOKENS
+# ──────────────────────────────────────────────────────────────────────────────
+
+opacity:
+  disabled:
+    value: 0.5
+    css-var: "--opacity-disabled"
+    status: defined
+  subtle:
+    value: 0.7
+    css-var: "--opacity-subtle"
+    status: defined
+  muted:
+    value: 0.9
+    css-var: "--opacity-muted"
+    status: implemented
+    note: Applied to hero-quote in main.css (was hardcoded 0.9).
+
+# ──────────────────────────────────────────────────────────────────────────────
+# DECISIONS — STATUS AFTER SF-SLICE-087D.2
 # ──────────────────────────────────────────────────────────────────────────────
 
 decisions:
@@ -525,3 +546,22 @@ decisions:
       Form focus ring changed from #2e7d32 (green) to --color-primary (blue)
       in contact.css. Input borders, focus shadow, submit button all now use
       primary blue tokens.
+    blocking: false
+
+  - id: D-06
+    token: typography.font-family.sans
+    status: OPEN
+    resolution: >
+      --font-family-sans defined in tokens.css but not applied to body in page CSS.
+      PaperMod owns the base font stack. Decision needed: override PaperMod font
+      stack with --font-family-sans, or leave PaperMod default as the body font.
+    blocking: false
+
+  - id: D-07
+    token: colors.text.primary (normalization)
+    status: OPEN
+    resolution: >
+      #333, #222, #1a1a1a remain in page CSS alongside --color-text-primary (#111111).
+      Values are close but not equal. Decision needed: normalize to #111111,
+      or introduce separate --color-text-rich (#222222) and --color-text-soft (#333333)?
+    blocking: false

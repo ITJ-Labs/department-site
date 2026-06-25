@@ -3,10 +3,36 @@
 <!-- Favicon -->
 <link rel="icon" href="{{ "favicon.png" | relURL }}" type="image/png">
 
-<!-- Design tokens first — all custom CSS reads from this layer -->
+<!-- ── Design system layer (load order matters) ─────────────── -->
+<!-- 0. Tokens — all custom properties; must be first -->
 {{ $tokens := resources.Get "css/tokens.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $tokens.RelPermalink }}">
 
+<!-- 1. Brand — identity, logo, gradient rules -->
+{{ $brand := resources.Get "css/brand.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $brand.RelPermalink }}">
+
+<!-- 2. Typography — type scale baseline -->
+{{ $typography := resources.Get "css/typography.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $typography.RelPermalink }}">
+
+<!-- 3. Spacing — section and gap utilities -->
+{{ $spacing := resources.Get "css/spacing.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $spacing.RelPermalink }}">
+
+<!-- 4. Layout — container and grid primitives -->
+{{ $layout := resources.Get "css/layout.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $layout.RelPermalink }}">
+
+<!-- 5. Components — canonical reusable components -->
+{{ $components := resources.Get "css/components.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $components.RelPermalink }}">
+
+<!-- 6. Utilities — helper classes -->
+{{ $utilities := resources.Get "css/utilities.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $utilities.RelPermalink }}">
+
+<!-- ── Page-specific styles (override layer as needed) ──────── -->
 <!-- Nav styles -->
 {{ $nav := resources.Get "css/nav.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $nav.RelPermalink }}">

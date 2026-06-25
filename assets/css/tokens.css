@@ -1,6 +1,6 @@
 /* ================================================================
    ITJ Solutions — AI Solutions Design Tokens
-   SF-SLICE-087D.1
+   SF-SLICE-087D.1 / SF-SLICE-087D.2
    ================================================================
    D-01 NOTE: --color-primary is config-derived from config.toml
    (primaryHue=220, S=80, L=50 → hsl(220,80%,50%) = #1a5ee6).
@@ -52,4 +52,71 @@
   /* ── Transitions ──────────────────────────────────────────────  */
   --transition-fast:           0.2s ease;
   --transition-medium:         0.3s ease;
+  --transition-slow:           0.6s ease;
+
+  /* ── Typography: Font Families ────────────────────────────────  */
+  --font-family-sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                       Helvetica, Arial, sans-serif;
+  --font-family-mono:  "SFMono-Regular", Consolas, "Liberation Mono",
+                       Menlo, Courier, monospace;
+
+  /* ── Typography: Size Scale ───────────────────────────────────  */
+  --font-size-xs:      0.75rem;    /* 12px — legal, footnotes */
+  --font-size-sm:      0.875rem;   /* 14px — captions, badges, meta */
+  --font-size-base:    1rem;       /* 16px — body */
+  --font-size-md:      1.1rem;     /* ~18px — subtitles, descriptions */
+  --font-size-lg:      1.25rem;    /* 20px — card titles, large labels */
+  --font-size-xl:      1.5rem;     /* 24px — h3 equivalents */
+  --font-size-2xl:     2rem;       /* 32px — h2, section headings */
+  --font-size-3xl:     2.5rem;     /* 40px — h1, hero title */
+
+  /* ── Typography: Weights ──────────────────────────────────────  */
+  --font-weight-regular:   400;
+  --font-weight-medium:    500;
+  --font-weight-semibold:  600;
+  --font-weight-bold:      700;
+
+  /* ── Typography: Line Heights ─────────────────────────────────  */
+  --line-height-tight:     1.3;    /* headings */
+  --line-height-compact:   1.4;    /* dense UI text */
+  --line-height-base:      1.6;    /* body text */
+  --line-height-loose:     1.8;    /* relaxed reading */
+
+  /* ── Spacing Scale (4px base unit) ───────────────────────────  */
+  --space-1:   0.25rem;   /*  4px */
+  --space-2:   0.5rem;    /*  8px */
+  --space-3:   0.75rem;   /* 12px */
+  --space-4:   1rem;      /* 16px */
+  --space-5:   1.25rem;   /* 20px */
+  --space-6:   1.5rem;    /* 24px */
+  --space-8:   2rem;      /* 32px */
+  --space-10:  2.5rem;    /* 40px */
+  --space-12:  3rem;      /* 48px */
+  --space-16:  4rem;      /* 64px */
+  --space-20:  5rem;      /* 80px */
+
+  /* ── Section Spacing ──────────────────────────────────────────  */
+  --section-y:  5rem;     /* vertical section padding */
+  --section-x:  1.5rem;   /* horizontal section padding */
+
+  /* ── Container Widths ─────────────────────────────────────────  */
+  --container-xl:  1080px;   /* quick-links grid */
+  --container-lg:   960px;   /* hero, featured service */
+  --container-md:   900px;   /* services intro */
+  --container-sm:   800px;   /* about, publications, CTA */
+  --container-xs:   600px;   /* featured content, hero quote */
+
+  /* ── Z-Index Scale ────────────────────────────────────────────  */
+  --z-base:       0;
+  --z-raised:     10;
+  --z-overlay:    999;     /* mobile nav backdrop */
+  --z-drawer:     1000;    /* sidebar / nav drawer */
+  --z-toggle:     1001;    /* hamburger button */
+  --z-modal:      1100;    /* reserved: modals */
+  --z-tooltip:    1200;    /* reserved: tooltips */
+
+  /* ── Opacity ──────────────────────────────────────────────────  */
+  --opacity-disabled:  0.5;
+  --opacity-subtle:    0.7;
+  --opacity-muted:     0.9;
 }

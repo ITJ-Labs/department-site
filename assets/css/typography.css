@@ -1,0 +1,103 @@
+/* ================================================================
+   typography.css — ITJ Solutions Type Scale
+   SF-SLICE-087D.2
+   ================================================================
+   Loaded after brand.css, before layout and component files.
+   Defines canonical typographic classes using tokens from tokens.css.
+
+   Scope: typographic baselines only.
+   - Scoped to .ds-* classes to avoid PaperMod theme conflict.
+   - Section-level selectors (.section-title, .section-subtitle)
+     are defined as baselines; page-specific CSS overrides as needed.
+   - Do not redefine raw h1–h6 globally (PaperMod owns those).
+   ================================================================ */
+
+/* ── Design-system typographic classes ─────────────────────────── */
+
+.ds-display {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+}
+
+.ds-heading-1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.ds-heading-2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.ds-heading-3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+.ds-heading-4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-compact);
+}
+
+.ds-body-lg {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-base);
+}
+
+.ds-body {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+.ds-body-sm {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+}
+
+.ds-caption {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-compact);
+  color: var(--color-text-muted);
+}
+
+.ds-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+}
+
+.ds-mono {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+}
+
+/* ── Canonical section-level heading classes ────────────────────── */
+/* Baseline only — page-specific CSS files override where needed.  */
+
+.section-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-base);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.section-description {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-base);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
