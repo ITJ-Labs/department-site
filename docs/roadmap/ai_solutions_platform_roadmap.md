@@ -25,20 +25,21 @@ The platform should become:
 
 ### SF-SLICE-087C — Platform Stabilization
 
-**Status:** NEXT  
+**Status:** ✅ COMPLETE  
 **Objective:** Stabilize the current Hugo website.
 
-**Deliverables:**
-- Merge `feature/local-home-page` into `develop`
-- Fix Makefile (`test-deploy.sh` → `deploy.sh`)
-- Resolve CSS conflicts (`nav.css` vs `main.css`)
-- Fix navigation (sidebar layout, mobile drawer, overlay element)
-- Fix layout (double `site-container` on homepage)
-- Fix contact workflow (functional form endpoint)
-- Validate GitHub Pages deployment
-- Production Readiness Checklist
+**Delivered:**
+- Fast-forward merged `feature/local-home-page` → `develop`
+- Fixed Makefile (`test-deploy.sh` → `deploy.sh`)
+- Resolved CSS cascade conflict (`nav.css` vs `main.css`)
+- Fixed navigation (sidebar layout, mobile drawer, `nav-overlay` element added)
+- Fixed layout (double `site-container` on homepage removed)
+- Wired contact form to FormSubmit.co placeholder (production lead capture deferred to SF-SLICE-094)
+- Hardened CI pipeline (`extended: true`, `workflow_dispatch`, `force_orphan: false`, YAML fold fix)
+- GitHub Pages CI validated: ✅ green, live site verified
+- Production Readiness: `docs/release/production_readiness_v1.md`
 
-**Outcome:** Stable production baseline.
+**Outcome:** Stable production baseline. Production Ready = YES.
 
 ---
 
@@ -200,7 +201,34 @@ New capability  → Mission → Website update → Deploy
 
 ---
 
-## Phase 5 — AI Solutions Digital Platform (Long-Term Vision)
+## Phase 5 — Lead Capture and Business Operations
+
+### SF-SLICE-094 — Lead Capture Strategy
+
+**Status:** PLANNED — blocked until business decisions confirmed  
+**Objective:** Replace the FormSubmit placeholder with a production lead capture system aligned to the ITJ Solutions sales and CRM strategy.
+
+**Prerequisites:**
+- Business decision document completed: `docs/strategy/lead_capture_strategy.md`
+- Lead owner confirmed (General Manager / Sales / AI Solutions)
+- CRM selection confirmed (HubSpot / Salesforce / Dynamics / email)
+- Consent requirements confirmed (GDPR / CCPA / basic)
+
+**Scope:**
+- Remove FormSubmit.co placeholder
+- Implement confirmed CRM or routing integration
+- Add consent checkbox and privacy policy link if required
+- Build Thank You / confirmation experience
+- Wire analytics conversion event (GA4 / equivalent)
+- Document lead routing SLA
+
+**Not in scope:** CRM administration, sales process design, marketing automation setup
+
+**Outcome:** Production lead capture — every submission is routed, tracked, and owned.
+
+---
+
+## Phase 6 — AI Solutions Digital Platform (Long-Term Vision)
 
 The website evolves into a complete digital platform including:
 
@@ -254,8 +282,8 @@ The website evolves into a complete digital platform including:
 |---|---|---|---|
 | SF-SLICE-087A | Current State Audit | 1 / Foundation | ✅ COMPLETE |
 | SF-SLICE-087B | GitOps & Research Benchmark | 1 / Foundation | ✅ COMPLETE |
-| SF-SLICE-087C | Platform Stabilization | 1 / Foundation | ⏳ NEXT |
-| SF-SLICE-087D | Corporate Brand Alignment | 1 / Foundation | 📋 PLANNED |
+| SF-SLICE-087C | Platform Stabilization | 1 / Foundation | ✅ COMPLETE |
+| SF-SLICE-087D | Corporate Brand Alignment | 1 / Foundation | ▶️ NEXT |
 | SF-SLICE-087E | Information Architecture | 2 / IA | 📋 PLANNED |
 | SF-SLICE-087F | Executive Content & Messaging | 2 / IA | 📋 PLANNED |
 | SF-SLICE-088 | AI Solutions Website MVP | 3 / Platform | 📋 PLANNED |
@@ -264,3 +292,4 @@ The website evolves into a complete digital platform including:
 | SF-SLICE-091 | Publications & Insights | 3 / Platform | 📋 PLANNED |
 | SF-SLICE-092 | AI Delivery OS Content Automation | 4 / OS Integration | 📋 PLANNED |
 | SF-SLICE-093 | Continuous Website Operations | 4 / OS Integration | 📋 PLANNED |
+| SF-SLICE-094 | Lead Capture Strategy | 5 / Business Ops | 📋 PLANNED — awaiting business decision |
