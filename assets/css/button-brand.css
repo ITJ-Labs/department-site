@@ -13,16 +13,16 @@ a.button {
 
 /* Primary (blue) */
 a.button.primary {
-  background-color: #0366d6 !important;   /* GitHub blue */
+  background-color: var(--color-primary) !important;
 }
 a.button.primary:hover {
-  background-color: #0256b3 !important;   /* slightly darker */
+  background-color: var(--color-primary-hover) !important;
 }
 
-/* Success (green) */
+/* Success (green — semantic only, not for CTAs) */
 a.button.success {
-  background-color: #28a745 !important;   /* GitHub green */
+  background-color: var(--color-success) !important;
 }
 a.button.success:hover {
-  background-color: #218838 !important;   /* slightly darker */
+  background-color: var(--color-success-hover) !important;
 }

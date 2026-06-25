@@ -35,7 +35,7 @@ h1.title {
 .service-card {
   background: var(--entry);
   border: 1px solid var(--border);
-  border-top: 2px solid hsl(220, 80%, 45%);
+  border-top: 2px solid var(--color-primary);
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -121,7 +121,7 @@ h1.title {
   margin-top: 2rem;
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.015);
-  border-left: 3px solid hsl(220, 80%, 50%);
+  border-left: 3px solid var(--color-primary);
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   animation: fadeInUp 0.6s ease both;
@@ -187,7 +187,7 @@ img[src*="ai-sandbox-banner"]:hover {
 
 .section-subtitle {
   font-size: 0.95rem;
-  color: #444444; /* darker for better readability */
+  color: var(--color-text-secondary);
   text-align: center;
   margin-top: -0.5rem;
   margin-bottom: 1.5rem;
@@ -197,9 +197,9 @@ img[src*="ai-sandbox-banner"]:hover {
 .industry-quote {
   margin-top: 2rem;
   padding: 1.2rem 1.5rem;
-  color: #1f1f1f; /* darker quote text */
+  color: #1f1f1f;
   background: rgba(240, 240, 240, 0.4);
-  border-left: 4px solid #007acc;
+  border-left: 4px solid var(--color-primary);
   font-style: italic;
   font-size: 0.95rem;
   border-radius: 8px;
@@ -300,7 +300,7 @@ img[src*="ai-sandbox-banner"]:hover {
   padding: 1rem 1.2rem;
   color: #2c2c2c;
   background-color: rgba(235, 245, 255, 0.4);
-  border-left: 4px solid #007acc;
+  border-left: 4px solid var(--color-primary);
   font-style: italic;
   font-size: 0.92rem;
   border-radius: 6px;
@@ -308,7 +308,7 @@ img[src*="ai-sandbox-banner"]:hover {
 }
 
 .industry-note a {
-  color: #007acc;
+  color: var(--color-primary);
   text-decoration: underline;
 }
 
@@ -394,7 +394,7 @@ img[src*="ai-sandbox-banner"]:hover {
 /* Subtitle styling (use-case list) under the heading */
 .intro-block.tech-stack .section-subtitle {
   font-size: 0.95rem;
-  color: #333333; /* much darker and readable */
+  color: var(--color-text-secondary);
   text-align: center;
   margin-top: -0.5rem;
   margin-bottom: 1rem;
@@ -504,24 +504,25 @@ img[src*="ai-sandbox-banner"]:hover {
 ─────────────────────────────────────────────────────────────────────────*/
 
 .button.learn-more {
-  background-color: #1E9D59; /* filled green */
+  background-color: var(--color-primary);
   color: #ffffff;
-  border: 2px solid #1E9D59;
+  border: 2px solid var(--color-primary);
   padding: 0.7rem 1.4rem;
-  border-radius: 6px;
+  border-radius: var(--radius-button);
   font-weight: 600;
   display: inline-block;
   transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    box-shadow 0.2s ease;
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .button.learn-more:hover,
 .button.learn-more:focus {
-  background-color: #167D47; /* darker green */
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(22, 125, 71, 0.4);
+  box-shadow: 0 4px 12px var(--color-primary-glow);
 }
 
 /*─────────────────────────────────────────────────────────────────────────
@@ -624,16 +625,16 @@ img[src*="ai-sandbox-banner"]:hover {
   color: #222222;
   font-size: 0.95rem;
   line-height: 1.6;
-  border-left: 4px solid #4ADE80;
+  border-left: 4px solid var(--color-success);
   border-radius: 8px;
 }
 
 .support-note a {
-  color: #007acc;
+  color: var(--color-primary);
   text-decoration: underline;
   font-weight: 500;
 }
 
 .support-note a:hover {
-  color: #4ADE80;
+  color: var(--color-primary-hover);
 }

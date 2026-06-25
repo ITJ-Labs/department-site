@@ -34,18 +34,18 @@
 }
 
 .cta-card .cta-button {
-  background-color: #28a745;
+  background-color: var(--color-primary);
   color: #fff;
   padding: 0.75rem 1.5rem;
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: var(--radius-button);
   text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
   display: inline-block;
 }
 
 .cta-card .cta-button:hover {
-  background-color: #1e7e34;
+  background-color: var(--color-primary-hover);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

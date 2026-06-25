@@ -3,7 +3,11 @@
 <!-- Favicon -->
 <link rel="icon" href="{{ "favicon.png" | relURL }}" type="image/png">
 
-<!-- Nav styles first -->
+<!-- Design tokens first — all custom CSS reads from this layer -->
+{{ $tokens := resources.Get "css/tokens.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $tokens.RelPermalink }}">
+
+<!-- Nav styles -->
 {{ $nav := resources.Get "css/nav.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $nav.RelPermalink }}">
 

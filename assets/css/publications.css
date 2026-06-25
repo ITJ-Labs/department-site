@@ -48,40 +48,41 @@
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 9999px;      /* full pill shape */
+  border-radius: var(--radius-pill);
   font-weight: 500;
   text-decoration: none;
-  transition: background-color 0.2s ease,
-              color 0.2s ease,
-              box-shadow 0.2s ease;
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast),
+              box-shadow var(--transition-fast);
   cursor: pointer;
 }
 .btn:focus {
-  outline: 3px solid rgba(0,122,204,0.6);
+  outline: 3px solid var(--color-primary-focus-ring);
   outline-offset: 2px;
 }
 
 /* PDF download button */
 .btn-primary {
-  background-color: var(--accent, #007acc);
+  background-color: var(--color-primary);
   color: #fff;
-  border: 2px solid var(--accent, #007acc);
+  border: 2px solid var(--color-primary);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .btn-primary:hover {
-  background-color: var(--accent-hover, #005fa3);
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 /* External link button */
 .btn-secondary {
   background-color: transparent;
-  color: var(--accent, #007acc);
-  border: 2px solid var(--accent, #007acc);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .btn-secondary:hover {
-  background-color: var(--accent, #007acc);
+  background-color: var(--color-primary);
   color: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
@@ -169,43 +170,43 @@
   transform: translateX(3px);
 }
 
-/* keep blue stripe by default */
+/* primary blue stripe */
 .pub-card::before {
-  background: linear-gradient(90deg, #007bff, #0056b3);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
 }
 
-/* on hover, swap to a “red” stripe */
+/* on hover, lighten the gradient direction (fixes brand-inconsistent red) */
 .pub-card:hover::before {
-  background: linear-gradient(90deg, #dc3545, #c82333);
+  background: linear-gradient(90deg, var(--color-primary-light), var(--color-primary));
 }
 
-/* and tint the “Read more” arrow similarly */
+/* Read more arrow */
 .pub-card .read-more {
-  color: #007bff;
+  color: var(--color-primary);
 }
 .pub-card:hover .read-more {
-  color: #dc3545;
+  color: var(--color-primary-hover);
 }
 
 /* ————————————————————————————————————————————————————— */
 /* Button overrides on single-paper page                     */
 /* ————————————————————————————————————————————————————— */
 .paper-actions .btn-primary {
-  background-color: #007bff;           /* blue */
-  border-color:   #007bff;
-  color:           #fff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
 }
 .paper-actions .btn-primary:hover {
-  background-color: #0056b3;
-  border-color:   #0056b3;
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
 }
 
 .paper-actions .btn-secondary {
-  background-color: #28a745;           /* green */
-  border-color:    #28a745;
-  color:            #fff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
 }
 .paper-actions .btn-secondary:hover {
-  background-color: #218838;
-  border-color:    #218838;
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
 }

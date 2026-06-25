@@ -27,67 +27,60 @@ meta:
 colors:
 
   # ── Brand Primary ─────────────────────────────────────────────────────────
-  # Derived from config.toml: primaryHue=220, primarySaturation=80, primaryLightness=50
-  # Aligns with ITJ corporate blue direction.
-  # Must be confirmed against itj.com exact blue before 087D.1.
+  # D-01 RESOLVED (config-derived): itj.com is JS-rendered; CSS not extractable
+  # via WebFetch. Using config.toml: primaryHue=220, S=80, L=50 = #1a5ee6.
+  # Flagged as pending official ITJ brand confirmation.
   brand:
     primary:
       value: "hsl(220, 80%, 50%)"
       hex: "#1a5ee6"
-      status: placeholder
+      css-var: "--color-primary"
+      status: implemented
       note: >
-        Canonical blue from config.toml. 6 different blues currently exist in CSS.
-        All hardcoded blues (#0057ff, #0366d6, #007acc, #337aff, #007bff, hsl(220,80%,50%))
-        should be replaced by this single token after brand confirmation.
+        Config-derived. All 6 ad-hoc blues replaced in 087D.1.
+        Pending official ITJ corporate blue confirmation.
     primary-hover:
       value: "hsl(220, 80%, 42%)"
       hex: "#134fc4"
-      status: placeholder
-      note: Approximately 8% lighter than primary. Used for button hover, link hover.
-    primary-active:
-      value: "hsl(220, 80%, 36%)"
-      hex: "#1042a9"
-      status: placeholder
-      note: Pressed/active state.
+      css-var: "--color-primary-hover"
+      status: implemented
+      note: ~8% darker lightness. Button and link hover state.
     primary-light:
       value: "hsl(220, 80%, 60%)"
       hex: "#4a84f9"
-      status: placeholder
-      note: Accent value from config.toml accentLightness=60. Used for decorative highlights.
-    primary-subtle:
-      value: "hsl(220, 80%, 96%)"
-      hex: "#ebf1fe"
-      status: placeholder
-      note: Very light tint for hover backgrounds, selected states.
+      css-var: "--color-primary-light"
+      status: implemented
+      note: Accent value from config.toml accentLightness=60. Gradient highlights.
+    primary-glow:
+      value: "rgba(26, 94, 230, 0.30)"
+      css-var: "--color-primary-glow"
+      status: implemented
+      note: Button hover shadow, derived from primary rgb(26, 94, 230).
+    primary-focus-ring:
+      value: "rgba(26, 94, 230, 0.20)"
+      css-var: "--color-primary-focus-ring"
+      status: implemented
+      note: Focus ring shadow for inputs and interactive elements (D-05 resolved).
 
   # ── Brand Secondary / CTA ──────────────────────────────────────────────────
-  # Current state: 4 different greens used inconsistently.
-  # Green (#28a745) originated from GitHub's color system, not ITJ brand.
-  # Whether CTA remains green or shifts to a blue variant is a BUSINESS DECISION.
-    secondary:
-      value: "DECISION_REQUIRED"
-      status: decision
-      note: >
-        Current state: #28a745 (GitHub green) used for CTA buttons and success states.
-        Options:
-          A) Keep green as CTA accent — maintains visual contrast vs primary blue buttons.
-          B) Replace with ITJ brand accent — purple or teal from corporate gradient.
-          C) Use primary blue for all CTAs — simpler token model.
-        Stakeholder decision required before implementation.
-    secondary-hover:
-      value: "DECISION_REQUIRED"
-      status: decision
-      note: Defined once secondary value is confirmed.
+  # D-02 RESOLVED: Primary CTAs use --color-primary (blue).
+  # Green is reserved for semantic success/status only (--color-success).
+  # No separate secondary CTA color; secondary buttons use outline/ghost of primary.
 
   # ── Semantic ───────────────────────────────────────────────────────────────
   semantic:
     success:
       value: "#2e7d32"
-      status: placeholder
+      css-var: "--color-success"
+      status: implemented
       note: >
-        Currently 3 different greens used as success color.
-        #2e7d32 is the Material Design green-800, most intentional-looking value found.
-        Align with secondary brand color once secondary is decided.
+        D-02 resolved: green reserved for success/status indicators only.
+        All CTA buttons changed to --color-primary in 087D.1.
+        #2e7d32 is the canonical success green (Material green-800).
+    success-hover:
+      value: "#256329"
+      css-var: "--color-success-hover"
+      status: implemented
     warning:
       value: "#b45309"
       status: gap
@@ -491,53 +484,44 @@ transition:
     note: Card fade-in animations on scroll. Less common.
 
 # ──────────────────────────────────────────────────────────────────────────────
-# DECISIONS REQUIRED BEFORE IMPLEMENTATION (SF-SLICE-087D.1)
+# DECISIONS — STATUS AFTER SF-SLICE-087D.1
 # ──────────────────────────────────────────────────────────────────────────────
 
-decisions_required:
+decisions:
   - id: D-01
     token: colors.brand.primary
-    question: What is the exact hex value for ITJ Solutions corporate blue?
-    options:
-      - "hsl(220, 80%, 50%) = #1a5ee6 (current placeholder)"
-      - "Extract from itj.com CSS via browser DevTools"
-      - "Obtain from ITJ brand guidelines document"
-    blocking: true
+    status: RESOLVED (config-derived)
+    resolution: >
+      Used config.toml value: hsl(220,80%,50%) = #1a5ee6. Implemented as
+      --color-primary across all CSS files. Pending official ITJ brand
+      confirmation — update token value if confirmed blue differs.
+    blocking: false
 
   - id: D-02
-    token: colors.brand.secondary
-    question: Should the CTA color remain green or shift to ITJ blue/purple?
-    options:
-      - "Keep #28a745 green — maintains visual contrast with blue primary buttons"
-      - "Replace with ITJ purple/violet — aligns with corporate gradient endpoint"
-      - "Collapse all CTAs to primary blue — single brand color"
-    blocking: true
+    token: colors.cta
+    status: RESOLVED
+    resolution: >
+      Primary CTA buttons use --color-primary (blue).
+      Green (#2e7d32) reserved for semantic success/status (--color-success only).
+      All 4 green CTA buttons changed to primary blue in 087D.1.
+    blocking: false
 
   - id: D-03
     token: typography.font-family.webfont
-    question: Should AI Solutions introduce an enterprise webfont?
-    options:
-      - "Keep system fonts — zero loading cost, acceptable for v1"
-      - "Inter — modern, open-source, increasingly common in enterprise"
-      - "IBM Plex Sans — technical credibility, open-source"
-      - "Match ITJ corporate site webfont — requires CSS inspection of itj.com"
+    status: RESOLVED
+    resolution: System fonts retained. Webfont deferred to future evaluation.
     blocking: false
 
   - id: D-04
     token: site_title
-    question: What is the official name for the site in browser title and header?
-    options:
-      - "AI Solutions"
-      - "ITJ Solutions — AI Solutions"
-      - "ITJ Labs — AI Solutions"
-    blocking: true
-    note: Current value in config.toml is 'ITJ Labs Department' — incorrect.
+    status: RESOLVED
+    resolution: config.toml title updated to "ITJ Solutions — AI Solutions".
+    blocking: false
 
   - id: D-05
-    token: colors.brand.secondary (focus-ring)
-    question: Should form focus rings use primary blue or remain green?
-    options:
-      - "Primary blue — consistent with brand color system"
-      - "Keep green — visible and accessible"
-    blocking: false
-    note: Current contact.css uses #2e7d32 green focus ring, inconsistent with blue primary.
+    token: colors.form.focus-ring
+    status: RESOLVED
+    resolution: >
+      Form focus ring changed from #2e7d32 (green) to --color-primary (blue)
+      in contact.css. Input borders, focus shadow, submit button all now use
+      primary blue tokens.

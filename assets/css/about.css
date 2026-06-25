@@ -200,7 +200,7 @@
 .leader-card blockquote {
   margin: 0.75rem 0;
   padding-left: 0.75rem;
-  border-left: 3px solid #007acc;
+  border-left: 3px solid var(--color-primary);
   font-size: 0.85rem;
   color: var(--content);
 }

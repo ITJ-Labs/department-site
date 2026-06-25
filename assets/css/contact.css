@@ -21,8 +21,8 @@
 ─────────────────────────────────────────────── */
 
 .contact-info {
-  background-color: #fff;
-  border: 1px solid #e1e1e1;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 10px;
   padding: 2rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
@@ -31,7 +31,7 @@
 .contact-info h2 {
   text-align: center;
   font-size: 1.5rem;
-  color: #222;
+  color: var(--color-text-primary);
   margin-bottom: 1.5rem;
   font-weight: 700;
 }
@@ -67,14 +67,14 @@
   background-color: rgba(0, 0, 0, 0.03);
   transform: scale(1.01);
   cursor: pointer;
-  color: var(--accent, #2e7d32);
+  color: var(--color-primary);
 }
 
 .contact-list .icon,
 .icon {
   width: 2rem;
   height: 2rem;
-  color: var(--accent, #2e7d32);
+  color: var(--color-primary);
   flex-shrink: 0;
 }
 
@@ -83,8 +83,8 @@
 ─────────────────────────────────────────────── */
 
 .contact-form {
-  background-color: #fff;
-  border: 1px solid #e1e1e1;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 10px;
   padding: 2rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
@@ -93,7 +93,7 @@
 .contact-form h2 {
   text-align: center;
   font-size: 1.5rem;
-  color: #222;
+  color: var(--color-text-primary);
   margin-bottom: 1.5rem;
   font-weight: 700;
 }
@@ -113,41 +113,41 @@
 .contact-form label {
   font-weight: 600;
   font-size: 0.95rem;
-  color: #333;
+  color: var(--color-text-secondary);
 }
 
 .contact-form input,
 .contact-form textarea {
   padding: 0.85rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  border: 1px solid var(--color-border-medium);
+  border-radius: var(--radius-button);
   font-size: 1rem;
   font-family: inherit;
-  background-color: #fff;
-  color: #222;
-  transition: border 0.2s ease, box-shadow 0.2s ease;
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  transition: border var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #2e7d32;
-  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-focus-ring);
   outline: none;
 }
 
 .contact-form button {
   align-self: flex-start;
-  background-color: #2e7d32;
+  background-color: var(--color-primary);
   color: #fff;
   padding: 0.75rem 1.5rem;
   font-weight: 600;
   font-size: 1rem;
   border: none;
-  border-radius: 6px;
+  border-radius: var(--radius-button);
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--transition-fast);
 }
 
 .contact-form button:hover {
-  background-color: #256329;
+  background-color: var(--color-primary-hover);
 }

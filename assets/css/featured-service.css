@@ -16,7 +16,7 @@
 .featured-service h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #0057ff;
+  color: var(--color-primary);
   font-weight: 700;
 }
 
@@ -56,22 +56,22 @@
   margin-bottom: 1.75rem;
 }
 
-/* Button (Updated Blue Tone) */
+/* Button */
 .cta-button {
   display: inline-block;
-  background-color: #337aff; /* softer blue */
+  background-color: var(--color-primary);
   color: #fff;
   padding: 0.75rem 1.5rem;
   font-weight: 600;
   font-size: 1rem;
   border: none;
-  border-radius: 6px;
+  border-radius: var(--radius-button);
   text-decoration: none;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .cta-button:hover {
-  background-color: #1d5edb; /* deeper blue */
-  box-shadow: 0 6px 16px rgba(29, 94, 219, 0.3);
+  background-color: var(--color-primary-hover);
+  box-shadow: 0 6px 16px var(--color-primary-glow);
   transform: translateY(-1px);
 }

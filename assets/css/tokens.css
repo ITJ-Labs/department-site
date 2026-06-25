@@ -1,0 +1,55 @@
+/* ================================================================
+   ITJ Solutions — AI Solutions Design Tokens
+   SF-SLICE-087D.1
+   ================================================================
+   D-01 NOTE: --color-primary is config-derived from config.toml
+   (primaryHue=220, S=80, L=50 → hsl(220,80%,50%) = #1a5ee6).
+   Pending official ITJ corporate blue confirmation.
+   All primary tokens are derived from this value.
+   ================================================================ */
+
+:root {
+
+  /* ── Brand Primary ─────────────────────────────────────────── */
+  --color-primary:             #1a5ee6;
+  --color-primary-hover:       #134fc4;
+  --color-primary-light:       #4a84f9;
+  --color-primary-glow:        rgba(26, 94, 230, 0.30);
+  --color-primary-focus-ring:  rgba(26, 94, 230, 0.20);
+
+  /* ── Semantic Success ──────────────────────────────────────────
+     Green is reserved for success/status indicators only.
+     Do not use for CTA buttons — use --color-primary instead.  */
+  --color-success:             #2e7d32;
+  --color-success-hover:       #256329;
+  --color-success-glow:        rgba(46, 125, 50, 0.35);
+
+  /* ── Text ─────────────────────────────────────────────────────  */
+  --color-text-primary:        #111111;
+  --color-text-secondary:      #444444;
+  --color-text-muted:          #666666;
+
+  /* ── Surfaces ─────────────────────────────────────────────────  */
+  --color-surface:             #ffffff;
+  --color-surface-alt:         #f9f9f9;
+  --color-overlay:             rgba(0, 0, 0, 0.40);
+
+  /* ── Borders ──────────────────────────────────────────────────  */
+  --color-border:              #e1e1e1;
+  --color-border-medium:       #cccccc;
+  --color-border-light:        rgba(0, 0, 0, 0.15);
+
+  /* ── Elevation ────────────────────────────────────────────────  */
+  --shadow-sm:                 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md:                 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg:                 0 8px 32px rgba(0, 0, 0, 0.10);
+
+  /* ── Radius ───────────────────────────────────────────────────  */
+  --radius-card:               12px;
+  --radius-button:             6px;
+  --radius-pill:               9999px;
+
+  /* ── Transitions ──────────────────────────────────────────────  */
+  --transition-fast:           0.2s ease;
+  --transition-medium:         0.3s ease;
+}
