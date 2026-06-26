@@ -67,3 +67,6 @@
 
 {{ $svc := resources.Get "css/services.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $svc.RelPermalink }}">
+
+{{ $footer := resources.Get "css/footer.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $footer.RelPermalink }}">
