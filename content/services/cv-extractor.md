@@ -1,7 +1,7 @@
 +++
 title = "CV Extractor Tool"
 date = "2025-01-04T09:00:00-07:00"
-draft = false
+draft = true
 headless = false
 
 [build]
