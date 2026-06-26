@@ -30,28 +30,28 @@ canonifyURLs = true  # add this if you haven’t already
     weight     = 10
 
   [[menu.main]]
-    identifier = "about"
-    name       = "About"
-    url        = "/about/"
+    identifier = "solutions"
+    name       = "Solutions"
+    url        = "/solutions/"
     weight     = 20
 
   [[menu.main]]
-    identifier = "services"
-    name       = "Services"
-    url        = "/services/"
+    identifier = "capabilities"
+    name       = "Capabilities"
+    url        = "/capabilities/"
     weight     = 30
 
   [[menu.main]]
-    identifier = "publications"
-    name       = "Publications"
-    url        = "/publications/"
+    identifier = "industries"
+    name       = "Industries"
+    url        = "/industries/"
     weight     = 40
 
   [[menu.main]]
-    identifier = "events"
-    name       = "Events"
-    url        = "/events/"
-    weight     = 50
+    identifier = "how-we-engage"
+    name       = "How We Engage"
+    url        = "/how-we-engage/"
+    weight     = 45
 
   [[menu.main]]
     identifier = "contact"
