@@ -1,9 +1,9 @@
 +++
-summary = "" # short page summary, if you want
+summary = ""
 slug = "about"
-title       = "About Us"
-description = "Learn more about ITJ Labs Department—our mission, vision, and team."
-date        = "2025-05-28T09:00:00-07:00"
+title       = "About AI Solutions"
+description = "AI Solutions is an applied AI engineering practice — building production AI systems for enterprise teams."
+date        = "2026-06-25T09:00:00-07:00"
 draft       = false
 +++
 
@@ -15,66 +15,61 @@ draft       = false
       <img src="/images/icons/mission.svg" alt="" class="mv-icon" />
       <h2>Our Mission</h2>
       <p>
-        At ITJ Labs Department, our mission is to empower organizations with
-        AI-driven insights and automation that streamline workflows and drive
-        innovation.
+        Build AI systems that solve real business problems — and deploy them to production
+        where they create measurable value. No PoC graveyards.
       </p>
     </div>
     <div class="mv-card">
       <img src="/images/icons/vision.svg" alt="" class="mv-icon" />
       <h2>Our Vision</h2>
       <p>
-        We envision a world where cutting-edge AI solutions are accessible to
-        every industry, enabling smarter decisions and unlocking new
-        opportunities.
+        A world where production AI is accessible to any enterprise team — not just those
+        with in-house data science departments. AI Solutions bridges that gap.
       </p>
     </div>
   </div>
 </div>
 
 
-<!-- Holistic Goals -->
+<!-- What We Do -->
 <section class="section-goals">
   <div class="section-header">
-    <h2>Our Holistic Goals</h2>
-    <p>ITJ Labs is driven by a set of holistic goals designed to advance our mission and vision:</p>
+    <h2>What We Do</h2>
+    <p>AI Solutions is an applied AI engineering practice. We design, build, and deploy AI systems for enterprise clients across Healthcare, Life Sciences, HR, Manufacturing, and Financial Services.</p>
   </div>
 <div class="goals-grid">
-  <!-- Goal 1 -->
   <div class="flip-card" data-aos="fade-up">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        <h3>Build capabilities around AI and related technologies</h3>
-        <img class="goal-icon" src="/images/icons/ai-capabilities.svg" alt="AI Capabilities">
+        <h3>Applied AI Engineering</h3>
+        <img class="goal-icon" src="/images/icons/ai-capabilities.svg" alt="AI Engineering">
       </div>
       <div class="flip-card-back">
-        <p>We act as a liaison and consulting group within ITJ to support localized AI initiatives across the organization.</p>
+        <p>We build RAG systems, LLM applications, computer vision pipelines, and ML models — all the way to production deployment and monitoring.</p>
       </div>
     </div>
   </div>
 
-  <!-- Goal 2 -->
   <div class="flip-card" data-aos="fade-up" data-aos-delay="100">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        <h3>Design, build and implement AI products and services</h3>
-        <img class="goal-icon" src="/images/icons/ai-products.svg" alt="AI Products">
+        <h3>CRISP-ML(Q) Delivery</h3>
+        <img class="goal-icon" src="/images/icons/ai-products.svg" alt="Structured Delivery">
       </div>
       <div class="flip-card-back">
-        <p>We create production-ready AI solutions—not just for ITJ’s core business, but also by leveraging public data to spark new innovations.</p>
+        <p>Every engagement follows CRISP-ML(Q) — the industry-standard AI delivery framework. Defined quality gates. No surprises at handoff.</p>
       </div>
     </div>
   </div>
 
-  <!-- Goal 3 -->
   <div class="flip-card" data-aos="fade-up" data-aos-delay="200">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        <h3>Divulge AI knowledge and information</h3>
-        <img class="goal-icon" src="/images/icons/ai-knowledge.svg" alt="AI Knowledge">
+        <h3>Research-Backed Practice</h3>
+        <img class="goal-icon" src="/images/icons/ai-knowledge.svg" alt="Research">
       </div>
       <div class="flip-card-back">
-        <p>In partnership with prestigious universities, we serve as a central knowledge hub for AI research and insights.</p>
+        <p>In partnership with CITEDI, CETYS, UABC, and ITT-TecNM, we stay at the frontier of AI research — and bring that into applied delivery work.</p>
       </div>
     </div>
   </div>
@@ -82,11 +77,78 @@ draft       = false
 </section>
 
 
+<!-- Team Section — Role-Based -->
+<div class="ds-container ds-section">
+  <h2 class="ds-heading-2" style="text-align:center; margin-bottom:1rem;">Our Engineering Team</h2>
+  <p style="text-align:center; color:var(--color-text-secondary); max-width:600px; margin:0 auto 3rem;">
+    AI Solutions is a multidisciplinary team of AI engineers, data scientists, and platform engineers.
+    We represent capabilities, not individuals — so your engagement is never dependent on one person.
+  </p>
+
+  <div class="ds-grid-3" style="margin-bottom:3rem;">
+    <div class="ds-card" style="padding:1.75rem; text-align:center;">
+      <div style="font-size:2rem; margin-bottom:0.75rem;">⚙️</div>
+      <h3 class="ds-heading-3">AI Engineers</h3>
+      <p style="color:var(--color-text-secondary); font-size:0.9rem;">
+        LLM integration, RAG pipeline design, AI application architecture, and production deployment.
+        Responsible for making AI systems work end-to-end.
+      </p>
+    </div>
+
+    <div class="ds-card" style="padding:1.75rem; text-align:center;">
+      <div style="font-size:2rem; margin-bottom:0.75rem;">📊</div>
+      <h3 class="ds-heading-3">Data Scientists</h3>
+      <p style="color:var(--color-text-secondary); font-size:0.9rem;">
+        ML model development, statistical analysis, model evaluation, and experiment design.
+        Responsible for model accuracy and performance.
+      </p>
+    </div>
+
+    <div class="ds-card" style="padding:1.75rem; text-align:center;">
+      <div style="font-size:2rem; margin-bottom:0.75rem;">🔧</div>
+      <h3 class="ds-heading-3">Data Engineers</h3>
+      <p style="color:var(--color-text-secondary); font-size:0.9rem;">
+        Data pipeline design, ETL architecture, feature stores, and data quality.
+        Responsible for reliable, high-quality data reaching AI systems.
+      </p>
+    </div>
+
+    <div class="ds-card" style="padding:1.75rem; text-align:center;">
+      <div style="font-size:2rem; margin-bottom:0.75rem;">🏗️</div>
+      <h3 class="ds-heading-3">AI Architects</h3>
+      <p style="color:var(--color-text-secondary); font-size:0.9rem;">
+        System design for AI at scale — data architecture, model serving infrastructure,
+        and integration patterns for enterprise environments.
+      </p>
+    </div>
+
+    <div class="ds-card" style="padding:1.75rem; text-align:center;">
+      <div style="font-size:2rem; margin-bottom:0.75rem;">🚀</div>
+      <h3 class="ds-heading-3">MLOps Engineers</h3>
+      <p style="color:var(--color-text-secondary); font-size:0.9rem;">
+        CI/CD for ML, model monitoring, drift detection, and automated retraining.
+        Responsible for keeping AI systems reliable in production.
+      </p>
+    </div>
+
+    <div class="ds-card" style="padding:1.75rem; text-align:center;">
+      <div style="font-size:2rem; margin-bottom:0.75rem;">🎯</div>
+      <h3 class="ds-heading-3">AI Consultants</h3>
+      <p style="color:var(--color-text-secondary); font-size:0.9rem;">
+        AI strategy, opportunity identification, data readiness assessment, and build-vs-buy
+        guidance. Bridge between business problems and technical solutions.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Partners -->
 <div class="section-partners">
 
-## Our Partners
+## Our Academic Partners
 
-We collaborate with top institutions, research centers, and clients to drive AI innovation:
+We collaborate with top research institutions to stay at the frontier of AI — and bring that research into applied engineering practice.
 
 <div class="partners-grid">
   <div class="partner-logo" data-aos="fade-up">
@@ -111,89 +173,3 @@ We collaborate with top institutions, research centers, and clients to drive AI 
   </div>
 </div>
 </div>
-
-## Meet the Team
-
-<section class="team-leaders two-per-row">
-    <div class="leader-card">
-  <img src="/images/team/phil.png" alt="Phil Sweeney" />
-  <h3>Phil Sweeney</h3>
-  <p class="role">Principal Business Leader</p>
-  <blockquote>
-    “I’m passionate about translating cutting-edge AI capabilities into clear business value and sustainable growth.”
-  </blockquote>
-  <ul class="expertise">
-    <li>15+ years driving tech-enabled business transformation</li>
-    <li>Expert in strategic planning & revenue growth</li>
-    <li>Skilled at aligning multi-stakeholder priorities</li>
-  </ul>
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/phillipsweeney/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-      <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
-    </a>
-  </div>
-</div>
-    <div class="leader-card">
-      <img src="/images/team/rafa.png" alt="Rafael GPL" />
-      <h3>Rafael GPL</h3>
-      <p class="role">Data Science Director</p>
-      <blockquote>
-        “I believe marrying advanced analytics with clear business strategy is the cornerstone of impactful AI solutions.”
-      </blockquote>
-      <ul class="expertise">
-        <li>10+ years in AI, cybersecurity & software development</li>
-        <li>Holds a Master’s in Data Science</li>
-        <li>Former Director of Engineering & Software Development</li>
-      </ul>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/rafaelgpl/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-          <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
-        </a>
-      </div>
-    </div>
-<div class="leader-card">
-  <img src="/images/team/drmike.png" alt="Dr. Miguel López" />
-  <h3>Dr. Miguel López</h3>
-  <p class="role">Data Science Manager</p>
-  <blockquote>
-    “AI can revolutionize businesses—when paired with a clear, strategic vision.”
-  </blockquote>
-  <ul class="expertise">
-    <li>5+ years leading AI &amp; ML initiatives</li>
-    <li>Published researcher &amp; scientific peer reviewer</li>
-    <li>MBA candidate in Senior Management</li>
-  </ul>
-  <div class="social-links">
-    <a href="https://orcid.org/0000-0001-5367-9801" aria-label="ORCID" target="_blank" rel="noopener noreferrer">
-      <img src="/images/icons/orcid.svg" alt="ORCID" />
-    </a>
-    <a href="https://www.linkedin.com/in/miguel-angel-lopez-montiel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-      <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
-    </a>
-    <a href="https://scholar.google.com/citations?user=ejQAKasAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer">
-      <img src="/images/icons/google-scholar.svg" alt="Google Scholar" />
-    </a>
-    <a href="https://www.scopus.com/authid/detail.uri?authorId=57212031562" aria-label="Scopus" target="_blank" rel="noopener noreferrer">
-      <img src="/images/icons/scopus.svg" alt="Scopus" />
-    </a>
-  </div>
-</div>
-<div class="leader-card">
-  <img src="/images/team/ivan.png" alt="Ivan Romero" />
-  <h3>Ivan Romero</h3>
-  <p class="role">Project Manager</p>
-  <blockquote>
-    “Great projects are built on clear goals, empowered teams, and relentless follow-through.”
-  </blockquote>
-  <ul class="expertise">
-    <li>8+ years managing cross-functional & software projects</li>
-    <li>Certified Scrum Master & PMP</li>
-    <li>Skilled in stakeholder alignment & risk management</li>
-  </ul>
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/ivanrromero/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-      <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
-    </a>
-  </div>
-</div>
-</section>
